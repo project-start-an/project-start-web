@@ -1,10 +1,10 @@
-# Roadmap
+# Roadmap 🚀
 
 ## Step 1: Website base
 
-1. Vite with React.js
-2. Configure eslint and prettier
-3. Confure routing with react router
+1. Vite with React.js ✅
+2. Configure eslint and prettier ✅
+3. Confure routing with react router ✅
 4. Create a simple navbar with material ui
 
 - Services/услуги

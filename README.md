@@ -22,6 +22,20 @@ npm run install
 ```bash
 npm run dev
 ```
+## Check code quality and style
+To ensure code quality and seamless development, eslint and prettier are integrated in the codebase.
+
+### Code quality (linter)
+
+```bash
+npm run eslint
+```
+
+### Code style (prettier) 
+
+```bash
+npm run format
+```
 
 # Packages
 
@@ -30,3 +44,6 @@ Checkout [Packages list](Packages.md) for more info.
 # Roadmap
 
 Check out the Roadmap of the project [here](Roadmap.md)
+
+# Icons for MD docs
+https://gist.github.com/rxaviers/7360908
