@@ -1,22 +1,32 @@
-# project-start-web
+# Project-start-web
 
-template website?
+This is the official repo for the website of project-start-an
 
-Nav:
-logo?
-Services/услуги
-contacts/контакти 
-search bar?
-translation - en/bg
+# Technologies
 
-Content:
-Chatbot?
-Footer:
+These are the core technologies:
 
-VCS: 
-github
+1. React.js
+2. Vite
 
-frontend hosting?
-api hosting?
+# Development
 
-pass: GiHB6OMh2o1c
+## Install or update local packages
+
+```bash
+npm run install
+```
+
+## Run the project
+
+```bash
+npm run dev
+```
+
+# Packages
+
+Checkout [Packages list](Packages.md) for more info.
+
+# Roadmap
+
+Check out the Roadmap of the project [here](Roadmap.md)
