@@ -7,6 +7,7 @@
 3. Confure routing with react router ✅
 4. Create a simple navbar with material ui ✅
 5. Create footer with mui ✅
+6. Main component Grid ✅
 
 - Services/услуги
 - Contacts/контакти
@@ -14,8 +15,10 @@
 ## Step 2: Content and Design
 
 1. Template to be used as ref: https://colorlib.com/wp/template/hami/
-2. Fill in content
-3. Make overall design/look of the website
+2. Home page
+  - Intro layer
+  - Services (Packages)
+  - Client feedback
 
 ## Step 3: DevOps automation
 
