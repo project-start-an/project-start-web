@@ -5,7 +5,8 @@
 1. Vite with React.js ✅
 2. Configure eslint and prettier ✅
 3. Confure routing with react router ✅
-4. Create a simple navbar with material ui
+4. Create a simple navbar with material ui ✅
+5. Create footer with mui ✅
 
 - Services/услуги
 - Contacts/контакти
