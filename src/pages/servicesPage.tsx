@@ -1,6 +1,3 @@
-
 export default function ServicesPage() {
-    return (
-        <div>Services page</div>
-    )
+  return <div>Services page</div>;
 }
