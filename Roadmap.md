@@ -16,9 +16,10 @@
 
 1. Template to be used as ref: https://colorlib.com/wp/template/hami/
 2. Home page
-  - Intro layer
-  - Services (Packages)
-  - Client feedback
+
+- Intro layer
+- Services (Packages)
+- Client feedback
 
 ## Step 3: DevOps automation
 
