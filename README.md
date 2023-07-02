@@ -41,11 +41,11 @@ npm run format
 
 # Packages
 
-Checkout [Packages list](Packages.md) for more info.
+Checkout [Packages list](../../wiki/Packages-list) for more info.
 
 # Roadmap
 
-Check out the Roadmap of the project [here](Roadmap.md)
+Check out the Roadmap of the project [here](../../wiki/Roadmap)
 
 # Icons for MD docs
 
