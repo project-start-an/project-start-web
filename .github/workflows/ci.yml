@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build:
@@ -14,7 +14,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18.x
-          cache: 'npm'
+          cache: "npm"
 
       - name: Cache dependencies
         uses: actions/cache@v3
@@ -38,7 +38,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18.x
-          cache: 'npm'
+          cache: "npm"
 
       - name: Cache NPM dependencies
         uses: actions/cache@v3
@@ -48,7 +48,6 @@ jobs:
 
       - name: linter
         run: npm run lint
-        
+
       - name: format
         run: npm run format
-
