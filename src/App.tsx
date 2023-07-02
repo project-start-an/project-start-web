@@ -7,30 +7,24 @@ import { Grid, Box } from "@mui/material";
 function App() {
   return (
     <div>
-       <Navigation />
-
-      <Grid container sx={{justifyContent: 'center', alignItems:'center'}}>
-        <Grid item md={10} >
-
-          <Box
-            sx={{
-              position: 'relative',
-              backgroundColor: 'grey',
-              width: '100%',
-              padding: '1rem'
-            }}
-          >
-          <Outlet />
-            
-
-          </Box>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          minHeight: "100vh", // This ensures the content takes up the full viewport height
+        }}
+      >
+        <Navigation />
+        <Grid container sx={{ justifyContent: "center", flexGrow: 1 }}>
+          <Grid item md={10} xs={11}>
+            <Box sx={{ padding: "1rem", height: "100%" }}>
+              <Outlet />
+            </Box>
+          </Grid>
         </Grid>
-      </Grid>
-      <Footer/>
-
-    
+        <Footer />
+      </Box>
     </div>
   );
 }
-
 export default App;
