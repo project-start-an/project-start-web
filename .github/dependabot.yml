@@ -11,5 +11,5 @@ updates:
       interval: "monthly"
     # Specify labels for npm pull requests
     labels:
-      - "npm-dependencies"
+      - "dependencies"
       - "update"
