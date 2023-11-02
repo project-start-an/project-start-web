@@ -7,9 +7,10 @@ const defaultTheme = createTheme();
 
 const projectName = "Project start";
 const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "Services", href: "/services" },
-  { label: "Contacts", href: "/contacts" },
+  { label: "Home", href: "#home" },
+  { label: "Services", href: "#services" },
+  { label: "Pricing", href: "#pricing" },
+  { label: "Our Team", href: "#ourTeam" },
 ];
 
 export default function Navigation() {

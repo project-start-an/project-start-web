@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./pages/errorPage.tsx";
 import ServicesPage from "./pages/servicesPage.tsx";
 import ContactPage from "./pages/contactPage.tsx";
+import HomePage from "./pages/homePage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -14,11 +15,15 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
+        path: "/",
+        element: <HomePage/>,
+      },
+      {
         path: "services",
         element: <ServicesPage />,
       },
       {
-        path: "contacts",
+        path: "ourTeam",
         element: <ContactPage />,
       },
     ],
