@@ -51,7 +51,7 @@ export default function Footer() {
             >
               {/* First Typography */}
               <Typography variant="body2">
-                &copy; {new Date().getFullYear()} Project Start. All rights
+                &copy; {new Date().getFullYear()} WedecodeIt. All rights
                 reserved.
               </Typography>
 

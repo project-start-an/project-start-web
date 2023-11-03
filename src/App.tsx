@@ -16,8 +16,8 @@ function App() {
       >
         <Navigation />
         <Grid container sx={{ justifyContent: "center", flexGrow: 1 }}>
-          <Grid item md={10} xs={11}>
-            <Box sx={{ padding: "1rem", height: "100%" }}>
+          <Grid item md={18} xs={11}>
+            <Box sx={{ padding: "0rem", height: "100%" }}>
               <Outlet />
             </Box>
           </Grid>
@@ -27,4 +27,5 @@ function App() {
     </div>
   );
 }
+
 export default App;

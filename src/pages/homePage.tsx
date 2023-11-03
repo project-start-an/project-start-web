@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import ServicesPage from "./servicesPage";
 import PricingPage from "./pricingPage";
 import ContactPage from "./contactPage";
+import MiddleSection from "./middleSection";
 
 interface Section {
   title: string;
@@ -14,25 +15,31 @@ function HomePage() {
   const sections: Section[] = [
     {
       title: "Home",
-      background: "grey",
+      background: "white",
       id: "home",
       ref: useRef(null),
     },
     {
       title: "Services",
-      background: "#3a3a3a",
+      background: "white",
       id: "services",
       ref: useRef(null),
     },
     {
+      title: "MiddleSection",
+      background: "white",
+      id: "middleSection",
+      ref: useRef(null),
+    },
+    {
       title: "Pricing",
-      background: "grey",
+      background: "white",
       id: "pricing",
       ref: useRef(null),
     },
     {
       title: "OurTeam",
-      background: "#3a3a3a",
+      background: "white",
       id: "ourTeam",
       ref: useRef(null),
     },
@@ -40,8 +47,11 @@ function HomePage() {
 
   const scrollToSection = (elementRef: React.RefObject<HTMLDivElement>) => {
     if (elementRef.current) {
+      // Calculate the scroll position with a slight offset
+      // const offset = 10; // Adjust this offset as needed
+      console.log(elementRef.current.offsetTop)
       window.scrollTo({
-        top: elementRef.current.offsetTop,
+        top: elementRef.current.offsetTop - 100,
         behavior: "smooth",
       });
     }
@@ -55,11 +65,18 @@ function HomePage() {
           ref={section.ref}
           id={section.id}
           className="section"
-          style={{ backgroundColor: section.background, minHeight: '90vh' }}
+          style={
+            { backgroundColor: section.background,
+              display: 'flex', 
+              // alignItems: 'flex-end', 
+              // justifyContent: 'flex-end', 
+              height: section.id === "ourTeam" ? '92vh' : '92vh' }
+          }
         >
-          {section.id==="services" ? <ServicesPage/> :
-          section.id==="pricing"? <PricingPage/>: 
-          section.id==="ourTeam" ? <ContactPage/>:
+          {section.id === "services" ? <ServicesPage /> :
+          section.id === "middleSection" ? <MiddleSection/> :
+          section.id === "pricing" ? <PricingPage /> :
+          section.id === "ourTeam" ? <ContactPage /> :
           <div>homePage</div>}
         </div>
       ))}
