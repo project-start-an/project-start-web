@@ -22,7 +22,7 @@ type TeamMember = {
     height: '80%',
     display: 'flex',
     alignItems: 'center',
-    flexDirection: 'column' as 'column',
+    flexDirection: 'column' as const,
     // backgroundColor:'grey'
   }; 
 
@@ -37,7 +37,7 @@ type TeamMember = {
     width: '70%', 
     height: '54%',
     display: 'flex',
-    flexDirection: 'column' as 'column',
+    flexDirection: 'column' as const,
   }; 
 
   const teamPersonNameOuterWrapperStyle = {
