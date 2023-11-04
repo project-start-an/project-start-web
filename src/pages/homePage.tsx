@@ -3,6 +3,7 @@ import ServicesPage from "./servicesPage";
 import PricingPage from "./pricingPage";
 import ContactPage from "./contactPage";
 import MiddleSection from "./middleSection";
+import IntroPage from "./introPage";
 
 interface Section {
   title: string;
@@ -45,18 +46,6 @@ function HomePage() {
     },
   ];
 
-  const scrollToSection = (elementRef: React.RefObject<HTMLDivElement>) => {
-    if (elementRef.current) {
-      // Calculate the scroll position with a slight offset
-      // const offset = 10; // Adjust this offset as needed
-      console.log(elementRef.current.offsetTop)
-      window.scrollTo({
-        top: elementRef.current.offsetTop - 100,
-        behavior: "smooth",
-      });
-    }
-  };
-
   return (
     <div className="App">
       {sections.map((section, index) => (
@@ -68,16 +57,17 @@ function HomePage() {
           style={
             { backgroundColor: section.background,
               display: 'flex', 
-              // alignItems: 'flex-end', 
-              // justifyContent: 'flex-end', 
-              height: section.id === "ourTeam" ? '92vh' : '92vh' }
+              alignItems: 'center', 
+              justifyContent: 'center', 
+              height: section.id === "ourTeam" ? '84vh' 
+              : '92vh' }
           }
         >
           {section.id === "services" ? <ServicesPage /> :
           section.id === "middleSection" ? <MiddleSection/> :
           section.id === "pricing" ? <PricingPage /> :
           section.id === "ourTeam" ? <ContactPage /> :
-          <div>homePage</div>}
+          <IntroPage/>}
         </div>
       ))}
     </div>
