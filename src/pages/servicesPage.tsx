@@ -1,4 +1,3 @@
-import React from 'react';
 import servicesBanner from '../assets/service_banner.png';
 import InnerWrapperStyle from './styled-components/InnerPageWrapper';
 import PageWrapperStyle from './styled-components/PageTitleWrapper';

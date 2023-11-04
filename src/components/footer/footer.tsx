@@ -3,7 +3,6 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-// import { Facebook, Instagram, Twitter } from "@mui/icons-material";
 import LinkedInSvg from '../../assets/LinkedIn white theme.svg'
 import InstagramSvg from '../../assets/Instagram white theme.svg'
 
@@ -11,14 +10,6 @@ import InstagramSvg from '../../assets/Instagram white theme.svg'
 const defaultTheme = createTheme();
 
 export default function Footer() {
-  // const iconStyle = {
-  //   marginRight: "8px", // Adjust the spacing as needed
-  //   fontSize: "21px", // Adjust the icon size as needed
-  // };
-
-  // const facebookColor = "#3b5998";
-  const instagramColor = "#E4405F";
-  const twitterColor = "#00acee";
 
   const handleLinkedInClick = () => {
     window.open("https://www.linkedin.com/company/wedecodeit", "_blank");

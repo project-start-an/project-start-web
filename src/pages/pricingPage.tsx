@@ -1,4 +1,3 @@
-import React from 'react'
 import pricingBanner from '../assets/pricing_banner.png'
 import InnerWrapperStyle from './styled-components/InnerPageWrapper';
 import PageWrapperStyle from './styled-components/PageTitleWrapper';

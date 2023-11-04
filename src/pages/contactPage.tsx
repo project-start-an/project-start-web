@@ -29,7 +29,6 @@ function ContactPage() {
               return(
                 <TeamPersonWrapper 
                 key={key}
-                id={item.id} 
                 name={item.name}
                 position={item.position}
                 email={item.email}

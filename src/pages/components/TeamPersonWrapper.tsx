@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 //vis assets
 import EmailSvg from '../../assets/Email.svg'
 import LinkedInSvg from '../../assets/LinkedIn.svg'
@@ -7,7 +7,6 @@ import { styled } from "@mui/material";
 
 // Define the props type with the 'id' property as a string
 type TeamMember = {
-    id: string;
     name: string;
     position: string;
     email: string;
@@ -72,7 +71,7 @@ type TeamMember = {
   }; 
 
 
-function TeamPersonWrapper({ id, name, position, email,emailLink, linkedInName, linkedInLink, svg, mobileNumber } : TeamMember) {
+function TeamPersonWrapper({  name, position, email,emailLink, linkedInName, linkedInLink, svg, mobileNumber } : TeamMember) {
  
   const containerRef = useRef(null);
 
@@ -86,10 +85,6 @@ function TeamPersonWrapper({ id, name, position, email,emailLink, linkedInName, 
     navigator.clipboard.writeText(email).then(() => {
 
     });
-
-    //Start email template on click
-    // const mailtoLink = `mailto:${email}`;
-    // window.location.href = mailtoLink;
   };
 
  

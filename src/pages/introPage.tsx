@@ -1,4 +1,3 @@
-import React from 'react';
 
 //visual assets
 import rightAsset from '../assets/IntroCompAssets/Webinar (1) 1.svg';

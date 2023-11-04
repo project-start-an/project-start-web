@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import { ThemeProvider } from "@emotion/react";
 import { AppBar, Toolbar, createTheme } from "@mui/material";
 import CustomTypography from "../styled-components/CustomTypography";
