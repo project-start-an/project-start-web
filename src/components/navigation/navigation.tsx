@@ -14,7 +14,6 @@ const navLinks = [
 ];
 
 export default function Navigation() {
-
   return (
     <ThemeProvider theme={defaultTheme}>
       <AppBar
@@ -23,20 +22,21 @@ export default function Navigation() {
         style={{
           zIndex: 1000,
           borderBottomLeftRadius: "0.3rem",
-          borderBottomRightRadius: "0.3rem", 
-          boxShadow: "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
+          borderBottomRightRadius: "0.3rem",
+          boxShadow:
+            "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
         }}
         sx={{
-          background: "white", 
+          background: "white",
         }}
       >
-       <Toolbar sx={{ mx: 15 }}>
+        <Toolbar sx={{ mx: 15 }}>
           <CustomTypography variant="h6" sx={{ flexGrow: 1 }}>
             {projectName}
           </CustomTypography>
           <nav>
             {navLinks.map((link, index) => (
-              <NavigationLink key={index} variant="button" href={link.href} >
+              <NavigationLink key={index} variant="button" href={link.href}>
                 {link.label}
               </NavigationLink>
             ))}

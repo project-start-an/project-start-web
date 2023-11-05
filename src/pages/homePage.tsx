@@ -5,12 +5,32 @@ import ContactPage from "./contactPage";
 import MiddleSection from "./middleSection";
 import IntroPage from "./introPage";
 
+import { styled } from "@mui/material";
+
 interface Section {
   title: string;
   background: string;
   id: string; // Add an ID for the section
   ref: React.RefObject<HTMLDivElement>;
 }
+
+type InputProps = {
+  background: string;
+  id: string;
+};
+
+const ResponsiveSection = styled("div")<InputProps>(({ background, id }) => ({
+  backgroundColor: background,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  height: id === "ourTeam" ? "84vh" : "92vh",
+
+  "@media (max-width: 768px)": {
+    width: "100%",
+    height: id === "ourTeam" ? "120vh" : "92vh",
+  },
+}));
 
 function HomePage() {
   const sections: Section[] = [
@@ -49,26 +69,24 @@ function HomePage() {
   return (
     <div className="App">
       {sections.map((section, index) => (
-        <div
+        <ResponsiveSection
           key={index}
           ref={section.ref}
           id={section.id}
-          className="section"
-          style={
-            { backgroundColor: section.background,
-              display: 'flex', 
-              alignItems: 'center', 
-              justifyContent: 'center', 
-              height: section.id === "ourTeam" ? '84vh' 
-              : '92vh' }
-          }
+          background={section.background}
         >
-          {section.id === "services" ? <ServicesPage /> :
-          section.id === "middleSection" ? <MiddleSection/> :
-          section.id === "pricing" ? <PricingPage /> :
-          section.id === "ourTeam" ? <ContactPage /> :
-          <IntroPage/>}
-        </div>
+          {section.id === "services" ? (
+            <ServicesPage />
+          ) : section.id === "middleSection" ? (
+            <MiddleSection />
+          ) : section.id === "pricing" ? (
+            <PricingPage />
+          ) : section.id === "ourTeam" ? (
+            <ContactPage />
+          ) : (
+            <IntroPage />
+          )}
+        </ResponsiveSection>
       ))}
     </div>
   );

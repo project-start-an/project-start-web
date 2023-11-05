@@ -11,7 +11,7 @@ export default function ErrorPage() {
         <i>
           {isRouteErrorResponse(error)
             ? // note that error is type `ErrorResponse`
-               error.statusText
+              error.statusText
             : "Unknown error message"}
         </i>
       </p>
