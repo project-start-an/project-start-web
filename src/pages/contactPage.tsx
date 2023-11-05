@@ -18,15 +18,13 @@ const ResponsiveTeamTitleVisualAsset = styled("div")({
     height: "40%",
   },
 
-  // Apply styles to the img element
   "& img": {
-    width: "100%", // Set the image width to 100% of its container
-    height: "100%", // Set the image height to 100% of its container
+    width: "100%",
+    height: "100%",
   },
 });
 
 const ResponsivePageTitleHeader = styled("div")({
-  // Add your default styles here
   height: "15%",
   width: "90%",
   marginLeft: "6%",
