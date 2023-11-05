@@ -69,7 +69,7 @@ function PricingPage() {
         </div>
         {/* content  */}
         <ResponsivePricingContentWrapper>
-          {PricingData.map((item, key) => {
+          {PricingData.map((item) => {
             return (
               <ResponsivePricingBox
                 height={item.height}
