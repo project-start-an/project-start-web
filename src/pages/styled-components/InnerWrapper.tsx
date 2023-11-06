@@ -7,6 +7,7 @@ const ResponsiveInnerWrapper = styled("div")({
   display: "flex",
   flexDirection: "column",
   justifyContent: "flex-start",
+  // backgroundColor: 'grey',
 
   "@media (max-width: 768px)": {
     width: "100%", // Apply 'flexDirection: column' for mobile view

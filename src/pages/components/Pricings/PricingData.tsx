@@ -5,14 +5,13 @@ export type PricingObj = {
   height: string;
   width: string;
   background: string;
-  features: FeaturesObj[]
+  features: FeaturesObj[];
 };
 
 type FeaturesObj = {
   feature: string;
   price: number;
-}
-
+};
 
 const PricingData: PricingObj[] = [
   {
@@ -25,21 +24,21 @@ const PricingData: PricingObj[] = [
     features: [
       {
         feature: "Cloud Hosting & Managment",
-        price: 100
+        price: 100,
       },
       {
         feature: "Database Management",
-        price: 100
+        price: 100,
       },
       {
         feature: "Monitoring & Logging",
-        price: 50
+        price: 50,
       },
       {
         feature: "Data Feed Integrations",
-        price: 150
+        price: 150,
       },
-    ]
+    ],
   },
   {
     id: 2,
@@ -51,25 +50,25 @@ const PricingData: PricingObj[] = [
     features: [
       {
         feature: "Website Page",
-        price: 150
+        price: 150,
       },
       {
         feature: "Contact Forms",
-        price: 50
+        price: 50,
       },
       {
         feature: "Wiki Component",
-        price: 50
+        price: 50,
       },
       {
         feature: "Calendar",
-        price: 50
+        price: 50,
       },
       {
         feature: "Appointments Feature",
-        price: 50
+        price: 50,
       },
-    ]
+    ],
   },
   {
     id: 3,
@@ -81,25 +80,25 @@ const PricingData: PricingObj[] = [
     features: [
       {
         feature: "Ad-free",
-        price: 50
+        price: 50,
       },
       {
         feature: "SEO Optimization",
-        price: 50
+        price: 50,
       },
       {
         feature: "Google Accounts Management",
-        price: 50
+        price: 50,
       },
       {
         feature: "Users Statistics",
-        price: 50
+        price: 50,
       },
       {
         feature: "Business Listing",
-        price: 50
-      }
-    ]
+        price: 50,
+      },
+    ],
   },
 ];
 

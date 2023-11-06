@@ -1,9 +1,13 @@
 import servicesBanner from "../assets/service_banner.png";
-import InnerWrapperStyle from "./styled-components/InnerPageWrapper";
-import PageWrapperStyle from "./styled-components/PageTitleWrapper";
+import { styled } from "@mui/material";
 
 //vis assets
-import OurServices from "../assets/ServicesCompAssets/Our Services.svg";
+import ResponsiveInnerWrapper from "./styled-components/InnerWrapper";
+import {
+  ResponsivePageTitleHeader,
+  ResponsiveTeamTitleVisualAsset,
+} from "./contactPage";
+import ServicesData from "./components/ServicesData/ServicesData";
 
 function ServicesPage() {
   const backgroundImageStyle = {
@@ -14,18 +18,141 @@ function ServicesPage() {
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    height: "100%", // Set the component height to 100% of the viewport height
+    height: "100%",
     width: "100%",
   };
 
+  const ResponsiveServicesContentWrapper = styled("div")({
+    height: "84%",
+    width: "100%",
+    display: "flex",
+    justifyContent: "space-evenly",
+    alignItems: "flex-start",
+    paddingTop: "1.5%",
+
+    "@media (max-width: 768px)": {
+      alignItems: "center",
+      flexDirection: "column",
+    },
+  });
+
+  const ResponsiveServicesBoxWrapper = styled("div")({
+    height: "70%",
+    width: "29%",
+    display: "flex",
+    borderRadius: "0.5em",
+    backgroundColor: "white",
+    flexDirection: "column",
+    boxShadow: "rgba(0, 0, 0, 0.14) 0.8px 2px 6px 2px",
+
+    "@media (max-width: 768px)": {
+      height: "29%",
+      width: "76%",
+    },
+  });
+
+  const ResponsiveServicesBoxTitleHeader = styled("div")({
+    height: "10%",
+    width: "100%",
+    display: "flex",
+    fontFamily: "Ubuntu",
+    fontWeight: "600",
+    fontSize: "1.3vw",
+    alignItems: "flex-end",
+    justifyContent: "center",
+    // backgroundColor: 'red',
+
+    "@media (max-width: 768px)": {
+      fontSize: "4.5vw",
+    },
+  });
+
+  const ResponsiveServicesBoxContentWrapper = styled("div")({
+    height: "70%",
+    width: "100%",
+    display: "flex",
+    fontFamily: "Ubuntu",
+    fontWeight: "600",
+    fontSize: "1.3vw",
+    alignItems: "flex-end",
+    justifyContent: "center",
+    // backgroundColor: 'green',
+
+    "@media (max-width: 768px)": {},
+  });
+
+  const ResponsiveServicesBoxInfoBtnWrapper = styled("div")({
+    height: "20%",
+    width: "100%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+
+    "@media (max-width: 768px)": {},
+  });
+
+  const ResponsiveServicesBoxInfoBtn = styled("div")({
+    height: "58%",
+    width: "36%",
+    display: "flex",
+    borderRadius: "0.6em",
+    color: "#FFFFFF",
+    fontFamily: "Ubuntu",
+    fontWeight: "500",
+    fontSize: "1vw",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#065A82",
+    border: "0.15em solid #065A82",
+    cursor: "pointer",
+
+    "@media (max-width: 768px)": {
+      fontSize: "3.8vw",
+      fontWeight: "600",
+    },
+
+    "&:hover": {
+      // opacity: 0.7,
+      color: "rgb(0 0 0 / 90%)",
+      backgroundColor: "#FFFFFF",
+    },
+  });
+
+  const CustomResponsiveTeamTitleVisualAsset = styled(
+    ResponsiveTeamTitleVisualAsset,
+  )({
+    color: "white",
+    "@media (max-width: 768px)": {
+      color: "black",
+    },
+  });
+
   return (
     <div style={backgroundImageStyle}>
-      <div style={InnerWrapperStyle}>
-        {/* page title */}
-        <div style={PageWrapperStyle}>
-          <img src={OurServices} alt="Our services" />
-        </div>
-      </div>
+      <ResponsiveInnerWrapper>
+        <ResponsivePageTitleHeader>
+          <CustomResponsiveTeamTitleVisualAsset>
+            Our Services
+          </CustomResponsiveTeamTitleVisualAsset>
+        </ResponsivePageTitleHeader>
+        <ResponsiveServicesContentWrapper>
+          {ServicesData.map((item) => {
+            return (
+              <ResponsiveServicesBoxWrapper>
+                <ResponsiveServicesBoxTitleHeader>
+                  {item.name}
+                </ResponsiveServicesBoxTitleHeader>
+                <ResponsiveServicesBoxContentWrapper></ResponsiveServicesBoxContentWrapper>
+                <ResponsiveServicesBoxInfoBtnWrapper>
+                  <ResponsiveServicesBoxInfoBtn>
+                    More info
+                  </ResponsiveServicesBoxInfoBtn>
+                </ResponsiveServicesBoxInfoBtnWrapper>
+              </ResponsiveServicesBoxWrapper>
+            );
+          })}
+        </ResponsiveServicesContentWrapper>
+      </ResponsiveInnerWrapper>
     </div>
   );
 }

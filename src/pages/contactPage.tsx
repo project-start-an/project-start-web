@@ -1,6 +1,3 @@
-//visual assets
-import ourTeam from "../assets/OurTeamAssets/Our team.svg";
-
 // Import your styles
 import TeamPersonWrapper from "./components/TeamPersonWrapper";
 import { styled } from "@mui/material";
@@ -12,15 +9,15 @@ export const ResponsiveTeamTitleVisualAsset = styled("div")({
   // Add your default styles for the containing div here
   width: "25%",
   height: "40%",
-  fontFamily: 'Ubuntu',
-  fontWeight: '500',
-  fontSize: '2.7vw',
-  color: 'black',
+  fontFamily: "Ubuntu",
+  fontWeight: "500",
+  fontSize: "2.7vw",
+  color: "black",
 
   "@media (max-width: 768px)": {
     width: "75%",
     height: "40%",
-    fontSize: '10vw',
+    fontSize: "10vw",
   },
 
   "& img": {
@@ -34,10 +31,10 @@ export const ResponsivePageTitleHeader = styled("div")({
   width: "90%",
   marginLeft: "6%",
   display: "flex",
-  alignItems: "flex-end",
+  alignItems: "center",
 
   "@media (max-width: 768px)": {
-    height: "14%",
+    height: "12%",
     alignItems: "center",
   },
 });
@@ -77,7 +74,7 @@ function ContactPage() {
       {/* title */}
       <ResponsivePageTitleHeader>
         <ResponsiveTeamTitleVisualAsset>
-            Our Team
+          Our Team
         </ResponsiveTeamTitleVisualAsset>
       </ResponsivePageTitleHeader>
       {/* main content */}

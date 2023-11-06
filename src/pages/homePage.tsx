@@ -28,9 +28,14 @@ const ResponsiveSection = styled("div")<InputProps>(({ background, id }) => ({
 
   "@media (max-width: 768px)": {
     width: "100%",
-    height: id === "ourTeam" ? "120vh" 
-    : id==="pricing" ? "180vh" 
-    : "92vh",
+    height:
+      id === "ourTeam"
+        ? "120vh"
+        : id === "pricing"
+        ? "180vh"
+        : id === "services"
+        ? "160vh"
+        : "92vh",
   },
 }));
 
