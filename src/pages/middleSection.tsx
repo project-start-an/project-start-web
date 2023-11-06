@@ -1,5 +1,9 @@
 function MiddleSection() {
-  return <div>middleSection</div>;
+  return (
+    <div>
+
+    </div>
+  )
 }
 
 export default MiddleSection;

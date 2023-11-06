@@ -8,14 +8,19 @@ import { styled } from "@mui/material";
 //team data
 import TeamData from "./components/TeamData/teamData";
 
-const ResponsiveTeamTitleVisualAsset = styled("div")({
+export const ResponsiveTeamTitleVisualAsset = styled("div")({
   // Add your default styles for the containing div here
-  width: "14%",
+  width: "25%",
   height: "40%",
+  fontFamily: 'Ubuntu',
+  fontWeight: '500',
+  fontSize: '2.7vw',
+  color: 'black',
 
   "@media (max-width: 768px)": {
-    width: "40%",
+    width: "75%",
     height: "40%",
+    fontSize: '10vw',
   },
 
   "& img": {
@@ -24,7 +29,7 @@ const ResponsiveTeamTitleVisualAsset = styled("div")({
   },
 });
 
-const ResponsivePageTitleHeader = styled("div")({
+export const ResponsivePageTitleHeader = styled("div")({
   height: "15%",
   width: "90%",
   marginLeft: "6%",
@@ -32,7 +37,7 @@ const ResponsivePageTitleHeader = styled("div")({
   alignItems: "flex-end",
 
   "@media (max-width: 768px)": {
-    height: "15%",
+    height: "14%",
     alignItems: "center",
   },
 });
@@ -72,7 +77,7 @@ function ContactPage() {
       {/* title */}
       <ResponsivePageTitleHeader>
         <ResponsiveTeamTitleVisualAsset>
-          <img src={ourTeam} alt="Our team" />
+            Our Team
         </ResponsiveTeamTitleVisualAsset>
       </ResponsivePageTitleHeader>
       {/* main content */}
