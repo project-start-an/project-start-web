@@ -1,18 +1,18 @@
-import pricingBanner from "../assets/pricing_banner.png";
+import pricingBanner from "../../assets/pricing_banner.png";
 
 import { styled } from "@mui/material";
 
 //vis assets
-import ResponsiveInnerWrapper from "./styled-components/InnerWrapper";
-import Checkmark from "../assets/Checkmark.svg";
+import ResponsiveInnerWrapper from "../../styles/styled-components/InnerWrapper";
+import Checkmark from "../../assets/Checkmark.svg";
 
-import PricingData from "./components/Pricings/PricingData";
+import PricingData from "../../data/Pricings/PricingData";
 import {
   ResponsivePageTitleHeader,
   ResponsiveTeamTitleVisualAsset,
-} from "./contactPage";
+} from "../contact/ContactComponent";
 
-function PricingPage() {
+function PricingComponent() {
   const backgroundImageStyle = {
     backgroundImage: `url(${pricingBanner})`,
     backgroundSize: "contain",
@@ -162,4 +162,4 @@ function PricingPage() {
   );
 }
 
-export default PricingPage;
+export default PricingComponent;

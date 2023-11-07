@@ -1,9 +1,8 @@
 import React, { useRef } from "react";
-import ServicesPage from "./servicesPage";
-import PricingPage from "./pricingPage";
-import ContactPage from "./contactPage";
-import MiddleSection from "./middleSection";
-import IntroPage from "./introPage";
+import HomeComponent from "../components/home/HomeComponent";
+import ServicesComponent from "../components/services/ServiceComponent";
+import PricingComponent from "../components/pricing/PricingComponent";
+import ContactComponent from "../components/contact/ContactComponent";
 
 import { styled } from "@mui/material";
 
@@ -39,7 +38,7 @@ const ResponsiveSection = styled("div")<InputProps>(({ background, id }) => ({
   },
 }));
 
-function HomePage() {
+function MainPage() {
   const sections: Section[] = [
     {
       title: "Home",
@@ -51,12 +50,6 @@ function HomePage() {
       title: "Services",
       background: "white",
       id: "services",
-      ref: useRef(null),
-    },
-    {
-      title: "MiddleSection",
-      background: "white",
-      id: "middleSection",
       ref: useRef(null),
     },
     {
@@ -83,15 +76,13 @@ function HomePage() {
           background={section.background}
         >
           {section.id === "services" ? (
-            <ServicesPage />
-          ) : section.id === "middleSection" ? (
-            <MiddleSection />
+            <ServicesComponent />
           ) : section.id === "pricing" ? (
-            <PricingPage />
+            <PricingComponent />
           ) : section.id === "ourTeam" ? (
-            <ContactPage />
+            <ContactComponent />
           ) : (
-            <IntroPage />
+            <HomeComponent />
           )}
         </ResponsiveSection>
       ))}
@@ -99,4 +90,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default MainPage;

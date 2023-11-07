@@ -1,15 +1,15 @@
-import servicesBanner from "../assets/service_banner.png";
+import servicesBanner from "../../assets/service_banner.png";
 import { styled } from "@mui/material";
 
 //vis assets
-import ResponsiveInnerWrapper from "./styled-components/InnerWrapper";
+import ResponsiveInnerWrapper from "../../styles/styled-components/InnerWrapper";
 import {
   ResponsivePageTitleHeader,
   ResponsiveTeamTitleVisualAsset,
-} from "./contactPage";
-import ServicesData from "./components/ServicesData/ServicesData";
+} from "../contact/ContactComponent";
+import ServicesData from "../../data/ServicesData/ServicesData";
 
-function ServicesPage() {
+function ServiceComponent() {
   const backgroundImageStyle = {
     backgroundImage: `url(${servicesBanner})`,
     backgroundSize: "contain",
@@ -157,4 +157,4 @@ function ServicesPage() {
   );
 }
 
-export default ServicesPage;
+export default ServiceComponent;

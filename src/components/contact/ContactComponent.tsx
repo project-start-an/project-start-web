@@ -1,9 +1,9 @@
 // Import your styles
-import TeamPersonWrapper from "./components/TeamPersonWrapper";
+import TeamPersonWrapper from "../../styles/styled-components/TeamPersonWrapper";
 import { styled } from "@mui/material";
 
 //team data
-import TeamData from "./components/TeamData/teamData";
+import TeamData from "../../data/TeamData/teamData";
 
 export const ResponsiveTeamTitleVisualAsset = styled("div")({
   // Add your default styles for the containing div here
@@ -68,7 +68,7 @@ const ResponsiveInnerWrapper = styled("div")({
   },
 });
 
-function ContactPage() {
+function ContactComponent() {
   return (
     <ResponsiveInnerWrapper>
       {/* title */}
@@ -99,4 +99,4 @@ function ContactPage() {
   );
 }
 
-export default ContactPage;
+export default ContactComponent;

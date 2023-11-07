@@ -1,11 +1,11 @@
 //visual assets
-import rightAsset from "../assets/IntroCompAssets/Webinar (1) 1.svg";
-import leftAsset from "../assets/IntroCompAssets/home_text.svg";
+import rightAsset from "../../assets/IntroCompAssets/Webinar (1) 1.svg";
+import leftAsset from "../../assets/IntroCompAssets/home_text.svg";
 
 //styles
-import InnerWrapperStyle from "./styled-components/InnerPageWrapper";
+import InnerWrapperStyle from "../../styles/styled-components/InnerPageWrapper";
 
-function IntroPage() {
+function HomeComponent() {
   const introSectionsOuterDividerStyle = {
     height: "100%",
     width: "50%",
@@ -66,4 +66,4 @@ function IntroPage() {
   );
 }
 
-export default IntroPage;
+export default HomeComponent;
