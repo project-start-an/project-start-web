@@ -2,6 +2,7 @@ import { ThemeProvider } from "@emotion/react";
 import { AppBar, Toolbar, createTheme } from "@mui/material";
 import CustomTypography from "../styled-components/CustomTypography";
 import NavigationLink from "../styled-components/NavigationLink";
+import { useState, useEffect } from "react";
 
 const defaultTheme = createTheme();
 
@@ -14,6 +15,30 @@ const navLinks = [
 ];
 
 export default function Navigation() {
+  const [, setScrollOffset] = useState<number>(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollOffset(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleNavLinkClick = (event: React.MouseEvent, href: string) => {
+    event.preventDefault();
+    const targetElement = document.querySelector(href);
+    if (targetElement) {
+      const offset =
+        targetElement.getBoundingClientRect().top + window.scrollY - 65;
+      window.scrollTo({ top: offset, behavior: "smooth" });
+    }
+  };
+
   return (
     <ThemeProvider theme={defaultTheme}>
       <AppBar
@@ -36,7 +61,12 @@ export default function Navigation() {
           </CustomTypography>
           <nav>
             {navLinks.map((link, index) => (
-              <NavigationLink key={index} variant="button" href={link.href}>
+              <NavigationLink
+                onClick={(event) => handleNavLinkClick(event, link.href)}
+                key={index}
+                variant="button"
+                href={link.href}
+              >
                 {link.label}
               </NavigationLink>
             ))}
