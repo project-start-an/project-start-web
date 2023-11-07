@@ -11,13 +11,14 @@ function App() {
         sx={{
           display: "flex",
           flexDirection: "column",
-          minHeight: "100vh", // This ensures the content takes up the full viewport height
+          // minHeight: "100vh", // This ensures the content takes up the full viewport height
+          // width: '100%'
         }}
       >
         <Navigation />
         <Grid container sx={{ justifyContent: "center", flexGrow: 1 }}>
-          <Grid item md={10} xs={11}>
-            <Box sx={{ padding: "1rem", height: "100%" }}>
+          <Grid item md={12} xs={12}>
+            <Box sx={{ padding: "0rem", height: "100%" }}>
               <Outlet />
             </Box>
           </Grid>
@@ -27,4 +28,5 @@ function App() {
     </div>
   );
 }
+
 export default App;
