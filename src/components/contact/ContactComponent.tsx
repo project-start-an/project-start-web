@@ -7,7 +7,7 @@ import TeamData from "../../data/TeamData/teamData";
 
 export const ResponsiveTeamTitleVisualAsset = styled("div")({
   // Add your default styles for the containing div here
-  width: "25%",
+  width: "40%",
   height: "40%",
   fontFamily: "Ubuntu",
   fontWeight: "500",

@@ -27,8 +27,8 @@ function ServiceComponent() {
     width: "100%",
     display: "flex",
     justifyContent: "space-evenly",
-    alignItems: "flex-start",
-    paddingTop: "1.5%",
+    alignItems: "center",
+    // backgroundColor: 'red',
 
     "@media (max-width: 768px)": {
       alignItems: "center",
@@ -37,13 +37,13 @@ function ServiceComponent() {
   });
 
   const ResponsiveServicesBoxWrapper = styled("div")({
-    height: "70%",
-    width: "29%",
+    height: "74%",
+    width: "25%",
     display: "flex",
     borderRadius: "0.5em",
-    backgroundColor: "white",
+    backgroundColor: "#D7E6F0",
     flexDirection: "column",
-    boxShadow: "rgba(0, 0, 0, 0.14) 0.8px 2px 6px 2px",
+    boxShadow: "rgba(0, 0, 0, 0.25) 0.8px 2px 6px 2px",
 
     "@media (max-width: 768px)": {
       height: "29%",
