@@ -4,9 +4,6 @@ import { styled } from "@mui/material";
 
 //vis assets
 import ResponsiveInnerWrapper from "../../styles/styled-components/InnerWrapper";
-import Checkmark from "../../assets/Checkmark.svg";
-
-import PricingData from "../../data/Pricings/PricingData";
 import {
   ResponsivePageTitleHeader,
   ResponsiveTeamTitleVisualAsset,
