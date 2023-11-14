@@ -8,10 +8,10 @@ type InputProps = {
 const ResponsiveSection = styled("div")<InputProps>(({ background, id }) => ({
     backgroundColor: background,
     display: "flex",
-    alignItems: "center",
     justifyContent: "center",
-    // height: id === "ourTeam" ? "84vh" : "100vh",
+    alignItems: "center",
     height: id === "home" ? "calc(100vh - 64px)" : "100vh",
+    // height: id === "ourTeam" ? "84vh" : "100vh",
   
     "@media (max-width: 768px)": {
       width: "100%",
