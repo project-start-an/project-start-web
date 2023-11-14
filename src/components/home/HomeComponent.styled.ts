@@ -15,11 +15,12 @@ const ResponsiveBackgroundBannerStyle = styled("div")({
 });
 
 const introSectionsOuterDividerStyle = {
-  // height: "100%",
-  // width: "50%",
+  height: "100%",
+  width: "40%",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
+  // width: "40%",
   // backgroundColor: 'grey',
 };
 
@@ -46,6 +47,12 @@ const rightAssetStyle = {
   // height: "90%",
 };
 
+const imageAssetStyle: React.CSSProperties = {
+  height: "100%",
+  width: "100%",
+  objectFit: "contain"
+}
+
 const leftImageAssetStyle = {
   // width: "80%",
   // height: "66%",
@@ -58,4 +65,5 @@ export {
   leftAssetStyle,
   rightAssetStyle,
   leftImageAssetStyle,
+  imageAssetStyle
 };

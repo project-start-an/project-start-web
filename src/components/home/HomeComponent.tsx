@@ -6,6 +6,7 @@ import {
   introSectionsOuterDividerStyle,
   introSectionsInnerDividerStyle,
   leftAssetStyle,
+  imageAssetStyle,
   leftImageAssetStyle,
   rightAssetStyle,
 } from "./HomeComponent.styled";
@@ -14,6 +15,7 @@ import LeftPoligon from "../../assets/IntroCompAssets/LeftPoligon.svg";
 import RighPolygon from "../../assets/IntroCompAssets/RightPoligon.svg";
 import UpPolygon from "../../assets/IntroCompAssets/UpPolygon.svg";
 import BottomPolygon from "../../assets/IntroCompAssets/BottomPolygon.svg";
+import { Height } from "@mui/icons-material";
 
 const WrapperStyle: React.CSSProperties = {
   display: "flex",
@@ -22,6 +24,7 @@ const WrapperStyle: React.CSSProperties = {
   alignItems: "stretch",
   width: "100%",
   height: "100%",
+  gap: "1rem"
 };
 
 const HorizontalWrapperStyle = {
@@ -30,12 +33,18 @@ const HorizontalWrapperStyle = {
   alignItems: "center",
   flex: 1,
   height: "40%",
+  gap: "1rem",
   overflow: "hidden"
 };
 
-const LeftPolygonStyle = {
+const LeftRightPolygonWrapperStyle = {
   height: "100%",
-  width: "3rem",
+  width: "5%"
+};
+
+const LeftRightPolygonStyle = {
+  height: "100%",
+  width: "100%",
 };
 
 const UpPolygonWrapperStyle = {
@@ -44,7 +53,7 @@ const UpPolygonWrapperStyle = {
 };
 
 const UpPolygonStyle = {
-  height: "3rem",
+  height: "100%",
 };
 
 const BottomPolygonWrapperStyle = {
@@ -59,26 +68,24 @@ function HomeComponent() {
         <img src={UpPolygon} style={UpPolygonStyle} />
       </div>
       <div style={HorizontalWrapperStyle}>
-        <img src={LeftPoligon} style={LeftPolygonStyle} />
+        <div style={LeftRightPolygonWrapperStyle}>
+          <img src={LeftPoligon} style={LeftRightPolygonStyle} />
+        </div>
         {/* left section */}
         <div style={introSectionsOuterDividerStyle}>
-          <div style={introSectionsInnerDividerStyle}>
-            <div style={leftAssetStyle}>
-              <img
-                src={leftAsset}
-                style={leftImageAssetStyle}
-                alt="welcome text"
-              />
-            </div>
-          </div>
+          <img
+            src={leftAsset}
+            style={imageAssetStyle}
+            alt="welcome text"
+          />
         </div>
         {/* right section */}
         <div style={introSectionsOuterDividerStyle}>
-          <div style={introSectionsInnerDividerStyle}>
-            <img src={rightAsset} style={rightAssetStyle} alt="Image asset" />
-          </div>
+          <img src={rightAsset} style={imageAssetStyle} alt="Image asset" />
         </div>
-        <img src={RighPolygon} style={LeftPolygonStyle} />
+        <div style={LeftRightPolygonWrapperStyle}>
+          <img src={RighPolygon} style={LeftRightPolygonStyle} />
+        </div>
       </div>
       <div style={BottomPolygonWrapperStyle}>
         <img src={BottomPolygon} />
