@@ -119,7 +119,7 @@ function ServiceComponent() {
   });
 
   const CustomResponsiveTeamTitleVisualAsset = styled(
-    ResponsiveTeamTitleVisualAsset,
+    ResponsiveTeamTitleVisualAsset
   )({
     color: "white",
     "@media (max-width: 768px)": {

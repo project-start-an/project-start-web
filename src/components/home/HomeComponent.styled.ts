@@ -50,8 +50,8 @@ const rightAssetStyle = {
 const imageAssetStyle: React.CSSProperties = {
   height: "100%",
   width: "100%",
-  objectFit: "contain"
-}
+  objectFit: "contain",
+};
 
 const leftImageAssetStyle = {
   // width: "80%",
@@ -65,5 +65,5 @@ export {
   leftAssetStyle,
   rightAssetStyle,
   leftImageAssetStyle,
-  imageAssetStyle
+  imageAssetStyle,
 };

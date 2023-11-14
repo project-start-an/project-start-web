@@ -4,18 +4,13 @@ import leftAsset from "../../assets/IntroCompAssets/home_text.svg";
 
 import {
   introSectionsOuterDividerStyle,
-  introSectionsInnerDividerStyle,
-  leftAssetStyle,
   imageAssetStyle,
-  leftImageAssetStyle,
-  rightAssetStyle,
 } from "./HomeComponent.styled";
 
 import LeftPoligon from "../../assets/IntroCompAssets/LeftPoligon.svg";
 import RighPolygon from "../../assets/IntroCompAssets/RightPoligon.svg";
 import UpPolygon from "../../assets/IntroCompAssets/UpPolygon.svg";
 import BottomPolygon from "../../assets/IntroCompAssets/BottomPolygon.svg";
-import { Height } from "@mui/icons-material";
 
 const WrapperStyle: React.CSSProperties = {
   display: "flex",
@@ -24,7 +19,7 @@ const WrapperStyle: React.CSSProperties = {
   alignItems: "stretch",
   width: "100%",
   height: "100%",
-  gap: "1rem"
+  gap: "1rem",
 };
 
 const HorizontalWrapperStyle = {
@@ -34,12 +29,12 @@ const HorizontalWrapperStyle = {
   flex: 1,
   height: "40%",
   gap: "1rem",
-  overflow: "hidden"
+  overflow: "hidden",
 };
 
 const LeftRightPolygonWrapperStyle = {
   height: "100%",
-  width: "5%"
+  width: "5%",
 };
 
 const LeftRightPolygonStyle = {
@@ -73,11 +68,7 @@ function HomeComponent() {
         </div>
         {/* left section */}
         <div style={introSectionsOuterDividerStyle}>
-          <img
-            src={leftAsset}
-            style={imageAssetStyle}
-            alt="welcome text"
-          />
+          <img src={leftAsset} style={imageAssetStyle} alt="welcome text" />
         </div>
         {/* right section */}
         <div style={introSectionsOuterDividerStyle}>
