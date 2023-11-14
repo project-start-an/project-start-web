@@ -92,7 +92,9 @@ function TeamPersonWrapper({
 
   const handleEmailClick = (email: string) => {
     // Copy the email to the clipboard
-    navigator.clipboard.writeText(email).then(() => {});
+    navigator.clipboard
+      .writeText(email)
+      .then(() => console.log("Email is copied!"));
   };
 
   const LinkedInIcon = styled("div")({

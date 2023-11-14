@@ -1,32 +1,32 @@
 import { styled } from "@mui/material";
-import homeBanner from "../../assets/home_banner.png";
 
 const ResponsiveBackgroundBannerStyle = styled("div")({
-  backgroundImage: `url(${homeBanner})`,
-  backgroundSize: "contain",
-  backgroundRepeat: "no-repeat",
+  // backgroundImage: `url(${homeBanner})`,
+  // backgroundSize: "contain",
+  // backgroundRepeat: "no-repeat",
+  backgroundColor: "white",
   display: "flex",
-  flex: 1,
-  alignItems: "center",
   justifyContent: "center",
-  height: "100%",
+  alignItems: "center",
   width: "100%",
+  height: "100%",
 
   "@media (max-width: 768px)": {},
 });
 
 const introSectionsOuterDividerStyle = {
   height: "100%",
-  width: "50%",
+  width: "40%",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
+  // width: "40%",
   // backgroundColor: 'grey',
 };
 
 const introSectionsInnerDividerStyle = {
-  height: "60%",
-  width: "100%",
+  // height: "60%",
+  // width: "100%",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -34,8 +34,8 @@ const introSectionsInnerDividerStyle = {
 };
 
 const leftAssetStyle = {
-  height: "70%",
-  width: "100%",
+  // height: "70%",
+  // width: "100%",
   display: "flex",
   // backgroundColor: 'grey',
   alignItems: "center",
@@ -43,13 +43,19 @@ const leftAssetStyle = {
 };
 
 const rightAssetStyle = {
+  // width: "100%",
+  // height: "90%",
+};
+
+const imageAssetStyle: React.CSSProperties = {
+  height: "100%",
   width: "100%",
-  height: "90%",
+  objectFit: "contain",
 };
 
 const leftImageAssetStyle = {
-  width: "80%",
-  height: "66%",
+  // width: "80%",
+  // height: "66%",
 };
 
 export {
@@ -59,4 +65,5 @@ export {
   leftAssetStyle,
   rightAssetStyle,
   leftImageAssetStyle,
+  imageAssetStyle,
 };
