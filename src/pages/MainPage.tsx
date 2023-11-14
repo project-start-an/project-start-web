@@ -20,28 +20,28 @@ function MainPage() {
       background: "white",
       id: "home",
       ref: useRef(null),
-      component: HomeComponent
+      component: HomeComponent,
     },
     {
       title: "Services",
       background: "white",
       id: "services",
       ref: useRef(null),
-      component: ServiceComponent
+      component: ServiceComponent,
     },
     {
       title: "Pricing",
       background: "white",
       id: "pricing",
       ref: useRef(null),
-      component: PricingComponent
+      component: PricingComponent,
     },
     {
       title: "OurTeam",
       background: "white",
       id: "ourTeam",
       ref: useRef(null),
-      component: ContactComponent
+      component: ContactComponent,
     },
   ];
 
@@ -54,7 +54,7 @@ function MainPage() {
           id={section.id}
           background={section.background}
         >
-          <section.component/>
+          <section.component />
         </ResponsiveSection>
       ))}
     </div>
