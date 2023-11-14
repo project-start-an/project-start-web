@@ -30,11 +30,12 @@ const HorizontalWrapperStyle = {
   alignItems: "center",
   flex: 1,
   height: "40%",
+  overflow: "hidden"
 };
 
 const LeftPolygonStyle = {
   height: "100%",
-  width: "5rem",
+  width: "3rem",
 };
 
 const UpPolygonWrapperStyle = {
@@ -43,7 +44,7 @@ const UpPolygonWrapperStyle = {
 };
 
 const UpPolygonStyle = {
-  height: "10rem",
+  height: "3rem",
 };
 
 const BottomPolygonWrapperStyle = {
