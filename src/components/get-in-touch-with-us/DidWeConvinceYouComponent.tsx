@@ -1,5 +1,5 @@
 function DidWeConvinceYouComponent() {
-  return <div>DidWeConvinceYouComponent</div>;
+  return <div>Did we convince you</div>;
 }
 
 export default DidWeConvinceYouComponent;

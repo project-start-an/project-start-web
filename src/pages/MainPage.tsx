@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
 import HomeComponent from "../components/home/HomeComponent";
 import ServiceComponent from "../components/services/ServiceComponent";
-import PricingComponent from "../components/pricing/PricingComponent";
 import ContactComponent from "../components/contact/ContactComponent";
 import { ResponsiveSection } from "./MainPage.styled";
+import DidWeConvinceYouComponent from "../components/get-in-touch-with-us/DidWeConvinceYouComponent";
 
 interface ISection {
   title: string;
@@ -32,9 +32,9 @@ function MainPage() {
     {
       title: "Pricing",
       background: "white",
-      id: "pricing",
+      id: "getStarted",
       ref: useRef(null),
-      component: PricingComponent,
+      component: DidWeConvinceYouComponent,
     },
     {
       title: "OurTeam",

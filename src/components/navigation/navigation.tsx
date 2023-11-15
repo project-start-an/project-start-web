@@ -10,7 +10,7 @@ const projectName = "WedecodeIT";
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "Services", href: "#services" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "Get Started", href: "#getStarted" },
   { label: "Our Team", href: "#ourTeam" },
 ];
 
