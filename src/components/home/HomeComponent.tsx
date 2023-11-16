@@ -1,16 +1,20 @@
 //visual assets
-import rightAsset from "../../assets/IntroCompAssets/Webinar (1) 1.svg";
 import leftAsset from "../../assets/IntroCompAssets/home_text.svg";
 
 import {
-  introSectionsOuterDividerStyle,
   imageAssetStyle,
+  imageAssetStyle1,
+  IntroSectionsOuterDividerStyle,
 } from "./HomeComponent.styled";
 
 import LeftPoligon from "../../assets/IntroCompAssets/LeftPoligon.svg";
 import RighPolygon from "../../assets/IntroCompAssets/RightPoligon.svg";
 import UpPolygon from "../../assets/IntroCompAssets/UpPolygon.svg";
 import BottomPolygon from "../../assets/IntroCompAssets/BottomPolygon.svg";
+import {
+  ResponsiveServicesBoxInfoBtn,
+  ResponsiveServicesBoxInfoBtnWrapper,
+} from "../services/ServiceComponent";
 
 const WrapperStyle: React.CSSProperties = {
   display: "flex",
@@ -56,6 +60,15 @@ const BottomPolygonWrapperStyle = {
   height: "10%",
 };
 
+const handleNavLinkClick = () => {
+  const targetElement = document.querySelector("#getStarted");
+  if (targetElement) {
+    const offset =
+      targetElement.getBoundingClientRect().top + window.scrollY - 65;
+    window.scrollTo({ top: offset, behavior: "smooth" });
+  }
+};
+
 function HomeComponent() {
   return (
     <div style={WrapperStyle}>
@@ -67,13 +80,23 @@ function HomeComponent() {
           <img src={LeftPoligon} style={LeftRightPolygonStyle} />
         </div>
         {/* left section */}
-        <div style={introSectionsOuterDividerStyle}>
-          <img src={leftAsset} style={imageAssetStyle} alt="welcome text" />
-        </div>
+        <IntroSectionsOuterDividerStyle>
+          <img src={leftAsset} style={imageAssetStyle1} alt="welcome text" />
+          <ResponsiveServicesBoxInfoBtnWrapper>
+            <ResponsiveServicesBoxInfoBtn
+              onHoverBackgroundColor={"white"}
+              normalViewFontSize={1.4}
+              mobileViewFontSize={3.8}
+              onClick={handleNavLinkClick}
+            >
+              Get started
+            </ResponsiveServicesBoxInfoBtn>
+          </ResponsiveServicesBoxInfoBtnWrapper>
+        </IntroSectionsOuterDividerStyle>
         {/* right section */}
-        <div style={introSectionsOuterDividerStyle}>
-          <img src={rightAsset} style={imageAssetStyle} alt="Image asset" />
-        </div>
+        <IntroSectionsOuterDividerStyle>
+          <div style={imageAssetStyle}></div>
+        </IntroSectionsOuterDividerStyle>
         <div style={LeftRightPolygonWrapperStyle}>
           <img src={RighPolygon} style={LeftRightPolygonStyle} />
         </div>

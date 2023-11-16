@@ -9,6 +9,55 @@ import {
 } from "../contact/ContactComponent";
 import ServicesData from "../../data/ServicesData/ServicesData";
 
+export const ResponsiveServicesBoxInfoBtnWrapper = styled("div")({
+  height: "20%",
+  width: "100%",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  // backgroundColor: 'blue',
+
+  "@media (max-width: 768px)": {},
+});
+
+type BtnProps = {
+  onHoverBackgroundColor: string;
+  normalViewFontSize: number;
+  mobileViewFontSize: number;
+};
+
+export const ResponsiveServicesBoxInfoBtn = styled("div")<BtnProps>(
+  ({ onHoverBackgroundColor, normalViewFontSize, mobileViewFontSize }) => ({
+    height: "58%",
+    width: "36%",
+    display: "flex",
+    borderRadius: "0.6em",
+    color: "#FFFFFF",
+    fontFamily: "Ubuntu",
+    fontWeight: "500",
+    // fontSize: "1vw",
+    fontSize: normalViewFontSize + "vw",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#065A82",
+    border: "0.15em solid #065A82",
+    cursor: "pointer",
+
+    "@media (max-width: 768px)": {
+      // fontSize: "3.8vw",
+      fontSize: mobileViewFontSize + "vw",
+      fontWeight: "600",
+    },
+
+    "&:hover": {
+      // opacity: 0.7,
+      color: "rgb(0 0 0 / 90%)",
+      backgroundColor: onHoverBackgroundColor,
+      // backgroundColor: "#D7E6F0",
+    },
+  }),
+);
+
 function ServiceComponent() {
   const backgroundImageStyle = {
     backgroundImage: `url(${servicesBanner})`,
@@ -46,7 +95,7 @@ function ServiceComponent() {
     boxShadow: "rgba(0, 0, 0, 0.25) 0.8px 2px 6px 2px",
 
     "@media (max-width: 768px)": {
-      height: "29%",
+      height: "28%",
       width: "76%",
     },
   });
@@ -120,43 +169,6 @@ function ServiceComponent() {
     "@media (max-width: 768px)": {},
   });
 
-  const ResponsiveServicesBoxInfoBtnWrapper = styled("div")({
-    height: "20%",
-    width: "100%",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-
-    "@media (max-width: 768px)": {},
-  });
-
-  const ResponsiveServicesBoxInfoBtn = styled("div")({
-    height: "58%",
-    width: "36%",
-    display: "flex",
-    borderRadius: "0.6em",
-    color: "#FFFFFF",
-    fontFamily: "Ubuntu",
-    fontWeight: "500",
-    fontSize: "1vw",
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#065A82",
-    border: "0.15em solid #065A82",
-    cursor: "pointer",
-
-    "@media (max-width: 768px)": {
-      fontSize: "3.8vw",
-      fontWeight: "600",
-    },
-
-    "&:hover": {
-      // opacity: 0.7,
-      color: "rgb(0 0 0 / 90%)",
-      backgroundColor: "#D7E6F0",
-    },
-  });
-
   const CustomResponsiveTeamTitleVisualAsset = styled(
     ResponsiveTeamTitleVisualAsset,
   )({
@@ -169,7 +181,7 @@ function ServiceComponent() {
   return (
     <div style={backgroundImageStyle}>
       <ResponsiveInnerWrapper>
-        <ResponsivePageTitleHeader>
+        <ResponsivePageTitleHeader height={8}>
           <CustomResponsiveTeamTitleVisualAsset>
             Our Services
           </CustomResponsiveTeamTitleVisualAsset>
@@ -186,7 +198,11 @@ function ServiceComponent() {
                 </ResponsiveServicesBoxTitleHeader>
                 <ResponsiveServicesBoxContentWrapper></ResponsiveServicesBoxContentWrapper>
                 <ResponsiveServicesBoxInfoBtnWrapper>
-                  <ResponsiveServicesBoxInfoBtn>
+                  <ResponsiveServicesBoxInfoBtn
+                    onHoverBackgroundColor={"#D7E6F0"}
+                    normalViewFontSize={1}
+                    mobileViewFontSize={3.8}
+                  >
                     More info
                   </ResponsiveServicesBoxInfoBtn>
                 </ResponsiveServicesBoxInfoBtnWrapper>

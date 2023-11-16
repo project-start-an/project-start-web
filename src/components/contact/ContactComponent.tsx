@@ -26,18 +26,24 @@ export const ResponsiveTeamTitleVisualAsset = styled("div")({
   },
 });
 
-export const ResponsivePageTitleHeader = styled("div")({
-  height: "15%",
-  width: "90%",
-  marginLeft: "6%",
-  display: "flex",
-  alignItems: "center",
+type InputProps = {
+  height: number;
+};
 
-  "@media (max-width: 768px)": {
-    height: "12%",
+export const ResponsivePageTitleHeader = styled("div")<InputProps>(
+  ({ height }) => ({
+    height: "15%",
+    width: "90%",
+    marginLeft: "6%",
+    display: "flex",
     alignItems: "center",
-  },
-});
+
+    "@media (max-width: 768px)": {
+      height: height + "%",
+      alignItems: "center",
+    },
+  }),
+);
 
 const ResponsiveMnContWrapper = styled("div")({
   // Add your default styles here
@@ -72,7 +78,7 @@ function ContactComponent() {
   return (
     <ResponsiveInnerWrapper>
       {/* title */}
-      <ResponsivePageTitleHeader>
+      <ResponsivePageTitleHeader height={14}>
         <ResponsiveTeamTitleVisualAsset>
           Our Team
         </ResponsiveTeamTitleVisualAsset>

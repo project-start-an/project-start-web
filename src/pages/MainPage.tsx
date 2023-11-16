@@ -4,6 +4,7 @@ import ServiceComponent from "../components/services/ServiceComponent";
 import ContactComponent from "../components/contact/ContactComponent";
 import { ResponsiveSection } from "./MainPage.styled";
 import DidWeConvinceYouComponent from "../components/get-in-touch-with-us/DidWeConvinceYouComponent";
+import PricingComponent from "../components/pricing/PricingComponent";
 
 interface ISection {
   title: string;
@@ -28,6 +29,13 @@ function MainPage() {
       id: "services",
       ref: useRef(null),
       component: ServiceComponent,
+    },
+    {
+      title: "Pricing",
+      background: "white",
+      id: "pricing",
+      ref: useRef(null),
+      component: PricingComponent,
     },
     {
       title: "Pricing",

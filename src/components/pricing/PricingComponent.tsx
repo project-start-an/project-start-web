@@ -204,7 +204,7 @@ function PricingComponent() {
     <div style={backgroundImageStyle}>
       <ResponsiveInnerWrapper>
         {/* page title */}
-        <ResponsivePageTitleHeader>
+        <ResponsivePageTitleHeader height={12}>
           <ResponsiveTeamTitleVisualAsset>
             Why you need us?
           </ResponsiveTeamTitleVisualAsset>
