@@ -4,8 +4,6 @@ import App from "./App.tsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./pages/ErrorPage.tsx";
-import ServicesComponent from "./components/services/ServicesComponent.tsx";
-import OurTeamComponent from "./components/ourTeam/OurTeamComponent.tsx";
 import MainPage from "./pages/MainPage.tsx";
 
 const router = createBrowserRouter([
@@ -17,14 +15,6 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <MainPage />,
-      },
-      {
-        path: "services",
-        element: <ServicesComponent />,
-      },
-      {
-        path: "ourTeam",
-        element: <OurTeamComponent />,
       },
     ],
   },
