@@ -4,7 +4,7 @@ import ServicesComponent from "../components/services/ServicesComponent";
 import ContactComponent from "../components/contact/ContactComponent";
 import { ResponsiveSection } from "./MainPage.styled";
 import DidWeConvinceYouComponent from "../components/get-in-touch-with-us/DidWeConvinceYouComponent";
-import WhyNeedUsComponent from "../components/value-proposition/WhyNeedUsComponent";
+import WhyNeedUsComponent from "../components/why-need-us/WhyNeedUsComponent";
 
 interface ISection {
   title: string;
