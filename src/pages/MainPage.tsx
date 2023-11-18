@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import HomeComponent from "../components/home/HomeComponent";
-import ServiceComponent from "../components/services/ServiceComponent";
+import ServicesComponent from "../components/services/ServicesComponent";
 import ContactComponent from "../components/contact/ContactComponent";
 import { ResponsiveSection } from "./MainPage.styled";
 import DidWeConvinceYouComponent from "../components/get-in-touch-with-us/DidWeConvinceYouComponent";
@@ -28,7 +28,7 @@ function MainPage() {
       background: "white",
       id: "services",
       ref: useRef(null),
-      component: ServiceComponent,
+      component: ServicesComponent,
     },
     {
       title: "Pricing",

@@ -7,7 +7,6 @@ const MainWrapper = styled("div")({
   alignItems: "stretch",
   width: "100%",
   height: "100%",
-  gap: "1rem",
 });
 
 const UpPolygonWrapper = styled("div")({
@@ -25,7 +24,6 @@ const HorizontalWrapper = styled("div")({
   alignItems: "center",
   flex: 1,
   height: "40%",
-  gap: "1rem",
   overflow: "hidden",
 });
 
@@ -41,12 +39,13 @@ const SidePolygonStyle: React.CSSProperties = {
 
 const LeftSection = styled("div")({
   height: "100%",
-  width: "40%",
+  width: "35%",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   flexDirection: "column",
   marginTop: "5%",
+  marginLeft: "5%"
 });
 
 const leftAssetStyle: React.CSSProperties = {
@@ -63,11 +62,12 @@ const rightAssetStyle: React.CSSProperties = {
 
 const RightSection = styled("div")({
   height: "100%",
-  width: "40%",
+  width: "35%",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   flexDirection: "column",
+  marginRight: "5%"
 });
 
 const BottomPolygonWrapper = styled("div")({
@@ -83,6 +83,41 @@ const ButtonWrapper = styled("div")({
   justifyContent: "flex-start",
 });
 
+type BtnProps = {
+  onHoverBackgroundColor: string;
+  normalViewFontSize: number;
+  mobileViewFontSize: number;
+};
+
+const Button = styled("div")<BtnProps>(({
+  onHoverBackgroundColor,
+  normalViewFontSize,
+  mobileViewFontSize
+}) => ({
+  height: "58%",
+  width: "36%",
+  display: "flex",
+  borderRadius: "0.6em",
+  color: "#FFFFFF",
+  fontFamily: "Ubuntu",
+  fontWeight: "500",
+  fontSize: normalViewFontSize + "vw",
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: "#065A82",
+  border: "0.15em solid #065A82",
+  cursor: "pointer",
+  "@media (max-width: 768px)": {
+    fontSize: mobileViewFontSize + "vw",
+    fontWeight: "600"
+  },
+  "&:hover": {
+    color: "rgb(0 0 0 / 90%)",
+    backgroundColor: onHoverBackgroundColor // backgroundColor: "#D7E6F0",
+
+  }
+}));
+
 export {
   MainWrapper,
   UpPolygonWrapper,
@@ -93,6 +128,7 @@ export {
   LeftSection,
   RightSection,
   ButtonWrapper,
+  Button,
   leftAssetStyle,
   rightAssetStyle,
   BottomPolygonWrapper,
