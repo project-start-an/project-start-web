@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
 import HomeComponent from "../components/home/HomeComponent";
 import ServicesComponent from "../components/services/ServicesComponent";
-import ContactComponent from "../components/contact/ContactComponent";
 import { ResponsiveSection } from "./MainPage.styled";
-import DidWeConvinceYouComponent from "../components/get-in-touch-with-us/DidWeConvinceYouComponent";
 import WhyNeedUsComponent from "../components/why-need-us/WhyNeedUsComponent";
+import OurTeamComponent from "../components/ourTeam/OurTeamComponent";
+import GetStartedComponent from "../components/getStarted/GetStartedComponent";
 
 interface ISection {
   title: string;
@@ -38,18 +38,18 @@ function MainPage() {
       component: WhyNeedUsComponent,
     },
     {
-      title: "Pricing",
+      title: "GetStarted",
       background: "white",
       id: "getStarted",
       ref: useRef(null),
-      component: DidWeConvinceYouComponent,
+      component: GetStartedComponent,
     },
     {
       title: "OurTeam",
       background: "white",
       id: "ourTeam",
       ref: useRef(null),
-      component: ContactComponent,
+      component: OurTeamComponent,
     },
   ];
 

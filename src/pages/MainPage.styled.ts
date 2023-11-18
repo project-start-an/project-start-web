@@ -10,13 +10,10 @@ const ResponsiveSection = styled("div")<InputProps>(({ background, id }) => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  height:
-    id === "home"
-      ? "calc(100vh - 64px)"
-      : id === "getStarted"
-      ? "70vh"
-      : "100vh",
-  // height: id === "ourTeam" ? "84vh" : "100vh",
+  height: "calc(100vh - 64px)",
+  // id === "home"
+  //   ? "calc(100vh - 64px)"
+  //   : "100vh",
 
   "@media (max-width: 768px)": {
     width: "100%",
