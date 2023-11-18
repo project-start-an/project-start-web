@@ -1,64 +1,28 @@
-//visual assets
-import leftAsset from "../../assets/IntroCompAssets/home_text.svg";
-
 import {
-  imageAssetStyle,
-  imageAssetStyle1,
-  IntroSectionsOuterDividerStyle,
+  BottomPolygonWrapper,
+  ButtonWrapper,
+  HorizontalWrapper,
+  LeftSection,
+  MainWrapper,
+  RightSection,
+  SidePolygonStyle,
+  SidePolygonWrapper,
+  UpPolygonStyle,
+  UpPolygonWrapper,
+  leftAssetStyle,
+  rightAssetStyle,
 } from "./HomeComponent.styled";
 
-import LeftPoligon from "../../assets/IntroCompAssets/LeftPoligon.svg";
-import RighPolygon from "../../assets/IntroCompAssets/RightPoligon.svg";
-import UpPolygon from "../../assets/IntroCompAssets/UpPolygon.svg";
-import BottomPolygon from "../../assets/IntroCompAssets/BottomPolygon.svg";
-import {
-  ResponsiveServicesBoxInfoBtn,
-  ResponsiveServicesBoxInfoBtnWrapper,
-} from "../services/ServiceComponent";
+import LeftAsset from "../../assets/HomeCompAssets/home-text.svg";
+import UpPolygon from "../../assets/HomeCompAssets/up-polygon.svg";
+import LeftPolygon from "../../assets/HomeCompAssets/left-polygon.svg";
+import RighPolygon from "../../assets/HomeCompAssets/right-polygon.svg";
+import BottomPolygon from "../../assets/HomeCompAssets/bottom-polygon.svg";
 
-const WrapperStyle: React.CSSProperties = {
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "space-between",
-  alignItems: "stretch",
-  width: "100%",
-  height: "100%",
-  gap: "1rem",
-};
+import { ResponsiveServicesBoxInfoBtn } from "../services/ServiceComponent";
 
-const HorizontalWrapperStyle = {
-  display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center",
-  flex: 1,
-  height: "40%",
-  gap: "1rem",
-  overflow: "hidden",
-};
-
-const LeftRightPolygonWrapperStyle = {
-  height: "100%",
-  width: "5%",
-};
-
-const LeftRightPolygonStyle = {
-  height: "100%",
-  width: "100%",
-};
-
-const UpPolygonWrapperStyle = {
-  alignSelf: "center",
-  height: "10%",
-};
-
-const UpPolygonStyle = {
-  height: "100%",
-};
-
-const BottomPolygonWrapperStyle = {
-  alignSelf: "center",
-  height: "10%",
-};
+const WebinarGif =
+  "https://s3-alpha-sig.figma.com/img/0f7d/fe21/5d31cb9ceecb5bed73672b0596cf8179?Expires=1701043200&Signature=bdF0L61A12e3c3iZdGKINzppMJ9X48GGHkZMJyoyMMZoQb297JI7nupXdl5i2RdMlc-xQSS4jx7DEbyDzL3JfUnSGoskcgZvkRpAZd6niXTzLrhNQBQ4e1fpsBabJ6pygTqA~tkYapfu3wYbaiLpk7-KycNyLkLTET3FoS90SHW0R1BRxobq0juQHMsV46baB57uHbMmSK9TRFt6XUHRxuJibtAikkT3g0-p3GPyOMOxQkIjCv~vu4m5OXIXIuW35QvgmL6q14ycmC1wiWdxSvmMAPH~VppYJh0l4ls3yesHYOBmoHzd9GPa-U0xhB0iXkUcbPdMkad3rt-Q3O0ASA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4";
 
 const handleNavLinkClick = () => {
   const targetElement = document.querySelector("#getStarted");
@@ -71,18 +35,20 @@ const handleNavLinkClick = () => {
 
 function HomeComponent() {
   return (
-    <div style={WrapperStyle}>
-      <div style={UpPolygonWrapperStyle}>
+    <MainWrapper>
+      <UpPolygonWrapper>
         <img src={UpPolygon} style={UpPolygonStyle} />
-      </div>
-      <div style={HorizontalWrapperStyle}>
-        <div style={LeftRightPolygonWrapperStyle}>
-          <img src={LeftPoligon} style={LeftRightPolygonStyle} />
-        </div>
+      </UpPolygonWrapper>
+      <HorizontalWrapper>
+        <SidePolygonWrapper>
+          <img src={LeftPolygon} style={SidePolygonStyle} />
+        </SidePolygonWrapper>
         {/* left section */}
-        <IntroSectionsOuterDividerStyle>
-          <img src={leftAsset} style={imageAssetStyle1} alt="welcome text" />
-          <ResponsiveServicesBoxInfoBtnWrapper>
+        <LeftSection>
+          <div>
+            <img src={LeftAsset} style={leftAssetStyle} alt="welcome text" />
+          </div>
+          <ButtonWrapper>
             <ResponsiveServicesBoxInfoBtn
               onHoverBackgroundColor={"white"}
               normalViewFontSize={1.4}
@@ -91,20 +57,20 @@ function HomeComponent() {
             >
               Get started
             </ResponsiveServicesBoxInfoBtn>
-          </ResponsiveServicesBoxInfoBtnWrapper>
-        </IntroSectionsOuterDividerStyle>
+          </ButtonWrapper>
+        </LeftSection>
         {/* right section */}
-        <IntroSectionsOuterDividerStyle>
-          <div style={imageAssetStyle}></div>
-        </IntroSectionsOuterDividerStyle>
-        <div style={LeftRightPolygonWrapperStyle}>
-          <img src={RighPolygon} style={LeftRightPolygonStyle} />
-        </div>
-      </div>
-      <div style={BottomPolygonWrapperStyle}>
+        <RightSection>
+          <img style={rightAssetStyle} src={WebinarGif} />
+        </RightSection>
+        <SidePolygonWrapper>
+          <img src={RighPolygon} style={SidePolygonStyle} />
+        </SidePolygonWrapper>
+      </HorizontalWrapper>
+      <BottomPolygonWrapper>
         <img src={BottomPolygon} />
-      </div>
-    </div>
+      </BottomPolygonWrapper>
+    </MainWrapper>
   );
 }
 
