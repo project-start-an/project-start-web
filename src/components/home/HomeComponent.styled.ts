@@ -45,7 +45,7 @@ const LeftSection = styled("div")({
   justifyContent: "center",
   flexDirection: "column",
   marginTop: "5%",
-  marginLeft: "5%"
+  marginLeft: "5%",
 });
 
 const leftAssetStyle: React.CSSProperties = {
@@ -67,7 +67,7 @@ const RightSection = styled("div")({
   alignItems: "center",
   justifyContent: "center",
   flexDirection: "column",
-  marginRight: "5%"
+  marginRight: "5%",
 });
 
 const BottomPolygonWrapper = styled("div")({
@@ -89,34 +89,31 @@ type BtnProps = {
   mobileViewFontSize: number;
 };
 
-const Button = styled("div")<BtnProps>(({
-  onHoverBackgroundColor,
-  normalViewFontSize,
-  mobileViewFontSize
-}) => ({
-  height: "58%",
-  width: "36%",
-  display: "flex",
-  borderRadius: "0.6em",
-  color: "#FFFFFF",
-  fontFamily: "Ubuntu",
-  fontWeight: "500",
-  fontSize: normalViewFontSize + "vw",
-  alignItems: "center",
-  justifyContent: "center",
-  backgroundColor: "#065A82",
-  border: "0.15em solid #065A82",
-  cursor: "pointer",
-  "@media (max-width: 768px)": {
-    fontSize: mobileViewFontSize + "vw",
-    fontWeight: "600"
-  },
-  "&:hover": {
-    color: "rgb(0 0 0 / 90%)",
-    backgroundColor: onHoverBackgroundColor // backgroundColor: "#D7E6F0",
-
-  }
-}));
+const Button = styled("div")<BtnProps>(
+  ({ onHoverBackgroundColor, normalViewFontSize, mobileViewFontSize }) => ({
+    height: "58%",
+    width: "36%",
+    display: "flex",
+    borderRadius: "0.6em",
+    color: "#FFFFFF",
+    fontFamily: "Ubuntu",
+    fontWeight: "500",
+    fontSize: normalViewFontSize + "vw",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#065A82",
+    border: "0.15em solid #065A82",
+    cursor: "pointer",
+    "@media (max-width: 768px)": {
+      fontSize: mobileViewFontSize + "vw",
+      fontWeight: "600",
+    },
+    "&:hover": {
+      color: "rgb(0 0 0 / 90%)",
+      backgroundColor: onHoverBackgroundColor, // backgroundColor: "#D7E6F0",
+    },
+  }),
+);
 
 export {
   MainWrapper,

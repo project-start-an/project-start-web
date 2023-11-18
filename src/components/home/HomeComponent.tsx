@@ -21,7 +21,7 @@ import {
   UpPolygonWrapper,
   leftAssetStyle,
   rightAssetStyle,
-  } from "./HomeComponent.styled";
+} from "./HomeComponent.styled";
 
 const handleNavLinkClick = () => {
   const targetElement = document.querySelector("#getStarted");
