@@ -1,24 +1,39 @@
 type ServiceObj = {
   id: number;
   name: string;
-  description: string;
+  listings: string[];
 };
 
 const ServicesData: ServiceObj[] = [
   {
     id: 1,
     name: "Building Modern Website",
-    description: "N/A",
+    listings: [
+      "Strategic Web Presence",
+      "Responsive Design",
+      "SEO Optimization",
+      "Tailored Functionality",
+    ],
   },
   {
     id: 2,
     name: "Custom Software Solutions",
-    description: "N/A",
+    listings: [
+      "Tailored Business Solutions",
+      "Scalability and Flexibility",
+      "User-Friendly Interfaces",
+      "Integration Capabilities",
+    ],
   },
   {
     id: 3,
     name: "Maintenence & Support",
-    description: "N/A",
+    listings: [
+      "Proactive System Monitoring",
+      "Timely Updates and Patches",
+      "Dedicated Support Team",
+      "Performance Optimizations",
+    ],
   },
 ];
 

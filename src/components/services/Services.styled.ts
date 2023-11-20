@@ -113,12 +113,14 @@ const BoxTitle = styled("div")({
 
 const BoxContentWrapper = styled("div")({
   height: "55%",
-  width: "100%",
+  width: "80%",
+  marginLeft: "10%",
   display: "flex",
   fontFamily: "Ubuntu",
   fontWeight: "600",
-  fontSize: "1.3vw",
-  alignItems: "flex-end",
+  fontSize: "1.1vw",
+  alignItems: "center",
+  flexDirection: "column",
   justifyContent: "center",
   "@media (max-width: 768px)": {},
 });
