@@ -48,11 +48,21 @@ const LeftSection = styled("div")({
   marginLeft: "5%",
 });
 
-const leftAssetStyle: React.CSSProperties = {
-  height: "100%",
-  width: "100%",
-  objectFit: "contain",
-};
+const TitleText = styled("span")({
+  color: "#000",
+  fontFamily: "Ubuntu",
+  fontSize: "min(4vw, 3rem)",
+  fontStyle: "normal",
+  fontWeight: "400",
+});
+
+const TitleBlueText = styled(TitleText)({
+  color: "#516A91",
+  fontFamily: "Ubuntu",
+  fontSize: "min(5.9vw, 4rem)",
+  fontStyle: "normal",
+  fontWeight: "500",
+});
 
 const rightAssetStyle: React.CSSProperties = {
   height: "100%",
@@ -126,7 +136,8 @@ export {
   RightSection,
   ButtonWrapper,
   Button,
-  leftAssetStyle,
   rightAssetStyle,
   BottomPolygonWrapper,
+  TitleText,
+  TitleBlueText,
 };

@@ -1,5 +1,6 @@
 import Banner from "../../assets/WhyNeedUsCompAssets/banner.png";
 import Checkmark from "../../assets/checkmark.svg";
+import OfficeGif from "../../assets/WhyNeedUsCompAssets/office-gif.gif";
 
 import {
   BoxWrapper,
@@ -14,9 +15,6 @@ import {
   FieldWrapper,
   IconWrapper,
 } from "./WhyNeedUs.styled";
-
-const OfficeGif =
-  "https://s3-alpha-sig.figma.com/img/04f0/69bc/350d90c617635bdb1c6ab47221ad2e7b?Expires=1701043200&Signature=NSFQcvFYmAQgiPr-PtXbwuusx2i21v65JnZmui0ykYiMvsfIqPMhvRo8lgPh-GvW2EsliPEigpoyL6WloUbpbslq1O05fiE4CneG2Y6PX4dwnhGWOkGEUXH0LWjXOLUlMw1~VQoBa5SvKLUk40QGNeMBe7FfOTaBOHQOB9wl3LZk3u7uqgWeMlM1ilQ-Azfl4ocuwGpS6QoQ5HtSJbEOHY78ahsBOH7VUaVmQkbLtalD1lMVUmHK83Flaz5uEU5i1KOpmq~mvc0em7Q0hHn9pTpkGJu~Dm7oChmQXSAIQ9Dv-doDQvVYREd4pvBaVdxKjN138TpHWyWSOjAwjm-PyA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4";
 
 function WhyNeedUsComponent() {
   return (
