@@ -1,68 +1,55 @@
 import React, { useRef } from "react";
 import HomeComponent from "../components/home/HomeComponent";
-import ServicesComponent from "../components/services/ServiceComponent";
-import PricingComponent from "../components/pricing/PricingComponent";
-import ContactComponent from "../components/contact/ContactComponent";
+import ServicesComponent from "../components/services/ServicesComponent";
+import { ResponsiveSection } from "./MainPage.styled";
+import WhyNeedUsComponent from "../components/why-need-us/WhyNeedUsComponent";
+import OurTeamComponent from "../components/ourTeam/OurTeamComponent";
+import GetStartedComponent from "../components/getStarted/GetStartedComponent";
 
-import { styled } from "@mui/material";
-
-interface Section {
+interface ISection {
   title: string;
   background: string;
   id: string; // Add an ID for the section
   ref: React.RefObject<HTMLDivElement>;
+  component: React.FC;
 }
 
-type InputProps = {
-  background: string;
-  id: string;
-};
-
-const ResponsiveSection = styled("div")<InputProps>(({ background, id }) => ({
-  backgroundColor: background,
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  height: id === "ourTeam" ? "84vh" : "92vh",
-
-  "@media (max-width: 768px)": {
-    width: "100%",
-    height:
-      id === "ourTeam"
-        ? "120vh"
-        : id === "pricing"
-        ? "180vh"
-        : id === "services"
-        ? "160vh"
-        : "92vh",
-  },
-}));
-
 function MainPage() {
-  const sections: Section[] = [
+  const sections: ISection[] = [
     {
       title: "Home",
       background: "white",
       id: "home",
       ref: useRef(null),
+      component: HomeComponent,
     },
     {
       title: "Services",
       background: "white",
       id: "services",
       ref: useRef(null),
+      component: ServicesComponent,
     },
     {
-      title: "Pricing",
+      title: "WhyNeedUs",
       background: "white",
-      id: "pricing",
+      id: "whyNeedUs",
       ref: useRef(null),
+      component: WhyNeedUsComponent,
+    },
+    {
+      title: "GetStarted",
+      background: "white",
+      id: "getStarted",
+      ref: useRef(null),
+      component: GetStartedComponent,
     },
     {
       title: "OurTeam",
       background: "white",
       id: "ourTeam",
       ref: useRef(null),
+      component: OurTeamComponent,
     },
   ];
 
@@ -75,15 +62,7 @@ function MainPage() {
           id={section.id}
           background={section.background}
         >
-          {section.id === "services" ? (
-            <ServicesComponent />
-          ) : section.id === "pricing" ? (
-            <PricingComponent />
-          ) : section.id === "ourTeam" ? (
-            <ContactComponent />
-          ) : (
-            <HomeComponent />
-          )}
+          <section.component />
         </ResponsiveSection>
       ))}
     </div>

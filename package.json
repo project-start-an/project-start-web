@@ -9,6 +9,7 @@
     "format:fix": "prettier --write .",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "format": "prettier --check .",
+    "precommit": "node .\\tools\\precommit.js",
     "preview": "vite preview"
   },
   "dependencies": {

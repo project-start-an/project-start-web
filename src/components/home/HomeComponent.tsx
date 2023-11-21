@@ -1,68 +1,79 @@
-//visual assets
-import rightAsset from "../../assets/IntroCompAssets/Webinar (1) 1.svg";
-import leftAsset from "../../assets/IntroCompAssets/home_text.svg";
+import UpPolygon from "../../assets/up-polygon.svg";
+import LeftPolygon from "../../assets/left-polygon.svg";
+import RighPolygon from "../../assets/right-polygon.svg";
+import BottomPolygon from "../../assets/bottom-polygon.svg";
+import WebinarGif from "../../assets/HomeCompAssets/webinar-gif.gif";
 
-//styles
-import InnerWrapperStyle from "../../styles/styled-components/InnerPageWrapper";
+import {
+  BottomPolygonWrapper,
+  Button,
+  ButtonWrapper,
+  HorizontalWrapper,
+  LeftSection,
+  MainWrapper,
+  RightSection,
+  SidePolygonStyle,
+  SidePolygonWrapper,
+  TitleBlueText,
+  TitleText,
+  UpPolygonStyle,
+  UpPolygonWrapper,
+  rightAssetStyle,
+} from "./HomeComponent.styled";
+
+const handleNavLinkClick = () => {
+  const targetElement = document.querySelector("#getStarted");
+  if (targetElement) {
+    const offset =
+      targetElement.getBoundingClientRect().top + window.scrollY - 65;
+    window.scrollTo({ top: offset, behavior: "smooth" });
+  }
+};
 
 function HomeComponent() {
-  const introSectionsOuterDividerStyle = {
-    height: "100%",
-    width: "50%",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    // backgroundColor: 'grey',
-  };
-
-  const introSectionsInnerDividerStyle = {
-    height: "60%",
-    width: "100%",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    // backgroundColor: 'grey',
-  };
-
-  const leftAssetStyle = {
-    height: "70%",
-    width: "100%",
-    display: "flex",
-    // backgroundColor: 'grey',
-    alignItems: "center",
-  };
-
-  const rightAssetStyle = {
-    width: "100%",
-    height: "90%",
-  };
-
-  const leftImageAssetStyle = {
-    width: "80%",
-    height: "66%",
-  };
-
   return (
-    <div style={InnerWrapperStyle}>
-      {/* left section */}
-      <div style={introSectionsOuterDividerStyle}>
-        <div style={introSectionsInnerDividerStyle}>
-          <div style={leftAssetStyle}>
-            <img
-              src={leftAsset}
-              style={leftImageAssetStyle}
-              alt="welcome text"
-            />
+    <MainWrapper>
+      <UpPolygonWrapper>
+        <img src={UpPolygon} style={UpPolygonStyle} />
+      </UpPolygonWrapper>
+      <HorizontalWrapper>
+        <SidePolygonWrapper>
+          <img src={LeftPolygon} style={SidePolygonStyle} />
+        </SidePolygonWrapper>
+        {/* left section */}
+        <LeftSection>
+          <div>
+            <TitleText>Together </TitleText>
+            <TitleBlueText>We </TitleBlueText>
+            <TitleText>digitalize </TitleText>
+            <TitleText>your </TitleText>
+            <TitleText>Business</TitleText>
+            <TitleText>!</TitleText>
+            {/* <img src={LeftAsset} style={leftAssetStyle} alt="welcome text" /> */}
           </div>
-        </div>
-      </div>
-      {/* right section */}
-      <div style={introSectionsOuterDividerStyle}>
-        <div style={introSectionsInnerDividerStyle}>
-          <img src={rightAsset} style={rightAssetStyle} alt="Image asset" />
-        </div>
-      </div>
-    </div>
+          <ButtonWrapper>
+            <Button
+              onHoverBackgroundColor={"white"}
+              normalViewFontSize={1.4}
+              mobileViewFontSize={3.8}
+              onClick={handleNavLinkClick}
+            >
+              Get started
+            </Button>
+          </ButtonWrapper>
+        </LeftSection>
+        {/* right section */}
+        <RightSection>
+          <img style={rightAssetStyle} src={WebinarGif} />
+        </RightSection>
+        <SidePolygonWrapper>
+          <img src={RighPolygon} style={SidePolygonStyle} />
+        </SidePolygonWrapper>
+      </HorizontalWrapper>
+      <BottomPolygonWrapper>
+        <img src={BottomPolygon} />
+      </BottomPolygonWrapper>
+    </MainWrapper>
   );
 }
 
