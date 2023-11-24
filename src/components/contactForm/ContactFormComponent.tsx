@@ -1,4 +1,4 @@
-import { BoxInfoBtn} from "../services/Services.styled";
+import { BoxInfoBtn } from "../services/Services.styled";
 import {
   ContactFormComponentStyle,
   ContactUsInnerWrapperStyle,
@@ -18,47 +18,29 @@ function ContactFormComponent() {
       <ContactUsInnerWrapperStyle>
         {/* contact us wrapper */}
         <ContactUsInitialWrapperStyle>
-            <ContactUsComponentTitleWrapperStyle>
-                Contact us
-            </ContactUsComponentTitleWrapperStyle>
-            <ContactUsComponentContentWrapperStyle>
-                <ContactUsComponentSmallInputWrapperStyle>
-                    <ContactUsComponentSmallInputStyle
-                    placeholder="Email"
-                    >
-
-                    </ContactUsComponentSmallInputStyle>
-                </ContactUsComponentSmallInputWrapperStyle>
-                <ContactUsComponentSmallInputWrapperStyle>
-                    <ContactUsComponentSmallInputStyle
-                    placeholder="Mobile Phone"
-                    >
-                        
-                    </ContactUsComponentSmallInputStyle>
-                </ContactUsComponentSmallInputWrapperStyle>
-                <ContactUsComponentBigInputWrapperStyle>
-                    <ContactUsComponentBigInputStyle
-                    placeholder="Type your request or meesage to us"
-                    
-                    >
-
-                    </ContactUsComponentBigInputStyle>
-                    
-                        
-
-                </ContactUsComponentBigInputWrapperStyle>
-
-            </ContactUsComponentContentWrapperStyle>
-            <ContactUsComponentSubmitBtnWrapperStyle>
-                    <BoxInfoBtn
-                     onHoverBackgroundColor={"#D7E6F0"}
-                     normalViewFontSize={1}
-                     mobileViewFontSize={3.8}
-                    >
-                        Submit
-                    </BoxInfoBtn>
-            </ContactUsComponentSubmitBtnWrapperStyle>
-
+          <ContactUsComponentTitleWrapperStyle>
+            Contact us
+          </ContactUsComponentTitleWrapperStyle>
+          <ContactUsComponentContentWrapperStyle>
+            <ContactUsComponentSmallInputWrapperStyle>
+              <ContactUsComponentSmallInputStyle placeholder="Email"></ContactUsComponentSmallInputStyle>
+            </ContactUsComponentSmallInputWrapperStyle>
+            <ContactUsComponentSmallInputWrapperStyle>
+              <ContactUsComponentSmallInputStyle placeholder="Mobile Phone"></ContactUsComponentSmallInputStyle>
+            </ContactUsComponentSmallInputWrapperStyle>
+            <ContactUsComponentBigInputWrapperStyle>
+              <ContactUsComponentBigInputStyle placeholder="Type your request or meesage to us"></ContactUsComponentBigInputStyle>
+            </ContactUsComponentBigInputWrapperStyle>
+          </ContactUsComponentContentWrapperStyle>
+          <ContactUsComponentSubmitBtnWrapperStyle>
+            <BoxInfoBtn
+              onHoverBackgroundColor={"#D7E6F0"}
+              normalViewFontSize={1}
+              mobileViewFontSize={3.8}
+            >
+              Submit
+            </BoxInfoBtn>
+          </ContactUsComponentSubmitBtnWrapperStyle>
         </ContactUsInitialWrapperStyle>
       </ContactUsInnerWrapperStyle>
     </ContactFormComponentStyle>
