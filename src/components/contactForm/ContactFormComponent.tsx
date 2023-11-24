@@ -17,7 +17,6 @@ import {
 
 // const count = signal(2);
 
-
 function ContactFormComponent() {
   return (
     <ContactFormComponentStyle>
@@ -25,7 +24,7 @@ function ContactFormComponent() {
         {/* contact us wrapper */}
         <ContactUsInitialWrapperStyle>
           <ContactUsComponentTitleWrapperStyle>
-            Contact us 
+            Contact us
           </ContactUsComponentTitleWrapperStyle>
           <ContactUsComponentContentWrapperStyle>
             <ContactUsComponentSmallInputWrapperStyle>
