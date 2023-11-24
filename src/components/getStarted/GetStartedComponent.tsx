@@ -2,6 +2,7 @@ import UpPolygon from "../../assets/up-polygon.svg";
 import LeftPolygon from "../../assets/left-polygon.svg";
 import RighPolygon from "../../assets/right-polygon.svg";
 import BottomPolygon from "../../assets/bottom-polygon.svg";
+import { useNavigate } from "react-router-dom";
 
 import {
   BottomPolygonStyle,
@@ -21,6 +22,8 @@ import {
 } from "./GetStarted.styled";
 
 function GetStartedComponent() {
+  const navigate = useNavigate();
+
   return (
     <MainWrapper>
       <UpPolygonWrapper>
@@ -44,6 +47,7 @@ function GetStartedComponent() {
                 onHoverBackgroundColor={"white"}
                 normalViewFontSize={1.4}
                 mobileViewFontSize={3.8}
+                onClick={() => navigate("/ContactUs")}
               >
                 Get started
               </Button>
