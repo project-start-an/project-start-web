@@ -118,12 +118,13 @@ const ContactUsComponentBigInputStyle = styled("textarea")({
   display: "flex",
   fontFamily: "Ubuntu",
   fontWeight: "600",
-  color: "grey",
+  color: "black",
   fontSize: "0.88vw",
   border: "none",
   borderRadius: "0.25em",
   alignItems: "center",
   justifyContent: "center",
+  resize: "none",
 
   "@media (max-width: 768px)": {
     width: "100%",

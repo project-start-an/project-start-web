@@ -31,7 +31,7 @@ function GetStartedComponent() {
       </UpPolygonWrapper>
       <HorizontalWrapper>
         <SidePolygonWrapper>
-          <img src={LeftPolygon} style={SidePolygonStyle} />
+          <img src={LeftPolygon} style={SidePolygonStyle} alt="image" />
         </SidePolygonWrapper>
         {/* left section */}
         <MiddleSectionWrapper>
@@ -55,11 +55,11 @@ function GetStartedComponent() {
           </MiddleSectionInnerWrapper>
         </MiddleSectionWrapper>
         <SidePolygonWrapper>
-          <img src={RighPolygon} style={SidePolygonStyle} />
+          <img src={RighPolygon} style={SidePolygonStyle} alt="image" />
         </SidePolygonWrapper>
       </HorizontalWrapper>
       <BottomPolygonWrapper>
-        <img src={BottomPolygon} style={BottomPolygonStyle} />
+        <img src={BottomPolygon} style={BottomPolygonStyle} alt="image" />
       </BottomPolygonWrapper>
     </MainWrapper>
   );

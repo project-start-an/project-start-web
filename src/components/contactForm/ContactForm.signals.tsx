@@ -1,4 +1,5 @@
 import { signal } from "@preact/signals-react";
+import { getBaseUrl } from "../../services/api-client.config";
 
 interface FormData {
   email: string;
@@ -36,6 +37,28 @@ const validateEmail = (email: string): boolean => {
   return /\S+@\S+\.\S+/.test(email);
 };
 
+const postRequest = async (url: string, data: FormData) => {
+  try {
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const responseData = await response.json();
+
+    console.log(responseData);
+  } catch (error) {
+    console.error("Error:", error);
+  }
+};
+
 const submitRequest = (): void => {
   if (!email.value || !mobilePhone.value || !description.value) {
     console.error("All fields are required");
@@ -43,7 +66,7 @@ const submitRequest = (): void => {
   }
 
   if (!validateEmail(email.value)) {
-    console.error("Invalid email format");
+    console.error();
     return;
   }
 
@@ -52,6 +75,8 @@ const submitRequest = (): void => {
     mobilePhone: mobilePhone.value,
     description: description.value,
   };
+
+  postRequest(`${getBaseUrl}formInputs/addNewInput`, formData);
 
   changeHandlerState(true);
   console.log(formData);
@@ -63,4 +88,5 @@ export {
   addDescription,
   submitRequest,
   getHandlerState,
+  changeHandlerState,
 };

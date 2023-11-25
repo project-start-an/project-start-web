@@ -12,14 +12,14 @@ import {
   ContactUsComponentBigInputStyle,
 } from "./ContactForm.styled";
 
-//usage of signals
+//signals
 import {
   addEmail,
   addMobilePhone,
   addDescription,
   submitRequest,
   getHandlerState,
-} from "./ContactForm.signals"; // Importing Count from the signals file
+} from "./ContactForm.signals";
 
 function ContactFormComponent() {
   return (
@@ -51,6 +51,7 @@ function ContactFormComponent() {
                 ></ContactUsComponentBigInputStyle>
               </ContactUsComponentBigInputWrapperStyle>
             </ContactUsComponentContentWrapperStyle>
+
             <ContactUsComponentSubmitBtnWrapperStyle>
               <BoxInfoBtn
                 onHoverBackgroundColor={"#D7E6F0"}

@@ -20,19 +20,19 @@ function ContactUsPage() {
     <div style={{ height: "calc(81vh - 64px)" }}>
       <MainWrapper>
         <UpPolygonWrapper>
-          <img src={UpPolygon} style={UpPolygonStyle} />
+          <img src={UpPolygon} style={UpPolygonStyle} alt="image" />
         </UpPolygonWrapper>
         <HorizontalWrapper>
           <SidePolygonWrapper>
-            <img src={LeftPolygon} style={SidePolygonStyle} />
+            <img src={LeftPolygon} style={SidePolygonStyle} alt="image" />
           </SidePolygonWrapper>
           <ContactFormComponent />
           <SidePolygonWrapper>
-            <img src={RighPolygon} style={SidePolygonStyle} />
+            <img src={RighPolygon} style={SidePolygonStyle} alt="image" />
           </SidePolygonWrapper>
         </HorizontalWrapper>
         <BottomPolygonWrapper>
-          <img src={BottomPolygon} style={BottomPolygonStyle} />
+          <img src={BottomPolygon} style={BottomPolygonStyle} alt="image" />
         </BottomPolygonWrapper>
       </MainWrapper>
     </div>

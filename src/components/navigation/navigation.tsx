@@ -6,6 +6,8 @@ import { NavWrapper } from "./Navigation.styled";
 import CustomToolbar from "../styled-components/CustomToolbar";
 import { useNavigate } from "react-router-dom";
 
+import { changeHandlerState } from "../contactForm/ContactForm.signals";
+
 const projectName = "WedecodeIT";
 
 type NavLinkType = {
@@ -44,6 +46,7 @@ export default function Navigation() {
     event.preventDefault();
 
     navigate("/");
+    changeHandlerState(false);
     const targetElement = document.querySelector(link.href);
     console.log(link.href);
     if (targetElement) {

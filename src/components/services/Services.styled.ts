@@ -162,7 +162,7 @@ const BoxInfoBtn = styled("div")<BtnProps>(
     },
     "&:hover": {
       color: "rgb(0 0 0 / 90%)",
-      backgroundColor: onHoverBackgroundColor, // backgroundColor: "#D7E6F0",
+      backgroundColor: onHoverBackgroundColor,
     },
   }),
 );
