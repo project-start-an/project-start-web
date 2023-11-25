@@ -27,6 +27,8 @@
     "@types/json-schema": "^7.0.12",
     "@types/react": "^18.2.24",
     "@types/react-dom": "^18.0.11",
+    "@types/signals": "^1.0.4",
+    "@types/use-sync-external-store": "^0.0.6",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-react": "^4.1.0",

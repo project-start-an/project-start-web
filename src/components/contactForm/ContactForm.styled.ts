@@ -9,6 +9,11 @@ const ContactFormComponentStyle = styled("div")({
   alignItems: "center",
   justifyContent: "center",
   boxShadow: "rgba(0, 0, 0, 0.25) 0.8px 2px 6px 2px",
+
+  "@media (max-width: 768px)": {
+    width: "86%",
+    height: "80%",
+  },
 });
 
 const ContactUsInnerWrapperStyle = styled("div")({
@@ -40,6 +45,10 @@ const ContactUsComponentTitleWrapperStyle = styled("div")({
   // backgroundColor: "red",
   alignItems: "center",
   justifyContent: "center",
+
+  "@media (max-width: 768px)": {
+    fontSize: "6vw",
+  },
 });
 
 const ContactUsComponentContentWrapperStyle = styled("div")({
@@ -79,6 +88,11 @@ const ContactUsComponentSmallInputStyle = styled("input")({
   alignItems: "center",
   justifyContent: "center",
 
+  "@media (max-width: 768px)": {
+    fontSize: "3.5vw",
+    width: "80%",
+  },
+
   "&:focus": {
     outline: "0",
   },
@@ -110,6 +124,11 @@ const ContactUsComponentBigInputStyle = styled("textarea")({
   borderRadius: "0.25em",
   alignItems: "center",
   justifyContent: "center",
+
+  "@media (max-width: 768px)": {
+    width: "100%",
+    fontSize: "3.5vw",
+  },
 
   "&:focus": {
     outline: "0",

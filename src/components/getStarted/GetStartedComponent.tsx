@@ -27,7 +27,7 @@ function GetStartedComponent() {
   return (
     <MainWrapper>
       <UpPolygonWrapper>
-        <img src={UpPolygon} style={UpPolygonStyle} />
+        <img src={UpPolygon} style={UpPolygonStyle} alt="polygon" />
       </UpPolygonWrapper>
       <HorizontalWrapper>
         <SidePolygonWrapper>
