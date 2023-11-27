@@ -1,5 +1,5 @@
 import { signal } from "@preact/signals-react";
-import { getBaseUrl } from "../../services/api-client.config";
+import { baseRequest } from "../../services/api-client.config";
 
 interface FormData {
   email: string;
@@ -38,25 +38,7 @@ const validateEmail = (email: string): boolean => {
 };
 
 const postRequest = async (url: string, data: FormData) => {
-  try {
-    const response = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-
-    const responseData = await response.json();
-
-    console.log(responseData);
-  } catch (error) {
-    console.error("Error:", error);
-  }
+  await baseRequest("POST", url, data);
 };
 
 const submitRequest = (): void => {
@@ -76,7 +58,7 @@ const submitRequest = (): void => {
     description: description.value,
   };
 
-  postRequest(`${getBaseUrl}formInputs/addNewInput`, formData);
+  postRequest(`formInputs/addNewInput`, formData);
 
   changeHandlerState(true);
   console.log(formData);
