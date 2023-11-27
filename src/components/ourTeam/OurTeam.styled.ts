@@ -19,6 +19,7 @@ type TitleInputProps = {
 const Title = styled("h2")<TitleInputProps>(({ color }) => ({
   color: `${color}`,
   fontFamily: "Ubuntu",
+  fontSize: "4dvh",
   fontWeight: "500",
   alignSelf: "flex-start",
 }));

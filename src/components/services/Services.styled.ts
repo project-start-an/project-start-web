@@ -29,6 +29,7 @@ const Title = styled("h2")({
   color: "white",
   fontFamily: "Ubuntu",
   fontWeight: "500",
+  fontSize: "4dvh",
   alignSelf: "flex-start",
 });
 
