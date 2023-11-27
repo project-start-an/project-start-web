@@ -5,7 +5,11 @@
 I created a simple abstract function that can be found: [service-config](../src//services/api-client.config.ts) and looks like this:
 
 ```typescript
-export const baseRequest = async (method: string,url: string, data?: object,) => {
+export const baseRequest = async (
+  method: string,
+  url: string,
+  data?: object,
+) => {
   try {
     const headers: HeadersInit = {
       "Content-Type": "application/json",
