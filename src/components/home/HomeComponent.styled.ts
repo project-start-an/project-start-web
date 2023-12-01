@@ -27,7 +27,7 @@ const HorizontalWrapper = styled("div")({
   overflow: "hidden",
 
   "@media (max-width: 768px)": {
-    flexDirection: 'column',
+    flexDirection: "column",
   },
 });
 
@@ -36,7 +36,7 @@ const SidePolygonWrapper = styled("div")({
   width: "5%",
 
   "@media (max-width: 768px)": {
-    display: 'none'
+    display: "none",
   },
 });
 
@@ -54,7 +54,6 @@ const LeftSection = styled("div")({
   flexDirection: "column",
   marginTop: "5%",
   marginLeft: "5%",
-
 });
 
 const TitleText = styled("span")({
