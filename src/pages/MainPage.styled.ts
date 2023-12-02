@@ -21,10 +21,10 @@ const ResponsiveSection = styled("div")<InputProps>(({ background, id }) => ({
       id === "ourTeam"
         ? "120vh"
         : id === "getStarted"
-        ? "180vh"
-        : id === "services"
-        ? "200vh"
-        : "92vh",
+          ? "180vh"
+          : id === "services"
+            ? "200vh"
+            : "92vh",
   },
 }));
 
