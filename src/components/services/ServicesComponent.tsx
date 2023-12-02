@@ -32,7 +32,7 @@ function ServicesComponent() {
               <BoxContentWrapper>
                 {item.listings.map((item1) => {
                   return (
-                    <FieldWrapper style={{ fontSize: "1vw" }}>
+                    <FieldWrapper>
                       <IconWrapper>
                         <img src={Checkmark} alt="checkmark" />
                       </IconWrapper>

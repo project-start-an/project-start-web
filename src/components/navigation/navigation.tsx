@@ -4,19 +4,31 @@ import NavigationLink from "../styled-components/NavigationLink";
 import { useState, useEffect } from "react";
 import { NavWrapper } from "./Navigation.styled";
 import CustomToolbar from "../styled-components/CustomToolbar";
+import { useNavigate } from "react-router-dom";
+
+import { changeHandlerState } from "../contactForm/ContactForm.signals";
 
 const projectName = "WedecodeIT";
 
-const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "Services", href: "#services" },
-  { label: "Why us", href: "#whyNeedUs" },
-  { label: "Get Started", href: "#getStarted" },
-  { label: "Our Team", href: "#ourTeam" },
+type NavLinkType = {
+  id: string;
+  label: string;
+  href: string;
+  url: string;
+};
+
+const navLinks: NavLinkType[] = [
+  { id: "home", label: "Home", href: "#home", url: "/home" },
+  { id: "services", label: "Services", href: "#services", url: "/home" },
+  { id: "whyNeedUs", label: "Why us", href: "#whyNeedUs", url: "/home" },
+  { id: "getStarted", label: "Get Started", href: "#getStarted", url: "/home" },
+  { id: "ourTeam", label: "Our Team", href: "#ourTeam", url: "/home" },
 ];
 
 export default function Navigation() {
   const [, setScrollOffset] = useState<number>(0);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,9 +42,13 @@ export default function Navigation() {
     };
   }, []);
 
-  const handleNavLinkClick = (event: React.MouseEvent, href: string) => {
+  const handleNavLinkClick = (event: React.MouseEvent, link: NavLinkType) => {
     event.preventDefault();
-    const targetElement = document.querySelector(href);
+
+    navigate("/");
+    changeHandlerState(false);
+    const targetElement = document.querySelector(link.href);
+    console.log(link.href);
     if (targetElement) {
       const offset =
         targetElement.getBoundingClientRect().top + window.scrollY - 65;
@@ -66,7 +82,7 @@ export default function Navigation() {
         <NavWrapper>
           {navLinks.map((link, index) => (
             <NavigationLink
-              onClick={(event) => handleNavLinkClick(event, link.href)}
+              onClick={(event) => handleNavLinkClick(event, link)}
               key={index}
               variant="button"
               href={link.href}

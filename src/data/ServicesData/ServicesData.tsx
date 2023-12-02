@@ -10,8 +10,8 @@ const ServicesData: ServiceObj[] = [
     name: "Building Modern Website",
     listings: [
       "Strategic Web Presence",
-      "Responsive Design",
-      "SEO Optimization",
+      "Responsive Web Design",
+      "SEO Website Optimization",
       "Tailored Functionality",
     ],
   },

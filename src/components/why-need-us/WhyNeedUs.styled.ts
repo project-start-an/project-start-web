@@ -34,6 +34,7 @@ const Title = styled("h2")<TitleInputProps>(({ color }) => ({
   color: `${color}`,
   fontFamily: "Ubuntu",
   fontWeight: "500",
+  fontSize: "4dvh",
   alignSelf: "flex-start",
 }));
 
@@ -105,9 +106,16 @@ const FieldWrapper = styled("div")({
   alignItems: "center",
   justifyContent: "flex-start",
   fontFamily: "Ubuntu",
-  fontWeight: "500",
-  fontSize: "1.2vw",
-  "@media (max-width: 768px)": {},
+  fontWeight: "600",
+  cursor: "pointer",
+  fontSize: "0.95dvw",
+  "@media (max-width: 768px)": {
+    fontSize: "3dvw",
+  },
+
+  "&:hover": {
+    opacity: 0.9,
+  },
 });
 
 const IconWrapper = styled("div")({

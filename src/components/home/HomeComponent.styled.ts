@@ -25,11 +25,19 @@ const HorizontalWrapper = styled("div")({
   flex: 1,
   height: "40%",
   overflow: "hidden",
+
+  "@media (max-width: 768px)": {
+    flexDirection: "column",
+  },
 });
 
 const SidePolygonWrapper = styled("div")({
   height: "100%",
   width: "5%",
+
+  "@media (max-width: 768px)": {
+    display: "none",
+  },
 });
 
 const SidePolygonStyle: React.CSSProperties = {
