@@ -7,9 +7,13 @@ version: 2
 updates:
   - package-ecosystem: "npm" # See documentation for possible values
     directory: "/" # Location of package manifests
+    # Schedule PRs
     schedule:
       interval: "monthly"
     # Specify labels for npm pull requests
     labels:
       - "dependencies"
       - "update"
+    # Assign reviewers
+    reviewers:
+      - "@toni123321"
