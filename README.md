@@ -1,13 +1,15 @@
 # Project-start-web
 
-This is the official repo for the website of project-start-an
+This is the official repo for the company website of WeDecodeIT
 
 # Technologies
 
 These are the core technologies:
 
-1. React.js
+1. React.js with TS
 2. Vite
+3. Styled components
+4. Eslint, Prettier
 
 # Development
 
@@ -23,6 +25,12 @@ npm run install
 npm run dev
 ```
 
+## Build the project
+
+```bash
+npm run build
+```
+
 ## Check code quality and style
 
 To ensure code quality and seamless development, eslint and prettier are integrated in the codebase.
@@ -33,11 +41,33 @@ To ensure code quality and seamless development, eslint and prettier are integra
 npm run eslint
 ```
 
-### Code style (prettier)
+### Code style/formatting (prettier)
 
 ```bash
 npm run format
 ```
+
+#### Fix formatting
+
+```bash
+npm run format:fix
+```
+
+### Use before commiting
+
+Before do a commit, you can use the precommit script to check code quality and if project can be built.
+
+```bash
+node .\tools\precommit.js
+```
+
+# DevOps
+
+The project uses GitHub actions to create automated workflows which help automate different processes like code quality checking on commit to the repo.
+
+## Dependabot package upgrade
+
+Dependabot is used to upgrade packages' versions from time to time so that we stay up-to-date with recent package upgrades.
 
 # Packages
 
