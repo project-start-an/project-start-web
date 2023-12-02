@@ -1,4 +1,4 @@
-const baseURL: string = "http://localhost:8000/";
+const baseURL = import.meta.env.VITE_BE_URL || "";
 
 interface RequestOptions {
   method: string;
@@ -25,7 +25,7 @@ export const baseRequest = async (
       requestOptions.body = JSON.stringify(data);
     }
 
-    const response = await fetch(`${baseURL}${url}`, requestOptions);
+    const response = await fetch(`${baseURL}/${url}`, requestOptions);
 
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
