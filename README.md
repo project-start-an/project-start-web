@@ -6,10 +6,13 @@ This is the official repo for the company website of WeDecodeIT
 
 These are the core technologies:
 
-1. React.js with TS
-2. Vite
-3. Styled components
-4. Eslint, Prettier
+1. [NPM](https://www.npmjs.com/)
+2. [React.js](https://react.dev/)
+3. [TypeScript](https://www.typescriptlang.org/)
+4. [Vite](https://vitejs.dev/)
+5. [Styled components](https://styled-components.com/)
+6. [Eslint](https://eslint.org/)
+7. [Prettier](https://prettier.io/)
 
 # Development
 
@@ -53,9 +56,9 @@ npm run format
 npm run format:fix
 ```
 
-### Use before commiting
+### Use before committing
 
-Before do a commit, you can use the precommit script to check code quality and if project can be built.
+Before do a commit, you can use the pre-commit script to check code quality and if the project can be built.
 
 ```bash
 node .\tools\precommit.js
@@ -63,11 +66,19 @@ node .\tools\precommit.js
 
 # DevOps
 
-The project uses GitHub actions to create automated workflows which help automate different processes like code quality checking on commit to the repo.
+The project uses GitHub actions to create automated workflows that help automate processes like code quality checking on commits to the repo.
+
+## Workflows (CI/CD)
+
+We use workflows to automate CI/CD processes. Check [workflows](.github/workflows/).
 
 ## Dependabot package upgrade
 
-Dependabot is used to upgrade packages' versions from time to time so that we stay up-to-date with recent package upgrades.
+Dependabot is used to upgrade packages' versions occasionally so that we stay up-to-date with recent package upgrades. Check [dependabot config](.github/dependabot.yml). For more info look at [config options](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file)
+
+## Issue templates
+
+We use specific templates for issue creation to make issues consistent and easy to follow. Check [config](.github/ISSUE_TEMPLATE/).
 
 # Packages
 
