@@ -7,8 +7,6 @@ const MainWrapper = styled("div")({
   alignItems: "stretch",
   width: "100%",
   height: "100%",
-
-  
 });
 
 const UpPolygonWrapper = styled("div")({
@@ -70,11 +68,9 @@ const LeftSection = styled("div")({
 });
 
 const HomePageTitlesWrapperStyled = styled("div")({
-  
-
   "@media (max-width: 768px)": {
-     marginTop: '10%',
-     textAlign: 'center',
+    marginTop: "10%",
+    textAlign: "center",
   },
 });
 
@@ -86,8 +82,8 @@ const TitleText = styled("span")({
   fontWeight: "400",
 
   "@media (max-width: 768px)": {
-      fontSize: "6vw",
-      fontWeight: "600",
+    fontSize: "6vw",
+    fontWeight: "600",
   },
 });
 
@@ -101,7 +97,7 @@ const TitleBlueText = styled(TitleText)({
   "@media (max-width: 768px)": {
     fontSize: "8vw",
     fontWeight: "600",
-},
+  },
 });
 
 const rightAssetStyle: React.CSSProperties = {
@@ -197,5 +193,5 @@ export {
   BottomPolygonWrapper,
   TitleText,
   TitleBlueText,
-  HomePageTitlesWrapperStyled
+  HomePageTitlesWrapperStyled,
 };

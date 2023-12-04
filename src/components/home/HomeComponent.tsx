@@ -19,7 +19,7 @@ import {
   UpPolygonStyle,
   UpPolygonWrapper,
   rightAssetStyle,
-  HomePageTitlesWrapperStyled
+  HomePageTitlesWrapperStyled,
 } from "./HomeComponent.styled";
 
 const handleNavLinkClick = () => {
