@@ -46,6 +46,11 @@ const MiddleSectionWrapper = styled("div")({
   justifyContent: "center",
   alignItems: "center",
   gap: "5rem",
+
+  "@media (max-width: 768px)": {
+    width: "78%",
+    // backgroundColor: 'blue'
+  },
 });
 
 const MiddleSectionInnerWrapper = styled("div")({
@@ -68,6 +73,11 @@ const MiddleSectionTitle = styled("div")({
   fontWeight: "400",
   lineHeight: "84px",
   marginBottom: "1rem",
+
+  "@media (max-width: 768px)": {
+    fontSize: "8vw",
+    fontWeight: "600",
+  },
 });
 
 const MiddleSectionDescription = styled("div")({
@@ -78,6 +88,11 @@ const MiddleSectionDescription = styled("div")({
   fontStyle: "italic",
   fontWeight: "400",
   lineHeight: "normal",
+
+  "@media (max-width: 768px)": {
+    fontSize: "5.2vw",
+    fontWeight: "500",
+  },
 });
 
 const BottomPolygonWrapper = styled("div")({
@@ -120,6 +135,9 @@ const Button = styled("div")<BtnProps>(
     border: "0.15em solid #065A82",
     cursor: "pointer",
     "@media (max-width: 768px)": {
+      width: "66%",
+      height: "60%",
+      borderRadius: "1.4em",
       fontSize: mobileViewFontSize + "vw",
       fontWeight: "600",
     },

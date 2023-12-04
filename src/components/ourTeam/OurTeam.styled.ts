@@ -22,6 +22,10 @@ const Title = styled("h2")<TitleInputProps>(({ color }) => ({
   fontSize: "4dvh",
   fontWeight: "500",
   alignSelf: "flex-start",
+
+  "@media (max-width: 768px)": {
+    alignSelf: "center",
+  },
 }));
 
 const TeamWrapper = styled("div")({

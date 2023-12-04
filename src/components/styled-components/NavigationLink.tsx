@@ -7,5 +7,9 @@ const NavigationLink = styled(Link)({
   fontFamily: "Inter",
   fontWeight: "600",
   fontSize: "0.8vw",
+
+  "@media (max-width: 768px)": {
+    display: "none",
+  },
 });
 export default NavigationLink;

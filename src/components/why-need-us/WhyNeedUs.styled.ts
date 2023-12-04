@@ -36,6 +36,10 @@ const Title = styled("h2")<TitleInputProps>(({ color }) => ({
   fontWeight: "500",
   fontSize: "4dvh",
   alignSelf: "flex-start",
+
+  "@media (max-width: 768px)": {
+    alignSelf: "center",
+  },
 }));
 
 const ContentWrapper = styled("div")({
@@ -59,7 +63,10 @@ const BoxWrapper = styled("div")({
   backgroundColor: "#D7E6F0",
   alignItems: "center",
   boxShadow: "rgba(0, 0, 0, 0.25) 0.8px 2px 6px 2px",
-  "@media (max-width: 768px)": {},
+  "@media (max-width: 768px)": {
+    width: "100%",
+    height: "78%",
+  },
 });
 
 const LeftSectionWrapper = styled("div")({
@@ -68,7 +75,10 @@ const LeftSectionWrapper = styled("div")({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  "@media (max-width: 768px)": {},
+
+  "@media (max-width: 768px)": {
+    width: "100%",
+  },
 });
 
 const LeftSectionInnerWrapper = styled("div")({
@@ -90,7 +100,9 @@ const RightSectionWrapper = styled("div")({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  "@media (max-width: 768px)": {},
+  "@media (max-width: 768px)": {
+    display: "none",
+  },
 });
 
 const ImageStyle: React.CSSProperties = {

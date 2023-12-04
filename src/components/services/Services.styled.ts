@@ -31,6 +31,10 @@ const Title = styled("h2")({
   fontWeight: "500",
   fontSize: "4dvh",
   alignSelf: "flex-start",
+
+  "@media (max-width: 768px)": {
+    alignSelf: "center",
+  },
 });
 
 const ContentWrapper = styled("div")({
@@ -43,6 +47,7 @@ const ContentWrapper = styled("div")({
   "@media (max-width: 768px)": {
     alignItems: "center",
     flexDirection: "column",
+    height: "100%",
   },
 });
 
