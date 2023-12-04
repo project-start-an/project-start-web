@@ -19,6 +19,7 @@ import {
   UpPolygonStyle,
   UpPolygonWrapper,
   rightAssetStyle,
+  HomePageTitlesWrapperStyled
 } from "./HomeComponent.styled";
 
 const handleNavLinkClick = () => {
@@ -42,7 +43,7 @@ function HomeComponent() {
         </SidePolygonWrapper>
         {/* left section */}
         <LeftSection>
-          <div>
+          <HomePageTitlesWrapperStyled>
             <TitleText>Together </TitleText>
             <TitleBlueText>We </TitleBlueText>
             <TitleText>digitalize </TitleText>
@@ -50,12 +51,12 @@ function HomeComponent() {
             <TitleText>Business</TitleText>
             <TitleText>!</TitleText>
             {/* <img src={LeftAsset} style={leftAssetStyle} alt="welcome text" /> */}
-          </div>
+          </HomePageTitlesWrapperStyled>
           <ButtonWrapper>
             <Button
               onHoverBackgroundColor={"white"}
               normalViewFontSize={1.4}
-              mobileViewFontSize={3.8}
+              mobileViewFontSize={4.6}
               onClick={handleNavLinkClick}
             >
               Get started

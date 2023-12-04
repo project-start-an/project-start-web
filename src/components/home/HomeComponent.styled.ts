@@ -7,11 +7,16 @@ const MainWrapper = styled("div")({
   alignItems: "stretch",
   width: "100%",
   height: "100%",
+
+  
 });
 
 const UpPolygonWrapper = styled("div")({
   alignSelf: "center",
   height: "10%",
+  "@media (max-width: 768px)": {
+    display: "none",
+  },
 });
 
 const UpPolygonStyle: React.CSSProperties = {
@@ -27,7 +32,7 @@ const HorizontalWrapper = styled("div")({
   overflow: "hidden",
 
   "@media (max-width: 768px)": {
-    flexDirection: "column",
+    flexDirection: "column-reverse",
   },
 });
 
@@ -54,6 +59,23 @@ const LeftSection = styled("div")({
   flexDirection: "column",
   marginTop: "5%",
   marginLeft: "5%",
+
+  "@media (max-width: 768px)": {
+    flexDirection: "column-reverse",
+    justifyContent: "flex-end",
+    width: "80%",
+    marginTop: "0%",
+    marginLeft: "0%",
+  },
+});
+
+const HomePageTitlesWrapperStyled = styled("div")({
+  
+
+  "@media (max-width: 768px)": {
+     marginTop: '10%',
+     textAlign: 'center',
+  },
 });
 
 const TitleText = styled("span")({
@@ -62,6 +84,11 @@ const TitleText = styled("span")({
   fontSize: "min(4vw, 3rem)",
   fontStyle: "normal",
   fontWeight: "400",
+
+  "@media (max-width: 768px)": {
+      fontSize: "6vw",
+      fontWeight: "600",
+  },
 });
 
 const TitleBlueText = styled(TitleText)({
@@ -70,6 +97,11 @@ const TitleBlueText = styled(TitleText)({
   fontSize: "min(5.9vw, 4rem)",
   fontStyle: "normal",
   fontWeight: "500",
+
+  "@media (max-width: 768px)": {
+    fontSize: "8vw",
+    fontWeight: "600",
+},
 });
 
 const rightAssetStyle: React.CSSProperties = {
@@ -86,11 +118,19 @@ const RightSection = styled("div")({
   justifyContent: "center",
   flexDirection: "column",
   marginRight: "5%",
+
+  "@media (max-width: 768px)": {
+    width: "82%",
+    marginRight: "0%",
+  },
 });
 
 const BottomPolygonWrapper = styled("div")({
   alignSelf: "center",
   height: "10%",
+  "@media (max-width: 768px)": {
+    display: "none",
+  },
 });
 
 const ButtonWrapper = styled("div")({
@@ -99,6 +139,12 @@ const ButtonWrapper = styled("div")({
   display: "flex",
   alignItems: "center",
   justifyContent: "flex-start",
+
+  "@media (max-width: 768px)": {
+    height: "20%",
+    justifyContent: "center",
+    // backgroundColor: 'red'
+  },
 });
 
 type BtnProps = {
@@ -123,6 +169,9 @@ const Button = styled("div")<BtnProps>(
     border: "0.15em solid #065A82",
     cursor: "pointer",
     "@media (max-width: 768px)": {
+      borderRadius: "1.4em",
+      height: "78%",
+      width: "56%",
       fontSize: mobileViewFontSize + "vw",
       fontWeight: "600",
     },
@@ -148,4 +197,5 @@ export {
   BottomPolygonWrapper,
   TitleText,
   TitleBlueText,
+  HomePageTitlesWrapperStyled
 };
