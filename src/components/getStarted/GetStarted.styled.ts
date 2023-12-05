@@ -99,6 +99,9 @@ const BottomPolygonWrapper = styled("div")({
   alignSelf: "center",
   height: "10%",
   marginLeft: "30%",
+  "@media (max-width: 768px)": {
+    display: "none",
+  },
 });
 
 const BottomPolygonStyle: React.CSSProperties = {

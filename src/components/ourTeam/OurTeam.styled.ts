@@ -8,7 +8,8 @@ const Wrapper = styled("div")({
   flexDirection: "column",
   justifyContent: "flex-start",
   "@media (max-width: 768px)": {
-    width: "100%", // Apply 'flexDirection: column' for mobile view
+    width: "100%",
+    paddingBottom: "3rem",
   },
 });
 
@@ -40,6 +41,7 @@ const TeamWrapper = styled("div")({
     // Apply 'flexDirection: column' for mobile view
     flexDirection: "column",
     height: "100%",
+    gap: "3rem",
   },
 });
 
