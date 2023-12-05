@@ -58,12 +58,13 @@ const BoxWrapper = styled("div")({
   width: "25%",
   borderRadius: "0.5em",
   backgroundColor: "#D7E6F0",
-  boxShadow: "rgba(0, 0, 0, 0.25) 0.8px 2px 6px 2px",
+  boxShadow: "0px -4px 3px rgba(50, 50, 50, 0.75)",
   display: "flex",
   flexDirection: "column",
 
   "@media (max-width: 768px)": {
-    height: "96%",
+    height: "94%",
+    boxShadow: "none",
     width: "100%",
   },
 });
@@ -95,11 +96,15 @@ const BoxHeaderVisAsset = styled("div")({
   fontWeight: "600",
   fontSize: "1.3vw",
   alignItems: "center",
-  justifyContent: "flex-start",
+  justifyContent: "center",
   backgroundColor: "white",
   // background: 'url(https://s3-alpha-sig.figma.com/img/31c0/12f2/3321997b7cdbe0b51c6951b732770aaa?Expires=1701043200&Signature=OErLsNF9q16cPbYQf4IXDNuwWe0HD0vpZem9wYhmWlByTOM24JFJNORR32qXJERHRZEk96mm2SZpniFx5T9ITfy94XLNfZp3inbW85TAVC4qaGTdPJD6xs5K7KOAWwkEdMT9EbqI6Tl6HiCalOAZAZmrEQg7VNK5Wifp~2neGyg1CYhAlsNVE2D4t9gcAb~W78Zi3XRJz3NwX3Svl3beEnO73XgoCtr3BtFn02O1XbAmY5OKFBt1XebfAG-rHyJCT2ornuZ48rqEbG0yNYL1HxOcNU0h9KQLTn~ackwE71dSjOjP6tjrdlz~xntJ7YhsvGncK~ZpXWKywtqqN30~4Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4)',
   borderRadius: "0.2em",
   zIndex: 1,
+
+  "& img":{
+    height: '100%'
+  },
   "@media (max-width: 768px)": {
     fontSize: "4.5vw",
   },
@@ -145,12 +150,10 @@ const BoxInfoBtnWrapper = styled("div")({
 
 type BtnProps = {
   onHoverBackgroundColor: string;
-  normalViewFontSize: number;
-  mobileViewFontSize: number;
 };
 
 const BoxInfoBtn = styled("div")<BtnProps>(
-  ({ onHoverBackgroundColor, normalViewFontSize, mobileViewFontSize }) => ({
+  ({ onHoverBackgroundColor }) => ({
     height: "58%",
     width: "36%",
     display: "flex",
@@ -158,7 +161,7 @@ const BoxInfoBtn = styled("div")<BtnProps>(
     color: "#FFFFFF",
     fontFamily: "Ubuntu",
     fontWeight: "500",
-    fontSize: normalViewFontSize + "vw",
+    fontSize: '1.1rem',
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#065A82",
@@ -168,8 +171,8 @@ const BoxInfoBtn = styled("div")<BtnProps>(
       width: "48%",
       height: "54%",
       borderRadius: "1.2rem",
-      fontSize: mobileViewFontSize + "vw",
-      fontWeight: "600",
+      fontSize: '1.3rem',
+      fontWeight: "500",
     },
     "&:hover": {
       color: "rgb(0 0 0 / 90%)",

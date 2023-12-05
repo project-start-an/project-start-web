@@ -165,6 +165,7 @@ const Button = styled("button")<BtnProps>(({ onHoverBackgroundColor }) => ({
   "@media (max-width: 768px)": {
     // fontSize: mobileViewFontSize + "vw",
     width: "10.5rem",
+    fontSize: "1.4rem",
   },
   "&:hover": {
     color: "rgb(0 0 0 / 90%)",

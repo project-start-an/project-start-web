@@ -62,7 +62,7 @@ const BoxWrapper = styled("div")({
   borderRadius: "0.4em",
   backgroundColor: "#D7E6F0",
   alignItems: "center",
-  boxShadow: "rgba(0, 0, 0, 0.25) 0.8px 2px 6px 2px",
+  // boxShadow: "rgba(0, 0, 0, 0.25) 0.8px 2px 6px 2px",
   "@media (max-width: 768px)": {
     width: "100%",
     height: "78%",
@@ -90,7 +90,10 @@ const LeftSectionInnerWrapper = styled("div")({
   alignItems: "center",
   justifyContent: "center",
   flexDirection: "column",
-  "@media (max-width: 768px)": {},
+  "@media (max-width: 768px)": {
+    width: "96%",
+    // backgroundColor: "grey",
+  },
 });
 
 const RightSectionWrapper = styled("div")({
@@ -122,7 +125,7 @@ const FieldWrapper = styled("div")({
   cursor: "pointer",
   fontSize: "0.95dvw",
   "@media (max-width: 768px)": {
-    fontSize: "3.8dvw",
+    fontSize: "3.7dvw",
   },
 
   "&:hover": {
@@ -137,7 +140,7 @@ const IconWrapper = styled("div")({
   justifyContent: "center",
   alignItems: "center",
   "@media (max-width: 768px)": {
-    width: "18%",
+    width: "17%",
   },
   "& img": {
     width: "42%",
