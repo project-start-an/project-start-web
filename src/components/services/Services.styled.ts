@@ -102,8 +102,8 @@ const BoxHeaderVisAsset = styled("div")({
   borderRadius: "0.2em",
   zIndex: 1,
 
-  "& img":{
-    height: '100%'
+  "& img": {
+    height: "100%",
   },
   "@media (max-width: 768px)": {
     fontSize: "4.5vw",
@@ -152,34 +152,32 @@ type BtnProps = {
   onHoverBackgroundColor: string;
 };
 
-const BoxInfoBtn = styled("div")<BtnProps>(
-  ({ onHoverBackgroundColor }) => ({
-    height: "58%",
-    width: "36%",
-    display: "flex",
-    borderRadius: "0.6em",
-    color: "#FFFFFF",
-    fontFamily: "Ubuntu",
+const BoxInfoBtn = styled("div")<BtnProps>(({ onHoverBackgroundColor }) => ({
+  height: "58%",
+  width: "36%",
+  display: "flex",
+  borderRadius: "0.6em",
+  color: "#FFFFFF",
+  fontFamily: "Ubuntu",
+  fontWeight: "500",
+  fontSize: "1.1rem",
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: "#065A82",
+  border: "0.15em solid #065A82",
+  cursor: "pointer",
+  "@media (max-width: 768px)": {
+    width: "48%",
+    height: "54%",
+    borderRadius: "1.2rem",
+    fontSize: "1.3rem",
     fontWeight: "500",
-    fontSize: '1.1rem',
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#065A82",
-    border: "0.15em solid #065A82",
-    cursor: "pointer",
-    "@media (max-width: 768px)": {
-      width: "48%",
-      height: "54%",
-      borderRadius: "1.2rem",
-      fontSize: '1.3rem',
-      fontWeight: "500",
-    },
-    "&:hover": {
-      color: "rgb(0 0 0 / 90%)",
-      backgroundColor: onHoverBackgroundColor,
-    },
-  }),
-);
+  },
+  "&:hover": {
+    color: "rgb(0 0 0 / 90%)",
+    backgroundColor: onHoverBackgroundColor,
+  },
+}));
 
 export {
   MainWrapper,

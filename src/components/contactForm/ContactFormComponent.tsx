@@ -55,8 +55,6 @@ function ContactFormComponent() {
             <ContactUsComponentSubmitBtnWrapperStyle>
               <BoxInfoBtn
                 onHoverBackgroundColor={"#D7E6F0"}
-                normalViewFontSize={1.2}
-                mobileViewFontSize={4.2}
                 onClick={() => submitRequest()}
               >
                 Submit

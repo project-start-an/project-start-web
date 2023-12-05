@@ -1,16 +1,13 @@
-import BuildModernWebsite from '../../assets/ServicesCompAssets/build-moder-website.gif'
-import CustomSolutions from '../../assets/ServicesCompAssets/custom-software.gif'
-import MaintananceSupport from '../../assets/ServicesCompAssets/maintanance-support.gif'
+import BuildModernWebsite from "../../assets/ServicesCompAssets/build-moder-website.gif";
+import CustomSolutions from "../../assets/ServicesCompAssets/custom-software.gif";
+import MaintananceSupport from "../../assets/ServicesCompAssets/maintanance-support.gif";
 
 type ServiceObj = {
   id: number;
   name: string;
-  image: string ;
+  image: string;
   listings: string[];
 };
-
-
-
 
 const ServicesData: ServiceObj[] = [
   {

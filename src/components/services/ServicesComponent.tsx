@@ -34,7 +34,7 @@ function ServicesComponent() {
             <BoxWrapper>
               <BoxHeaderVisAssetWrapper>
                 <BoxHeaderVisAsset>
-                  <img src={item.image} alt="image"/>
+                  <img src={item.image} alt="image" />
                 </BoxHeaderVisAsset>
               </BoxHeaderVisAssetWrapper>
               <BoxTitle>{item.name}</BoxTitle>
@@ -51,9 +51,7 @@ function ServicesComponent() {
                 })}
               </BoxContentWrapper>
               <BoxInfoBtnWrapper>
-                <BoxInfoBtn
-                  onHoverBackgroundColor={"#D7E6F0"}
-                >
+                <BoxInfoBtn onHoverBackgroundColor={"#D7E6F0"}>
                   More info
                 </BoxInfoBtn>
               </BoxInfoBtnWrapper>
@@ -61,20 +59,20 @@ function ServicesComponent() {
           ))}
         </ContentWrapper>
         {isMobile ? (
-          <div style={{ width: "100%", height: '100%' }}>
-            <Carousel 
-            cycleNavigation={false}
-            navButtonsAlwaysVisible={false}
-            fullHeightHover={false}
-            animation='slide'
-            indicators={true}
-
-            height="66vh" >
+          <div style={{ width: "100%", height: "100%" }}>
+            <Carousel
+              cycleNavigation={false}
+              navButtonsAlwaysVisible={false}
+              fullHeightHover={false}
+              animation="slide"
+              indicators={true}
+              height="66vh"
+            >
               {ServicesData.map((item) => (
                 <BoxWrapper>
                   <BoxHeaderVisAssetWrapper>
                     <BoxHeaderVisAsset>
-                        <img src={item.image} alt="image"/>
+                      <img src={item.image} alt="image" />
                     </BoxHeaderVisAsset>
                   </BoxHeaderVisAssetWrapper>
                   <BoxTitle>{item.name}</BoxTitle>
@@ -91,9 +89,7 @@ function ServicesComponent() {
                     })}
                   </BoxContentWrapper>
                   <BoxInfoBtnWrapper>
-                    <BoxInfoBtn
-                      onHoverBackgroundColor={"#D7E6F0"}
-                    >
+                    <BoxInfoBtn onHoverBackgroundColor={"#D7E6F0"}>
                       More info
                     </BoxInfoBtn>
                   </BoxInfoBtnWrapper>
