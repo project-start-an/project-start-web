@@ -122,7 +122,7 @@ const FieldWrapper = styled("div")({
   cursor: "pointer",
   fontSize: "0.95dvw",
   "@media (max-width: 768px)": {
-    fontSize: "3dvw",
+    fontSize: "3.8dvw",
   },
 
   "&:hover": {
@@ -136,7 +136,9 @@ const IconWrapper = styled("div")({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  "@media (max-width: 768px)": {},
+  "@media (max-width: 768px)": {
+    width: "18%",
+  },
   "& img": {
     width: "42%",
     height: "100%",

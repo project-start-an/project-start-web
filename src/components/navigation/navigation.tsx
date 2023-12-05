@@ -58,7 +58,7 @@ export default function Navigation() {
 
   return (
     <AppBar
-      position="sticky"
+      position="fixed"
       elevation={2}
       style={{
         zIndex: 1000,
