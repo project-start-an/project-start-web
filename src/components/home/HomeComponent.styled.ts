@@ -11,7 +11,7 @@ const MainWrapper = styled("div")({
 
 const UpPolygonWrapper = styled("div")({
   alignSelf: "center",
-  height: "10%",
+  height: "15%",
   "@media (max-width: 768px)": {
     display: "none",
   },
@@ -139,44 +139,38 @@ const ButtonWrapper = styled("div")({
   "@media (max-width: 768px)": {
     height: "20%",
     justifyContent: "center",
-    // backgroundColor: 'red'
   },
 });
 
 type BtnProps = {
   onHoverBackgroundColor: string;
-  normalViewFontSize: number;
-  mobileViewFontSize: number;
 };
 
-const Button = styled("div")<BtnProps>(
-  ({ onHoverBackgroundColor, normalViewFontSize, mobileViewFontSize }) => ({
-    height: "58%",
-    width: "36%",
-    display: "flex",
-    borderRadius: "0.6em",
-    color: "#FFFFFF",
-    fontFamily: "Ubuntu",
-    fontWeight: "500",
-    fontSize: normalViewFontSize + "vw",
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#065A82",
-    border: "0.15em solid #065A82",
-    cursor: "pointer",
-    "@media (max-width: 768px)": {
-      borderRadius: "1.4em",
-      height: "78%",
-      width: "56%",
-      fontSize: mobileViewFontSize + "vw",
-      fontWeight: "600",
-    },
-    "&:hover": {
-      color: "rgb(0 0 0 / 90%)",
-      backgroundColor: onHoverBackgroundColor, // backgroundColor: "#D7E6F0",
-    },
-  }),
-);
+const Button = styled("button")<BtnProps>(({ onHoverBackgroundColor }) => ({
+  width: "12.5rem",
+  padding: "1rem",
+  height: "3.5rem",
+  fontWeight: "600",
+  borderRadius: "1rem",
+  display: "flex",
+  color: "#FFFFFF",
+  fontFamily: "Ubuntu",
+  // fontSize: normalViewFontSize + "vw",
+  fontSize: "1.5rem",
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: "#065A82",
+  border: "0.15em solid #065A82",
+  cursor: "pointer",
+  "@media (max-width: 768px)": {
+    // fontSize: mobileViewFontSize + "vw",
+    width: "10.5rem",
+  },
+  "&:hover": {
+    color: "rgb(0 0 0 / 90%)",
+    backgroundColor: onHoverBackgroundColor, // backgroundColor: "#D7E6F0",
+  },
+}));
 
 export {
   MainWrapper,
