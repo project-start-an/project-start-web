@@ -6,7 +6,7 @@ import { Grid, Box } from "@mui/material";
 
 function App() {
   return (
-    <div>
+    <div style={{ overflowX: "hidden" }}>
       <Box
         sx={{
           display: "flex",
