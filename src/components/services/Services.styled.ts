@@ -34,6 +34,7 @@ const Title = styled("h2")({
 
   "@media (max-width: 768px)": {
     alignSelf: "center",
+    marginBottom: "30%",
   },
 });
 
@@ -48,6 +49,7 @@ const ContentWrapper = styled("div")({
     alignItems: "center",
     flexDirection: "column",
     height: "100%",
+    display: "none",
   },
 });
 
@@ -61,8 +63,8 @@ const BoxWrapper = styled("div")({
   flexDirection: "column",
 
   "@media (max-width: 768px)": {
-    height: "28%",
-    width: "76%",
+    height: "96%",
+    width: "100%",
   },
 });
 
@@ -113,7 +115,7 @@ const BoxTitle = styled("div")({
   alignItems: "flex-end",
   justifyContent: "center",
   "@media (max-width: 768px)": {
-    fontSize: "4.5vw",
+    fontSize: "5.6vw",
   },
 });
 
@@ -163,6 +165,9 @@ const BoxInfoBtn = styled("div")<BtnProps>(
     border: "0.15em solid #065A82",
     cursor: "pointer",
     "@media (max-width: 768px)": {
+      width: "48%",
+      height: "54%",
+      borderRadius: "1.2rem",
       fontSize: mobileViewFontSize + "vw",
       fontWeight: "600",
     },
