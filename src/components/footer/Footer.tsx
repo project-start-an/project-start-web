@@ -4,6 +4,8 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import LinkedInSvg from "../../assets/LinkedIn white theme.svg";
 import InstagramSvg from "../../assets/Instagram white theme.svg";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import useTheme from "@mui/material/styles/useTheme";
 
 const projectName = "WedecodeIT";
 const companyEmail = "project.start.an@gmail.com";
@@ -18,6 +20,9 @@ function Footer() {
     window.open("https://www.instagram.com/wedecodeit/", "_blank");
   };
 
+  const theme = useTheme();
+
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <Box sx={{ display: "flex", flexDirection: "column" }}>
       <CssBaseline />
@@ -36,9 +41,14 @@ function Footer() {
             display="flex"
             justifyContent="space-between"
             alignItems="center"
+            flexDirection={isMobile ? "column" : "row"}
           >
             {/* Company/Logo */}
-            <Typography variant="h6" width="20%">
+            <Typography
+              variant="h6"
+              width={isMobile ? "30" : "20"}
+              marginBottom={isMobile ? "3%" : "0%"}
+            >
               {projectName}
             </Typography>
 
@@ -49,6 +59,7 @@ function Footer() {
                 justifyContent="center"
                 alignItems="center"
                 gap="0.5rem"
+                flexDirection={isMobile ? "column" : "row"}
               >
                 <Typography variant="body2" textAlign="center">
                   &copy; {new Date().getFullYear()} WedecodeIT.
@@ -60,7 +71,11 @@ function Footer() {
             </Box>
 
             {/* Contacts */}
-            <Box width="20%" fontSize="0.9rem">
+            <Box
+              width="20%"
+              fontSize="0.9rem"
+              display={isMobile ? "none" : "row"}
+            >
               <Typography variant="h6">Contacts</Typography>
               <Box>{companyEmail}</Box>
               <Box>{phone}</Box>
