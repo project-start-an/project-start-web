@@ -105,24 +105,16 @@ const PersonPosition = styled(InfoRow)({
   fontStyle: "italic",
 });
 
-const AdditionalInfoWrapper = styled("div")({
-  width: "90%",
-  display: "flex",
-  alignItems: "flex-start",
-  justifyContent: "center",
-  flexDirection: "column",
-});
-
 const AdditionalInfoRow = styled(InfoRow)({
   width: "90%",
   justifyContent: "flex-start",
+  fontSize: "0.875rem",
 });
 
 export {
   InfoRow,
   PersonName,
   PersonPosition,
-  AdditionalInfoWrapper,
   AdditionalInfoRow,
   Wrapper,
   TeamPersonImage,
