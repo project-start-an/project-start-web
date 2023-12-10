@@ -32,9 +32,13 @@ const Title = styled("h2")({
   fontSize: "4dvh",
   alignSelf: "flex-start",
 
-  "@media (max-width: 768px)": {
+  "@media (max-width: 900px)": {
     alignSelf: "center",
-    marginBottom: "30%",
+    marginBottom: "4rem",
+  },
+
+  "@media (max-width: 768px)": {
+    marginBottom: "2rem",
   },
 });
 
@@ -44,6 +48,13 @@ const ContentWrapper = styled("div")({
   display: "flex",
   justifyContent: "space-evenly",
   alignItems: "center",
+
+  "@media (max-width: 900px)": {
+    alignItems: "center",
+    flexDirection: "column",
+    height: "100%",
+    display: "none",
+  },
 
   "@media (max-width: 768px)": {
     alignItems: "center",
@@ -79,6 +90,11 @@ const BoxHeaderVisAssetWrapper = styled("div")({
   fontSize: "1.3vw",
   alignItems: "flex-start",
   justifyContent: "center",
+
+  "@media (max-width: 900px)": {
+    display: "none",
+  },
+
   "@media (max-width: 768px)": {
     fontSize: "4.5vw",
   },
@@ -119,6 +135,9 @@ const BoxTitle = styled("div")({
   fontSize: "1.3vw",
   alignItems: "flex-end",
   justifyContent: "center",
+  "@media (max-width: 900px)": {
+    marginTop: "5rem",
+  },
   "@media (max-width: 768px)": {
     fontSize: "5.6vw",
   },

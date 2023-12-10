@@ -23,7 +23,8 @@ import {
 function ServicesComponent() {
   const theme = useTheme();
 
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  // Change to be tablet/mobile
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <MainWrapper bannerImg={ServicesBanner}>
