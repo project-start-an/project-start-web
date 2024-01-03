@@ -1,5 +1,5 @@
 // Import your styles
-import TeamPersonWrapper from "../../styles/styled-components/TeamPersonWrapper";
+import TeamPersonWrapper from "../teamPerson/TeamPerson";
 import TeamData from "../../data/TeamData/teamData";
 import { TeamWrapper, Title, Wrapper } from "./OurTeam.styled";
 
@@ -17,7 +17,6 @@ function OurTeamComponent() {
               name={item.name}
               position={item.position}
               email={item.email}
-              emailLink={item.emailLink}
               linkedInName={item.linkedInName}
               linkedInLink={item.linkedInLink}
               svg={item.svg}

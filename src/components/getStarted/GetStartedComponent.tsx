@@ -45,8 +45,6 @@ function GetStartedComponent() {
             <ButtonWrapper>
               <Button
                 onHoverBackgroundColor={"white"}
-                normalViewFontSize={1.4}
-                mobileViewFontSize={4.6}
                 onClick={() => navigate("/ContactUs")}
               >
                 Get started

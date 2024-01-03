@@ -51,14 +51,15 @@ export default function Navigation() {
     console.log(link.href);
     if (targetElement) {
       const offset =
-        targetElement.getBoundingClientRect().top + window.scrollY - 65;
+        targetElement.getBoundingClientRect().top + window.scrollY - 64;
       window.scrollTo({ top: offset, behavior: "smooth" });
     }
   };
 
   return (
     <AppBar
-      position="sticky"
+      id="nav-header"
+      position="fixed"
       elevation={2}
       style={{
         zIndex: 1000,

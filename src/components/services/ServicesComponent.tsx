@@ -2,6 +2,9 @@ import ServicesBanner from "../../assets/ServicesCompAssets/service-banner.png";
 import ServicesData from "../../data/ServicesData/ServicesData";
 import Checkmark from "../../assets/checkmark.svg";
 import { FieldWrapper, IconWrapper } from "../why-need-us/WhyNeedUs.styled";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import useTheme from "@mui/material/styles/useTheme";
+import Carousel from "react-material-ui-carousel";
 
 import {
   BoxContentWrapper,
@@ -18,6 +21,11 @@ import {
 } from "./Services.styled";
 
 function ServicesComponent() {
+  const theme = useTheme();
+
+  // Change to be tablet/mobile
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <MainWrapper bannerImg={ServicesBanner}>
       <InnerWrapper>
@@ -26,7 +34,9 @@ function ServicesComponent() {
           {ServicesData.map((item) => (
             <BoxWrapper>
               <BoxHeaderVisAssetWrapper>
-                <BoxHeaderVisAsset></BoxHeaderVisAsset>
+                <BoxHeaderVisAsset>
+                  <img src={item.image} alt="image" />
+                </BoxHeaderVisAsset>
               </BoxHeaderVisAssetWrapper>
               <BoxTitle>{item.name}</BoxTitle>
               <BoxContentWrapper>
@@ -42,17 +52,55 @@ function ServicesComponent() {
                 })}
               </BoxContentWrapper>
               <BoxInfoBtnWrapper>
-                <BoxInfoBtn
-                  onHoverBackgroundColor={"#D7E6F0"}
-                  normalViewFontSize={1}
-                  mobileViewFontSize={3.8}
-                >
+                <BoxInfoBtn onHoverBackgroundColor={"#D7E6F0"}>
                   More info
                 </BoxInfoBtn>
               </BoxInfoBtnWrapper>
             </BoxWrapper>
           ))}
         </ContentWrapper>
+        {isMobile ? (
+          <div style={{ width: "100%", height: "100%" }}>
+            <Carousel
+              cycleNavigation={false}
+              navButtonsAlwaysVisible={false}
+              fullHeightHover={false}
+              animation="slide"
+              indicators={true}
+              height="66vh"
+            >
+              {ServicesData.map((item) => (
+                <BoxWrapper>
+                  <BoxHeaderVisAssetWrapper>
+                    <BoxHeaderVisAsset>
+                      <img src={item.image} alt="image" />
+                    </BoxHeaderVisAsset>
+                  </BoxHeaderVisAssetWrapper>
+                  <BoxTitle>{item.name}</BoxTitle>
+                  <BoxContentWrapper>
+                    {item.listings.map((item1) => {
+                      return (
+                        <FieldWrapper>
+                          <IconWrapper>
+                            <img src={Checkmark} alt="checkmark" />
+                          </IconWrapper>
+                          {item1}
+                        </FieldWrapper>
+                      );
+                    })}
+                  </BoxContentWrapper>
+                  <BoxInfoBtnWrapper>
+                    <BoxInfoBtn onHoverBackgroundColor={"#D7E6F0"}>
+                      More info
+                    </BoxInfoBtn>
+                  </BoxInfoBtnWrapper>
+                </BoxWrapper>
+              ))}
+            </Carousel>
+          </div>
+        ) : (
+          ""
+        )}
       </InnerWrapper>
     </MainWrapper>
   );

@@ -60,7 +60,7 @@ const MiddleSectionInnerWrapper = styled("div")({
   alignItems: "center",
   width: "80%",
   flexDirection: "column",
-  gap: "5rem",
+  gap: "2rem",
 });
 
 const MiddleSectionTitle = styled("div")({
@@ -99,6 +99,9 @@ const BottomPolygonWrapper = styled("div")({
   alignSelf: "center",
   height: "10%",
   marginLeft: "30%",
+  "@media (max-width: 768px)": {
+    display: "none",
+  },
 });
 
 const BottomPolygonStyle: React.CSSProperties = {
@@ -115,38 +118,34 @@ const ButtonWrapper = styled("div")({
 
 type BtnProps = {
   onHoverBackgroundColor: string;
-  normalViewFontSize: number;
-  mobileViewFontSize: number;
 };
 
-const Button = styled("div")<BtnProps>(
-  ({ onHoverBackgroundColor, normalViewFontSize, mobileViewFontSize }) => ({
-    height: "58%",
-    width: "36%",
-    display: "flex",
-    borderRadius: "0.6em",
-    color: "#FFFFFF",
-    fontFamily: "Ubuntu",
-    fontWeight: "500",
-    fontSize: normalViewFontSize + "vw",
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#065A82",
-    border: "0.15em solid #065A82",
-    cursor: "pointer",
-    "@media (max-width: 768px)": {
-      width: "66%",
-      height: "60%",
-      borderRadius: "1.4em",
-      fontSize: mobileViewFontSize + "vw",
-      fontWeight: "600",
-    },
-    "&:hover": {
-      color: "rgb(0 0 0 / 90%)",
-      backgroundColor: onHoverBackgroundColor, // backgroundColor: "#D7E6F0",
-    },
-  }),
-);
+const Button = styled("button")<BtnProps>(({ onHoverBackgroundColor }) => ({
+  width: "12.5rem",
+  padding: "1rem",
+  height: "3.5rem",
+  fontWeight: "600",
+  borderRadius: "1rem",
+  display: "flex",
+  color: "#FFFFFF",
+  fontFamily: "Ubuntu",
+  // fontSize: normalViewFontSize + "vw",
+  fontSize: "1.5rem",
+  alignItems: "center",
+  justifyContent: "center",
+  backgroundColor: "#065A82",
+  border: "0.15em solid #065A82",
+  cursor: "pointer",
+  "@media (max-width: 768px)": {
+    // fontSize: mobileViewFontSize + "vw",
+    width: "10.5rem",
+    fontSize: "1.4rem",
+  },
+  "&:hover": {
+    color: "rgb(0 0 0 / 90%)",
+    backgroundColor: onHoverBackgroundColor, // backgroundColor: "#D7E6F0",
+  },
+}));
 
 export {
   MainWrapper,
