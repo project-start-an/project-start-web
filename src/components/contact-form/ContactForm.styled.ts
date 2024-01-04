@@ -141,7 +141,7 @@ const ContactUsComponentSubmitBtnWrapperStyle = styled.div`
   justify-content: center;
 `;
 
-//#endregion
+//#endregion Styled Components
 
 export {
   ContactFormComponentStyle,

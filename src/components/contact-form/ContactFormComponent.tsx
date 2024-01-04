@@ -1,4 +1,4 @@
-import { BoxInfoBtn } from "../services/Services.styled";
+import { BoxInfoBtn } from "../our-services/Services.styled";
 import {
   ContactFormComponentStyle,
   ContactUsInnerWrapperStyle,

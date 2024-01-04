@@ -12,11 +12,7 @@ const MainWrapper = styled.div`
 
 const UpPolygonWrapper = styled.div`
   align-self: center;
-  height: 15%;
-
-  @media (max-width: 768px) {
-    display: none;
-  }
+  height: 10%;
 `;
 
 const UpPolygonStyle = {
@@ -30,19 +26,11 @@ const HorizontalWrapper = styled.div`
   flex: 1;
   height: 40%;
   overflow: hidden;
-
-  @media (max-width: 768px) {
-    flex-direction: column-reverse;
-  }
 `;
 
 const SidePolygonWrapper = styled.div`
   height: 100%;
   width: 5%;
-
-  @media (max-width: 768px) {
-    display: none;
-  }
 `;
 
 const SidePolygonStyle = {
@@ -50,49 +38,40 @@ const SidePolygonStyle = {
   width: "100%",
 };
 
-const LeftSection = styled.div`
+const MiddleSectionWrapper = styled.div`
   height: 100%;
-  width: 35%;
+  width: 60%;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  margin-top: 5%;
-  margin-left: 5%;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
 
   @media (max-width: 768px) {
-    flex-direction: column-reverse;
-    justify-content: flex-end;
-    width: 80%;
-    margin-top: 0%;
-    margin-left: 0%;
+    width: 78%;
   }
 `;
 
-const HomePageTitlesWrapperStyled = styled.div`
-  @media (max-width: 768px) {
-    margin-top: 10%;
-    text-align: center;
-  }
+const MiddleSectionInnerWrapper = styled.div`
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  flex-direction: column;
+  gap: 2rem;
 `;
 
-const TitleText = styled.span`
+const MiddleSectionTitle = styled.div`
   color: #000;
-  font-family: Ubuntu;
-  font-size: min(4vw, 3rem);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: "Ubuntu";
+  font-size: min(7vw, 4.375rem);
   font-style: normal;
   font-weight: 400;
-
-  @media (max-width: 768px) {
-    font-size: 6vw;
-    font-weight: 600;
-  }
-`;
-
-const TitleBlueText = styled(TitleText)`
-  color: #516a91;
-  font-size: min(5.9vw, 4rem);
-  font-weight: 500;
+  line-height: 84px;
+  margin-bottom: 1rem;
 
   @media (max-width: 768px) {
     font-size: 8vw;
@@ -100,47 +79,41 @@ const TitleBlueText = styled(TitleText)`
   }
 `;
 
-const rightAssetStyle = {
-  height: "100%",
-  width: "100%",
-  objectFit: "contain",
-};
-
-const RightSection = styled.div`
-  height: 100%;
-  width: 35%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin-right: 5%;
+const MiddleSectionDescription = styled.div`
+  color: #000;
+  text-align: center;
+  font-family: "Ubuntu";
+  font-size: min(3vw, 2rem);
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
 
   @media (max-width: 768px) {
-    width: 82%;
-    margin-right: 0%;
+    font-size: 5.2vw;
+    font-weight: 500;
   }
 `;
 
 const BottomPolygonWrapper = styled.div`
   align-self: center;
   height: 10%;
+  margin-left: 30%;
 
   @media (max-width: 768px) {
     display: none;
   }
 `;
 
+const BottomPolygonStyle = {
+  height: "calc(100% + 5rem)",
+};
+
 const ButtonWrapper = styled.div`
   height: 20%;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-
-  @media (max-width: 768px) {
-    height: 20%;
-    justify-content: center;
-  }
+  justify-content: center;
 `;
 
 type BtnProps = {
@@ -155,7 +128,7 @@ const Button = styled.button<BtnProps>`
   border-radius: 1rem;
   display: flex;
   color: #ffffff;
-  font-family: Ubuntu;
+  font-family: "Ubuntu";
   font-size: 1.5rem;
   align-items: center;
   justify-content: center;
@@ -169,7 +142,7 @@ const Button = styled.button<BtnProps>`
   }
 
   &:hover {
-    color: rgb(0 0 0 / 90%);
+    color: rgba(0, 0, 0, 0.9);
     background-color: ${(props) => props.onHoverBackgroundColor};
   }
 `;
@@ -182,13 +155,12 @@ export {
   HorizontalWrapper,
   SidePolygonWrapper,
   SidePolygonStyle,
-  LeftSection,
-  RightSection,
   ButtonWrapper,
   Button,
-  rightAssetStyle,
   BottomPolygonWrapper,
-  TitleText,
-  TitleBlueText,
-  HomePageTitlesWrapperStyled,
+  BottomPolygonStyle,
+  MiddleSectionWrapper,
+  MiddleSectionInnerWrapper,
+  MiddleSectionTitle,
+  MiddleSectionDescription,
 };
