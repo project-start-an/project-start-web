@@ -1,5 +1,5 @@
 import { styled } from "@mui/material";
-import ResponsiveInnerWrapper from "../../styles/styled-components/InnerWrapper";
+import ResponsiveInnerWrapper from "../styled-components/InnerWrapper.styled";
 
 const ResponsiveMiddleSectionLeftWrapper = styled("div")({
   // Add your default styles here
