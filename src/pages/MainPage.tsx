@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
-import HomeComponent from "../../components/home/HomeComponent";
-import ServicesComponent from "../../components/our-services/ServicesComponent";
+import HomeComponent from "../components/home/HomeComponent";
+import ServicesComponent from "../components/services/ServicesComponent";
 import { ResponsiveSection } from "./MainPage.styled";
-import WhyNeedUsComponent from "../../components/why-need-us/WhyNeedUsComponent";
-import OurTeamComponent from "../../components/our-team/OurTeamComponent";
-import GetStartedComponent from "../../components/get-started/GetStartedComponent";
+import WhyNeedUsComponent from "../components/why-need-us/WhyNeedUsComponent";
+import OurTeamComponent from "../components/ourTeam/OurTeamComponent";
+import GetStartedComponent from "../components/getStarted/GetStartedComponent";
 
 interface ISection {
   title: string;

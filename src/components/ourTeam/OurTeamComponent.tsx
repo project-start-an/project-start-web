@@ -1,5 +1,5 @@
 // Import your styles
-import TeamPersonWrapper from "../team-person/TeamPerson";
+import TeamPersonWrapper from "../teamPerson/TeamPerson";
 import TeamData from "../../data/TeamData/teamData";
 import { TeamWrapper, Title, Wrapper } from "./OurTeam.styled";
 

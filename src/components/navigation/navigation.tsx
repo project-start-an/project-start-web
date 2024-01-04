@@ -1,12 +1,12 @@
 import { AppBar } from "@mui/material";
-import CustomTypography from "../styled-components/CustomTypography.styled";
-import NavigationLink from "../styled-components/NavigationLink.styled";
+import CustomTypography from "../styled-components/CustomTypography";
+import NavigationLink from "../styled-components/NavigationLink";
 import { useState, useEffect } from "react";
 import { NavWrapper } from "./Navigation.styled";
-import CustomToolbar from "../styled-components/CustomToolbar.styled";
+import CustomToolbar from "../styled-components/CustomToolbar";
 import { useNavigate } from "react-router-dom";
 
-import { changeHandlerState } from "../contact-form/ContactForm.signals";
+import { changeHandlerState } from "../contactForm/ContactForm.signals";
 
 const projectName = "WedecodeIT";
 

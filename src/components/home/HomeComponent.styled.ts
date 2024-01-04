@@ -173,7 +173,7 @@ const Button = styled.button<BtnProps>`
     background-color: ${(props) => props.onHoverBackgroundColor};
   }
 `;
-//#endregion Styled Components
+//#endregion
 
 export {
   MainWrapper,

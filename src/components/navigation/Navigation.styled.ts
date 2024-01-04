@@ -1,12 +1,10 @@
-import styled from "styled-components";
+import { styled } from "@mui/material";
 
-//#region Styled Components
-const NavWrapper = styled.nav`
-  width: 60%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-`;
-//#endregion Styled Components
+const NavWrapper = styled("nav")({
+  width: "60%",
+  display: "flex",
+  justifyContent: "flex-end",
+  alignItems: "center",
+});
 
 export { NavWrapper };
