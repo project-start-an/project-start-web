@@ -12,7 +12,7 @@ import {
   SidePolygonWrapper,
   UpPolygonStyle,
   UpPolygonWrapper,
-} from "../../components/getStarted/GetStartedComponent.styled";
+} from "../../components/getStarted/GetStarted.styled";
 import ContactFormComponent from "../../components/contactForm/ContactFormComponent";
 
 function ContactUsPage() {

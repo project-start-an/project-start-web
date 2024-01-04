@@ -1,145 +1,152 @@
-import styled from "styled-components";
+import { styled } from "@mui/material";
 
-//#region Styled Components
-const ContactFormComponentStyle = styled.div`
-  width: 50%;
-  height: 90%;
-  border-radius: 0.4em;
-  background-color: #d7e6f0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: rgba(0, 0, 0, 0.25) 0.8px 2px 6px 2px;
+const ContactFormComponentStyle = styled("div")({
+  width: "50%",
+  height: "90%",
+  borderRadius: "0.4em",
+  backgroundColor: "#D7E6F0",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  boxShadow: "rgba(0, 0, 0, 0.25) 0.8px 2px 6px 2px",
 
-  @media (max-width: 768px) {
-    width: 86%;
-    height: 80%;
-  }
-`;
+  "@media (max-width: 768px)": {
+    width: "86%",
+    height: "80%",
+  },
+});
 
-const ContactUsInnerWrapperStyle = styled.div`
-  width: 98%;
-  height: 98%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
+const ContactUsInnerWrapperStyle = styled("div")({
+  width: "98%",
+  height: "98%",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+});
 
-const ContactUsInitialWrapperStyle = styled.div`
-  width: 86%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
+//#region Contact Us wrapper
+const ContactUsInitialWrapperStyle = styled("div")({
+  width: "86%",
+  height: "100%",
+  display: "flex",
+  flexDirection: "column",
+  //   backgroundColor: "grey",
+  alignItems: "center",
+  justifyContent: "center",
+});
 
-const ContactUsComponentTitleWrapperStyle = styled.div`
-  width: 100%;
-  height: 15%;
-  display: flex;
-  font-family: Ubuntu;
-  font-weight: 600;
-  font-size: 1.5vw;
-  align-items: center;
-  justify-content: center;
+const ContactUsComponentTitleWrapperStyle = styled("div")({
+  width: "100%",
+  height: "15%",
+  display: "flex",
+  fontFamily: "Ubuntu",
+  fontWeight: "600",
+  fontSize: "1.5vw",
+  // backgroundColor: "red",
+  alignItems: "center",
+  justifyContent: "center",
 
-  @media (max-width: 768px) {
-    font-size: 6vw;
-  }
-`;
+  "@media (max-width: 768px)": {
+    fontSize: "6vw",
+  },
+});
 
-const ContactUsComponentContentWrapperStyle = styled.div`
-  width: 100%;
-  height: 65%;
-  display: flex;
-  flex-direction: column;
-  font-family: Ubuntu;
-  font-weight: 600;
-  font-size: 1.5vw;
-  align-items: center;
-  justify-content: center;
-`;
+const ContactUsComponentContentWrapperStyle = styled("div")({
+  width: "100%",
+  height: "65%",
+  display: "flex",
+  flexDirection: "column",
+  fontFamily: "Ubuntu",
+  fontWeight: "600",
+  fontSize: "1.5vw",
+  alignItems: "center",
+  justifyContent: "center",
+});
 
-const ContactUsComponentSmallInputWrapperStyle = styled.div`
-  width: 100%;
-  height: 20%;
-  display: flex;
-  font-family: Ubuntu;
-  font-weight: 600;
-  font-size: 1.5vw;
-  align-items: center;
-  justify-content: flex-start;
-`;
+const ContactUsComponentSmallInputWrapperStyle = styled("div")({
+  width: "100%",
+  height: "20%",
+  display: "flex",
+  fontFamily: "Ubuntu",
+  fontWeight: "600",
+  fontSize: "1.5vw",
+  // backgroundColor: "red",
+  alignItems: "center",
+  justifyContent: "flex-start",
+});
 
-const ContactUsComponentSmallInputStyle = styled.input`
-  width: 60%;
-  padding-left: 1.5%;
-  height: 80%;
-  font-family: Ubuntu;
-  font-weight: 600;
-  font-size: 0.88vw;
-  border: none;
-  border-radius: 0.25em;
-  align-items: center;
-  justify-content: center;
+const ContactUsComponentSmallInputStyle = styled("input")({
+  width: "60%",
+  paddingLeft: "1.5%",
+  height: "80%",
+  display: "flex",
+  fontFamily: "Ubuntu",
+  fontWeight: "600",
+  fontSize: "0.88vw",
+  border: "none",
+  borderRadius: "0.25em",
+  alignItems: "center",
+  justifyContent: "center",
 
-  @media (max-width: 768px) {
-    font-size: 3.5vw;
-    width: 80%;
-  }
+  "@media (max-width: 768px)": {
+    fontSize: "3.5vw",
+    width: "80%",
+  },
 
-  &:focus {
-    outline: 0;
-  }
-`;
+  "&:focus": {
+    outline: "0",
+  },
+});
 
-const ContactUsComponentBigInputWrapperStyle = styled.div`
-  width: 100%;
-  height: 60%;
-  display: flex;
-  font-family: Ubuntu;
-  font-weight: 600;
-  font-size: 1.5vw;
-  align-items: center;
-  justify-content: flex-start;
-`;
+const ContactUsComponentBigInputWrapperStyle = styled("div")({
+  width: "100%",
+  height: "60%",
+  display: "flex",
+  fontFamily: "Ubuntu",
+  fontWeight: "600",
+  fontSize: "1.5vw",
+  // backgroundColor: "grey",
+  alignItems: "center",
+  justifyContent: "flex-start",
+});
 
-const ContactUsComponentBigInputStyle = styled.textarea`
-  width: 90%;
-  padding-left: 1.5%;
-  padding-top: 2%;
-  height: 86%;
-  font-family: Ubuntu;
-  font-weight: 600;
-  color: black;
-  font-size: 0.88vw;
-  border: none;
-  border-radius: 0.25em;
-  align-items: center;
-  justify-content: center;
-  resize: none;
+const ContactUsComponentBigInputStyle = styled("textarea")({
+  width: "90%",
+  paddingLeft: "1.5%",
+  paddingTop: "2%",
+  height: "86%",
+  display: "flex",
+  fontFamily: "Ubuntu",
+  fontWeight: "600",
+  color: "black",
+  fontSize: "0.88vw",
+  border: "none",
+  borderRadius: "0.25em",
+  alignItems: "center",
+  justifyContent: "center",
+  resize: "none",
 
-  @media (max-width: 768px) {
-    width: 100%;
-    font-size: 3.5vw;
-  }
+  "@media (max-width: 768px)": {
+    width: "100%",
+    fontSize: "3.5vw",
+  },
 
-  &:focus {
-    outline: 0;
-  }
-`;
+  "&:focus": {
+    outline: "0",
+  },
+});
 
-const ContactUsComponentSubmitBtnWrapperStyle = styled.div`
-  width: 100%;
-  height: 20%;
-  display: flex;
-  font-family: Ubuntu;
-  font-weight: 600;
-  font-size: 1.5vw;
-  align-items: center;
-  justify-content: center;
-`;
+const ContactUsComponentSubmitBtnWrapperStyle = styled("div")({
+  width: "100%",
+  height: "20%",
+  display: "flex",
+  fontFamily: "Ubuntu",
+  fontWeight: "600",
+  fontSize: "1.5vw",
+  // backgroundColor: "red",
+  alignItems: "center",
+  justifyContent: "center",
+});
 
 //#endregion
 

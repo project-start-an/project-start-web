@@ -19,7 +19,7 @@ import {
   MiddleSectionTitle,
   MiddleSectionDescription,
   MiddleSectionInnerWrapper,
-} from "./GetStartedComponent.styled";
+} from "./GetStarted.styled";
 
 function GetStartedComponent() {
   const navigate = useNavigate();
