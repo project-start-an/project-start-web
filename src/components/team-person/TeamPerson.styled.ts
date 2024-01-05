@@ -11,8 +11,8 @@ const Wrapper = styled.div`
   flex-direction: column;
   gap: 2rem;
 
-  @media (max-width: 768px) {
-    width: 80%; // Apply 'flexDirection: column' for mobile view
+  @media (width <= 768px) {
+    width: 80%;
   }
 `;
 
@@ -27,7 +27,7 @@ const TeamPersonImage = styled.img`
   height: 100%;
   width: 90%;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     width: 50%;
   }
 `;
@@ -50,7 +50,7 @@ const PersonContentWrapper = styled.div`
   gap: 1rem;
   width: 100%;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     max-width: 18rem;
   }
 `;
@@ -85,7 +85,7 @@ const InfoRow = styled.div`
   align-items: center;
   justify-content: center;
   color: #000;
-  font-family: "Ubuntu";
+  font-family: Ubuntu, sans-serif;
   font-style: normal;
   font-size: 1rem;
   line-height: normal;

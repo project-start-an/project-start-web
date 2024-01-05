@@ -85,7 +85,6 @@ export default function Navigation() {
             <NavigationLink
               onClick={(event) => handleNavLinkClick(event, link)}
               key={index}
-              variant="button"
               href={link.href}
             >
               {link.label}

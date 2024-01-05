@@ -9,9 +9,9 @@ const ContactFormComponentStyle = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: rgba(0, 0, 0, 0.25) 0.8px 2px 6px 2px;
+  box-shadow: rgb(0 0 0 / 25%) 0.8px 2px 6px 2px;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     width: 86%;
     height: 80%;
   }
@@ -38,13 +38,13 @@ const ContactUsComponentTitleWrapperStyle = styled.div`
   width: 100%;
   height: 15%;
   display: flex;
-  font-family: Ubuntu;
+  font-family: Ubuntu, sans-serif;
   font-weight: 600;
   font-size: 1.5vw;
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     font-size: 6vw;
   }
 `;
@@ -54,7 +54,7 @@ const ContactUsComponentContentWrapperStyle = styled.div`
   height: 65%;
   display: flex;
   flex-direction: column;
-  font-family: Ubuntu;
+  font-family: Ubuntu, sans-serif;
   font-weight: 600;
   font-size: 1.5vw;
   align-items: center;
@@ -65,7 +65,7 @@ const ContactUsComponentSmallInputWrapperStyle = styled.div`
   width: 100%;
   height: 20%;
   display: flex;
-  font-family: Ubuntu;
+  font-family: Ubuntu, sans-serif;
   font-weight: 600;
   font-size: 1.5vw;
   align-items: center;
@@ -76,7 +76,7 @@ const ContactUsComponentSmallInputStyle = styled.input`
   width: 60%;
   padding-left: 1.5%;
   height: 80%;
-  font-family: Ubuntu;
+  font-family: Ubuntu, sans-serif;
   font-weight: 600;
   font-size: 0.88vw;
   border: none;
@@ -84,7 +84,7 @@ const ContactUsComponentSmallInputStyle = styled.input`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     font-size: 3.5vw;
     width: 80%;
   }
@@ -98,7 +98,7 @@ const ContactUsComponentBigInputWrapperStyle = styled.div`
   width: 100%;
   height: 60%;
   display: flex;
-  font-family: Ubuntu;
+  font-family: Ubuntu, sans-serif;
   font-weight: 600;
   font-size: 1.5vw;
   align-items: center;
@@ -110,7 +110,7 @@ const ContactUsComponentBigInputStyle = styled.textarea`
   padding-left: 1.5%;
   padding-top: 2%;
   height: 86%;
-  font-family: Ubuntu;
+  font-family: Ubuntu, sans-serif;
   font-weight: 600;
   color: black;
   font-size: 0.88vw;
@@ -120,7 +120,7 @@ const ContactUsComponentBigInputStyle = styled.textarea`
   justify-content: center;
   resize: none;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     width: 100%;
     font-size: 3.5vw;
   }
@@ -134,7 +134,7 @@ const ContactUsComponentSubmitBtnWrapperStyle = styled.div`
   width: 100%;
   height: 20%;
   display: flex;
-  font-family: Ubuntu;
+  font-family: Ubuntu, sans-serif;
   font-weight: 600;
   font-size: 1.5vw;
   align-items: center;

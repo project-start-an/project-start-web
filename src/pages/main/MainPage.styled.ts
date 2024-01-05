@@ -12,7 +12,7 @@ const ResponsiveSection = styled.div<InputProps>`
   align-items: center;
   height: ${(props) => (props.id === "home" ? "100vh" : "calc(100vh - 64px)")};
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     width: 100%;
     height: ${(props) =>
       props.id === "ourTeam"

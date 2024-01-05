@@ -3,7 +3,8 @@ import { Typography } from "@mui/material";
 
 const CustomTypography = styled(Typography)`
   color: #2092f5;
-  font-family: "Ubuntu";
+  font-family: Ubuntu, sans-serif;
+
   /* fontSize: 1.4vw; */
   font-weight: 500;
 `;

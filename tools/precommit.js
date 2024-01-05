@@ -12,6 +12,7 @@ console.log("=============== Start ===============");
 // Run npm commands
 runNpmCommand("Check formatting", "format:fix");
 runNpmCommand("Check linting", "lint");
+runNpmCommand("Check css linting", "lint-css:fix");
 runNpmCommand("Check build", "build");
 
 // If all commands pass, the script will reach this point
