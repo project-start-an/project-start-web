@@ -3,9 +3,9 @@ import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import ErrorPage from "./pages/ErrorPage.tsx";
-import MainPage from "./pages/MainPage.tsx";
-import ContactUsPage from "./pages/contactUs/ContactUsPage.tsx";
+import ErrorPage from "./pages/error/ErrorPage.tsx";
+import MainPage from "./pages/main/MainPage.tsx";
+import ContactUsPage from "./pages/contact-us/ContactUsPage.tsx";
 
 const router = createBrowserRouter([
   {

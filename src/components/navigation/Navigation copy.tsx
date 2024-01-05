@@ -1,12 +1,12 @@
 import { AppBar } from "@mui/material";
-import CustomTypography from "../styled-components/CustomTypography";
-import NavigationLink from "../styled-components/NavigationLink";
+import CustomTypography from "../styled-components/CustomTypography.styled";
+import NavigationLink from "../styled-components/NavigationLink.styled";
 import { useState, useEffect } from "react";
 import { NavWrapper } from "./Navigation.styled";
-import CustomToolbar from "../styled-components/CustomToolbar";
+import CustomToolbar from "../styled-components/CustomToolbar.styled";
 import { useNavigate } from "react-router-dom";
 
-import { changeHandlerState } from "../contactForm/ContactForm.signals";
+import { changeHandlerState } from "../contact-form/ContactForm.signals";
 
 const projectName = "WedecodeIT";
 
@@ -85,7 +85,6 @@ export default function Navigation() {
             <NavigationLink
               onClick={(event) => handleNavLinkClick(event, link)}
               key={index}
-              variant="button"
               href={link.href}
             >
               {link.label}

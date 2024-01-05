@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/experimental-ct-react";
-import Navigation from "./navigation";
+import Navigation from "./Navigation";
 
 test.use({ viewport: { width: 500, height: 500 } });
 

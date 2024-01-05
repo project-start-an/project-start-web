@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import "./App.css";
-import Navigation from "./components/navigation/navigation";
+import Navigation from "./components/navigation/Navigation";
 import Footer from "./components/footer/Footer";
 import { Grid, Box } from "@mui/material";
 
