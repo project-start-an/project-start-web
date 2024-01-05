@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 
 //#region Styled Components
@@ -14,7 +15,7 @@ const UpPolygonWrapper = styled.div`
   align-self: center;
   height: 15%;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     display: none;
   }
 `;
@@ -31,7 +32,7 @@ const HorizontalWrapper = styled.div`
   height: 40%;
   overflow: hidden;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     flex-direction: column-reverse;
   }
 `;
@@ -40,7 +41,7 @@ const SidePolygonWrapper = styled.div`
   height: 100%;
   width: 5%;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     display: none;
   }
 `;
@@ -60,7 +61,7 @@ const LeftSection = styled.div`
   margin-top: 5%;
   margin-left: 5%;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     flex-direction: column-reverse;
     justify-content: flex-end;
     width: 80%;
@@ -70,7 +71,7 @@ const LeftSection = styled.div`
 `;
 
 const HomePageTitlesWrapperStyled = styled.div`
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     margin-top: 10%;
     text-align: center;
   }
@@ -78,12 +79,12 @@ const HomePageTitlesWrapperStyled = styled.div`
 
 const TitleText = styled.span`
   color: #000;
-  font-family: Ubuntu;
+  font-family: Ubuntu, sans-serif;
   font-size: min(4vw, 3rem);
   font-style: normal;
   font-weight: 400;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     font-size: 6vw;
     font-weight: 600;
   }
@@ -94,13 +95,13 @@ const TitleBlueText = styled(TitleText)`
   font-size: min(5.9vw, 4rem);
   font-weight: 500;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     font-size: 8vw;
     font-weight: 600;
   }
 `;
 
-const rightAssetStyle = {
+const rightAssetStyle: React.CSSProperties = {
   height: "100%",
   width: "100%",
   objectFit: "contain",
@@ -115,7 +116,7 @@ const RightSection = styled.div`
   flex-direction: column;
   margin-right: 5%;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     width: 82%;
     margin-right: 0%;
   }
@@ -125,7 +126,7 @@ const BottomPolygonWrapper = styled.div`
   align-self: center;
   height: 10%;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     display: none;
   }
 `;
@@ -137,7 +138,7 @@ const ButtonWrapper = styled.div`
   align-items: center;
   justify-content: flex-start;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     height: 20%;
     justify-content: center;
   }
@@ -154,8 +155,8 @@ const Button = styled.button<BtnProps>`
   font-weight: 600;
   border-radius: 1rem;
   display: flex;
-  color: #ffffff;
-  font-family: Ubuntu;
+  color: #fff;
+  font-family: Ubuntu, sans-serif;
   font-size: 1.5rem;
   align-items: center;
   justify-content: center;
@@ -163,7 +164,7 @@ const Button = styled.button<BtnProps>`
   border: 0.15em solid #065a82;
   cursor: pointer;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     width: 10.5rem;
     font-size: 1.4rem;
   }

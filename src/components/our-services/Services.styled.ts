@@ -28,17 +28,17 @@ const InnerWrapper = styled.div`
 
 const Title = styled.h2`
   color: white;
-  font-family: "Ubuntu";
+  font-family: Ubuntu, sans-serif;
   font-weight: 500;
   font-size: 4vh;
   align-self: flex-start;
 
-  @media (max-width: 900px) {
+  @media (width <= 900px) {
     align-self: center;
     margin-bottom: 4rem;
   }
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     margin-bottom: 2rem;
   }
 `;
@@ -50,14 +50,14 @@ const ContentWrapper = styled.div`
   justify-content: space-evenly;
   align-items: center;
 
-  @media (max-width: 900px) {
+  @media (width <= 900px) {
     align-items: center;
     flex-direction: column;
     height: 100%;
     display: none;
   }
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     align-items: center;
     flex-direction: column;
     height: 100%;
@@ -70,11 +70,11 @@ const BoxWrapper = styled.div`
   width: 25%;
   border-radius: 0.5em;
   background-color: #d7e6f0;
-  box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.75);
+  box-shadow: 0 -4px 3px rgb(50 50 50 / 75%);
   display: flex;
   flex-direction: column;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     height: 94%;
     box-shadow: none;
     width: 100%;
@@ -85,17 +85,17 @@ const BoxHeaderVisAssetWrapper = styled.div`
   height: 15%;
   width: 100%;
   position: relative;
-  font-family: "Ubuntu";
+  font-family: Ubuntu, sans-serif;
   font-weight: 600;
   font-size: 1.3vw;
   align-items: flex-start;
   justify-content: center;
 
-  @media (max-width: 900px) {
+  @media (width <= 900px) {
     display: none;
   }
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     font-size: 4.5vw;
   }
 `;
@@ -108,7 +108,7 @@ const BoxHeaderVisAsset = styled.div`
   width: 34%;
   display: flex;
   height: 160%;
-  font-family: "Ubuntu";
+  font-family: Ubuntu, sans-serif;
   font-weight: 600;
   font-size: 1.3vw;
   align-items: center;
@@ -121,7 +121,7 @@ const BoxHeaderVisAsset = styled.div`
     height: 100%;
   }
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     font-size: 4.5vw;
   }
 `;
@@ -130,17 +130,17 @@ const BoxTitle = styled.div`
   height: 10%;
   width: 100%;
   display: flex;
-  font-family: "Ubuntu";
+  font-family: Ubuntu, sans-serif;
   font-weight: 600;
   font-size: 1.3vw;
   align-items: flex-end;
   justify-content: center;
 
-  @media (max-width: 900px) {
+  @media (width <= 900px) {
     margin-top: 5rem;
   }
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     font-size: 5.6vw;
   }
 `;
@@ -150,14 +150,14 @@ const BoxContentWrapper = styled.div`
   width: 80%;
   margin-left: 10%;
   display: flex;
-  font-family: "Ubuntu";
+  font-family: Ubuntu, sans-serif;
   font-weight: 600;
   font-size: 1.1vw;
   align-items: center;
   flex-direction: column;
   justify-content: center;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     /* Mobile styles go here */
   }
 `;
@@ -179,8 +179,8 @@ const BoxInfoBtn = styled.div<BtnProps>`
   width: 36%;
   display: flex;
   border-radius: 0.6em;
-  color: #ffffff;
-  font-family: "Ubuntu";
+  color: #fff;
+  font-family: Ubuntu, sans-serif;
   font-weight: 500;
   font-size: 1.1rem;
   align-items: center;
@@ -189,7 +189,7 @@ const BoxInfoBtn = styled.div<BtnProps>`
   border: 0.15em solid #065a82;
   cursor: pointer;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     width: 48%;
     height: 54%;
     border-radius: 1.2rem;
@@ -198,7 +198,7 @@ const BoxInfoBtn = styled.div<BtnProps>`
   }
 
   &:hover {
-    color: rgba(0, 0, 0, 0.9);
+    color: rgb(0 0 0 / 90%);
     background-color: ${(props) => props.onHoverBackgroundColor};
   }
 `;

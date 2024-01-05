@@ -33,12 +33,12 @@ type TitleInputProps = {
 
 const Title = styled.h2<TitleInputProps>`
   color: ${(props) => props.color};
-  font-family: "Ubuntu";
+  font-family: Ubuntu, sans-serif;
   font-weight: 500;
   font-size: 4vh;
   align-self: flex-start;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     align-self: center;
   }
 `;
@@ -50,7 +50,7 @@ const ContentWrapper = styled.div`
   justify-content: space-evenly;
   align-items: center;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     align-items: center;
     flex-direction: column;
   }
@@ -64,7 +64,7 @@ const BoxWrapper = styled.div`
   background-color: #d7e6f0;
   align-items: center;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     width: 100%;
     height: 78%;
   }
@@ -77,7 +77,7 @@ const LeftSectionWrapper = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     width: 100%;
   }
 `;
@@ -90,7 +90,7 @@ const LeftSectionInnerWrapper = styled.div`
   justify-content: center;
   flex-direction: column;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     width: 96%;
   }
 `;
@@ -102,7 +102,7 @@ const RightSectionWrapper = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     display: none;
   }
 `;
@@ -119,12 +119,12 @@ const FieldWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  font-family: "Ubuntu";
+  font-family: Ubuntu, sans-serif;
   font-weight: 600;
   cursor: pointer;
   font-size: 0.95vw;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     font-size: 3.7vw;
   }
 
@@ -140,7 +140,7 @@ const IconWrapper = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     width: 17%;
   }
 

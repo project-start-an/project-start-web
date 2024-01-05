@@ -7,7 +7,7 @@ const ResponsiveInnerWrapper = styled.div`
   flex-direction: column;
   justify-content: flex-start;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     width: 100%;
   }
 `;

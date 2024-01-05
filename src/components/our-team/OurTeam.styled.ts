@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: flex-start;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     width: 100%;
     padding-bottom: 3rem;
   }
@@ -20,12 +20,12 @@ type TitleInputProps = {
 
 const Title = styled.h2<TitleInputProps>`
   color: ${(props) => props.color};
-  font-family: "Ubuntu";
+  font-family: Ubuntu, sans-serif;
   font-size: 4vh;
   font-weight: 500;
   align-self: flex-start;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     align-self: center;
   }
 `;
@@ -38,7 +38,7 @@ const TeamWrapper = styled.div`
   justify-content: space-evenly;
   align-items: center;
 
-  @media (max-width: 768px) {
+  @media (width <= 768px) {
     flex-direction: column;
     height: 100%;
     gap: 3rem;
