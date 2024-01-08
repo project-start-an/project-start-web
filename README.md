@@ -56,6 +56,18 @@ npm run format
 npm run format:fix
 ```
 
+#### Check css style quality
+
+```bash
+npm run lint-css
+```
+
+#### Fix css style issues
+
+```bash
+npm run lint-css:fix
+```
+
 ### Use before committing
 
 Before do a commit, you can use the pre-commit script to check code quality and if the project can be built.
