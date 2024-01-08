@@ -68,12 +68,20 @@ npm run lint-css
 npm run lint-css:fix
 ```
 
-### Use before committing
+### Pre-commit
+
+Use before committing
 
 Before do a commit, you can use the pre-commit script to check code quality and if the project can be built.
 
 ```bash
-node .\tools\precommit.js
+npm run precommit
+```
+
+#### Pre-commit on Linux
+
+```bash
+npm run precommit-linux
 ```
 
 # DevOps
