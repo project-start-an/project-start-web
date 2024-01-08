@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const NavigationLink = styled.a`
-  color: whitesmoke;
+  color: black;
   text-decoration: none;
   margin-inline: 2.5rem;
   font-family: Ubuntu, sans-serif;
@@ -11,12 +11,7 @@ const NavigationLink = styled.a`
   &:hover {
     border-radius: 10px;
     padding: 15px; /* Increased padding on hover for emphasis */
-    background: linear-gradient(
-      135deg,
-      #516a91,
-      #42587b
-    ); /* Gradient for a subtle shading effect */
-
+    background: #065a82;
     color: white;
     box-shadow: 0 4px 8px rgb(0 0 0 / 20%); /* Box shadow for a lifted appearance */
     transition: all 0.3s ease; /* Smooth transition for all properties */

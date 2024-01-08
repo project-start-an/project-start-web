@@ -5,28 +5,33 @@ const NavWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  padding: 10px;
-  background: linear-gradient(135deg, #065a82, #044c67);
-  box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
-  color: white;
+  border-radius: 0 0 0.5rem 0.5rem;
+  background: #fff;
+  box-shadow: 0 4px 4px 0 rgb(0 0 0 / 25%);
+  color: black;
+
+  @media (width <= 768px) {
+    box-shadow: none;
+  }
 `;
 
 const Logo = styled.h2`
-  color: whitesmoke;
+  color: #2092f5;
   font-family: Ubuntu, sans-serif;
   font-weight: 600;
   width: 30%;
-  margin-inline: auto;
+  text-align: center;
   transition:
     transform 0.3s ease,
     color 0.3s ease;
 
+  @media (width <= 768px) {
+    text-align: end;
+  }
+
   &:hover {
     transform: scale(1.2) translateX(15%); /* Increase the size on hover */
     font-weight: bold;
-    color: #d7e6f0;
   }
 `;
 
@@ -35,25 +40,10 @@ const MenuIconWrapper = styled.div`
   cursor: pointer;
   width: 60%;
   justify-content: flex-end;
-  margin-right: 2.5rem;
 
   @media (width <= 768px) {
     display: flex;
   }
-`;
-
-const MenuIcon = styled.div`
-  width: fit-content;
-  display: flex;
-  flex-direction: column;
-`;
-
-const Line = styled.div`
-  width: 30px;
-  height: 3px;
-  background-color: whitesmoke;
-  margin: 6px 0;
-  transition: 0.4s;
 `;
 
 const NavLinksWrapper = styled.nav<{ $showMenu?: boolean }>`
@@ -76,7 +66,7 @@ const NavLinksMobileWrapper = styled(NavLinksWrapper)<{ $showMenu?: boolean }>`
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   padding: 15px; /* Adjusted padding for better spacing */
-  background: linear-gradient(135deg, #065a82, #044c67);
+  background: #fff;
   box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
   transition:
     opacity 0.3s ease,
@@ -101,6 +91,4 @@ export {
   NavLinksWrapper,
   NavLinksMobileWrapper,
   MenuIconWrapper,
-  MenuIcon,
-  Line,
 };

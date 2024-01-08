@@ -1,9 +1,7 @@
 import NavigationLink from "../styled-components/NavigationLink.styled";
 import { useState, useEffect } from "react";
 import {
-  Line,
   Logo,
-  MenuIcon,
   MenuIconWrapper,
   NavLinksMobileWrapper,
   NavLinksWrapper,
@@ -12,6 +10,7 @@ import {
 import { useNavigate } from "react-router-dom";
 
 import { changeHandlerState } from "../contact-form/ContactForm.signals";
+import MobileNav from "../../assets/NavAssets/mobile-nav.svg";
 
 const projectName = "WedecodeIT";
 
@@ -95,11 +94,7 @@ export default function Navigation() {
         ))}
       </NavLinksMobileWrapper>
       <MenuIconWrapper className="mobile" onClick={() => toggleMenu()}>
-        <MenuIcon>
-          <Line />
-          <Line />
-          <Line />
-        </MenuIcon>
+        <img src={MobileNav} alt="mobile-nav" />
       </MenuIconWrapper>
     </NavWrapper>
   );
