@@ -1,16 +1,16 @@
 import NavigationLink from "../styled-components/NavigationLink.styled";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
 import {
-  Logo,
   MenuIconWrapper,
   NavLinksMobileWrapper,
   NavLinksWrapper,
   NavWrapper,
 } from "./Navigation.styled";
-import { useNavigate } from "react-router-dom";
-
 import { changeHandlerState } from "../contact-form/ContactForm.signals";
 import MobileNav from "../../assets/NavAssets/mobile-nav.svg";
+import { NavLogo } from "../styled-components/Logo.styled";
 
 const projectName = "WedecodeIT";
 
@@ -24,12 +24,11 @@ type NavLinkType = {
 const navLinks: NavLinkType[] = [
   { id: "home", label: "Home", href: "#home", url: "/home" },
   { id: "services", label: "Services", href: "#services", url: "/home" },
-  // { id: "whyNeedUs", label: "Why", href: "#whyNeedUs", url: "/home" },
   { id: "getStarted", label: "Start", href: "#getStarted", url: "/home" },
   { id: "ourTeam", label: "Team", href: "#ourTeam", url: "/home" },
 ];
 
-export default function Navigation() {
+function Navigation() {
   const [, setScrollOffset] = useState<number>(0);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
@@ -60,8 +59,10 @@ export default function Navigation() {
     if (targetElement) {
       let offset = targetElement.getBoundingClientRect().top + window.scrollY;
       console.log("href: ", link.href);
+
       // Navbar height = 75.828px, margin-bottom of navbar = 5.6px (needed for nav shadow)
       if (link.href === "#home") offset = offset - (75.828 + 5.6);
+
       window.scrollTo({ top: offset, behavior: "smooth" });
     }
   };
@@ -72,7 +73,7 @@ export default function Navigation() {
 
   return (
     <NavWrapper>
-      <Logo>{projectName}</Logo>
+      <NavLogo>{projectName}</NavLogo>
       <NavLinksWrapper>
         {navLinks.map((link, index) => (
           <NavigationLink
@@ -102,3 +103,4 @@ export default function Navigation() {
     </NavWrapper>
   );
 }
+export default Navigation;

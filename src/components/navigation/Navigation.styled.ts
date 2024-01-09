@@ -18,26 +18,6 @@ const NavWrapper = styled.div`
   }
 `;
 
-const Logo = styled.h2`
-  color: #2092f5;
-  font-family: Ubuntu, sans-serif;
-  font-weight: 600;
-  width: 30%;
-  text-align: center;
-  transition:
-    transform 0.3s ease,
-    color 0.3s ease;
-
-  @media (width <= 768px) {
-    text-align: end;
-  }
-
-  &:hover {
-    transform: scale(1.2) translateX(15%); /* Increase the size on hover */
-    font-weight: bold;
-  }
-`;
-
 const MenuIconWrapper = styled.div`
   display: none;
   cursor: pointer;
@@ -88,10 +68,4 @@ const NavLinksMobileWrapper = styled(NavLinksWrapper)<{ $showMenu?: boolean }>`
 `;
 //#endregion Styled Components
 
-export {
-  NavWrapper,
-  Logo,
-  NavLinksWrapper,
-  NavLinksMobileWrapper,
-  MenuIconWrapper,
-};
+export { NavWrapper, NavLinksWrapper, NavLinksMobileWrapper, MenuIconWrapper };

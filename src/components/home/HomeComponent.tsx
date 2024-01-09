@@ -5,8 +5,6 @@ import WebinarGif from "../../assets/HomeCompAssets/webinar-gif.gif";
 
 import {
   BottomPolygonWrapper,
-  Button,
-  ButtonWrapper,
   HorizontalWrapper,
   LeftSection,
   MainWrapper,
@@ -18,6 +16,7 @@ import {
   rightAssetStyle,
   HomePageTitlesWrapperStyled,
 } from "./HomeComponent.styled";
+import { ButtonWrapper, DarkButton } from "../styled-components/Button.styled";
 
 const handleNavLinkClick = () => {
   const targetElement = document.querySelector("#getStarted");
@@ -46,13 +45,8 @@ function HomeComponent() {
             <TitleText>!</TitleText>
             {/* <img src={LeftAsset} style={leftAssetStyle} alt="welcome text" /> */}
           </HomePageTitlesWrapperStyled>
-          <ButtonWrapper>
-            <Button
-              onHoverBackgroundColor={"white"}
-              onClick={handleNavLinkClick}
-            >
-              Get started
-            </Button>
+          <ButtonWrapper position="flex-start">
+            <DarkButton onClick={handleNavLinkClick}>Get started</DarkButton>
           </ButtonWrapper>
         </LeftSection>
         {/* right section */}

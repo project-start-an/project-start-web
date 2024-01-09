@@ -2,9 +2,8 @@ import ServicesBanner from "../../assets/ServicesCompAssets/service-banner.png";
 import ServicesData from "../../data/ServicesData/ServicesData";
 import Checkmark from "../../assets/checkmark.svg";
 import { FieldWrapper, IconWrapper } from "../why-need-us/WhyNeedUs.styled";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import useTheme from "@mui/material/styles/useTheme";
 import Carousel from "react-material-ui-carousel";
+import { useMediaQuery } from "usehooks-ts";
 
 import {
   BoxContentWrapper,
@@ -16,15 +15,12 @@ import {
   InnerWrapper,
   MainWrapper,
   Title,
-  ButtonWrapper,
-  Button,
 } from "./Services.styled";
+import { ButtonWrapper, DarkButton } from "../styled-components/Button.styled";
 
 function ServicesComponent() {
-  const theme = useTheme();
-
   // Change to be tablet/mobile
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const isMobile = useMediaQuery("(max-width: 900px)");
 
   return (
     <MainWrapper bannerImg={ServicesBanner}>
@@ -51,8 +47,8 @@ function ServicesComponent() {
                   );
                 })}
               </BoxContentWrapper>
-              <ButtonWrapper>
-                <Button onHoverBackgroundColor={"#fff"}>Get started</Button>
+              <ButtonWrapper position="center">
+                <DarkButton>Get started</DarkButton>
               </ButtonWrapper>
             </BoxWrapper>
           ))}
@@ -87,8 +83,8 @@ function ServicesComponent() {
                       );
                     })}
                   </BoxContentWrapper>
-                  <ButtonWrapper>
-                    <Button onHoverBackgroundColor={"#fff"}>Get started</Button>
+                  <ButtonWrapper position="center">
+                    <DarkButton>Get started</DarkButton>
                   </ButtonWrapper>
                 </BoxWrapper>
               ))}

@@ -113,53 +113,6 @@ const BottomPolygonWrapper = styled.div`
 const BottomPolygonStyle = {
   height: "calc(100% + 5rem)",
 };
-
-const ButtonWrapper = styled.div`
-  height: 20%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-type BtnProps = {
-  onHoverBackgroundColor: string;
-};
-
-const Button = styled.button<BtnProps>`
-  width: 12.5rem;
-  padding: 1rem;
-  height: 3.5rem;
-  font-weight: 600;
-  border-radius: 1rem;
-  display: flex;
-  color: #fff;
-  font-family: Ubuntu, sans-serif;
-  font-size: 1.5rem;
-  align-items: center;
-  justify-content: center;
-  background-color: #065a82;
-  border: 0.15em solid #065a82;
-  cursor: pointer;
-
-  &:hover {
-    color: rgb(0 0 0 / 90%);
-    background-color: ${(props) => props.onHoverBackgroundColor};
-  }
-
-  @media (width <= 768px) {
-    color: rgb(0 0 0 / 90%);
-    background-color: #fff;
-    height: 3rem;
-    width: clamp(8.438rem, 30%, 10.5rem);
-    font-size: clamp(1rem, -0.5rem + 2.8vw, 1.3rem);
-
-    &:hover {
-      color: #fff;
-      background-color: #065a82;
-    }
-  }
-`;
 //#endregion Styled Components
 
 export {
@@ -169,8 +122,6 @@ export {
   HorizontalWrapper,
   SidePolygonWrapper,
   SidePolygonStyle,
-  ButtonWrapper,
-  Button,
   BottomPolygonWrapper,
   BottomPolygonStyle,
   MiddleSectionWrapper,
