@@ -17,15 +17,19 @@ const ButtonWrapper = styled.div<BtnWrapperProps>`
   }
 `;
 
-const Button = styled.button`
-  width: 12.5rem;
+type BtnProps = {
+  size?: "sm" | "md";
+};
+
+const Button = styled.button<BtnProps>`
+  width: ${(props) => (props.size === "sm" ? "8.5rem" : "12.5rem")};
   padding: 1rem;
-  height: 3.5rem;
+  height: ${(props) => (props.size === "sm" ? "2.5rem" : "3.5rem")};
   font-weight: 600;
   border-radius: 1rem;
   display: flex;
   font-family: Ubuntu, sans-serif;
-  font-size: 1.5rem;
+  font-size: ${(props) => (props.size === "sm" ? "1rem" : "1.5rem")};
   align-items: center;
   justify-content: center;
   cursor: pointer;

@@ -48,7 +48,7 @@ function ServicesComponent() {
                 })}
               </BoxContentWrapper>
               <ButtonWrapper position="center">
-                <DarkButton>Get started</DarkButton>
+                <DarkButton size="sm">Get started</DarkButton>
               </ButtonWrapper>
             </BoxWrapper>
           ))}
@@ -84,7 +84,7 @@ function ServicesComponent() {
                     })}
                   </BoxContentWrapper>
                   <ButtonWrapper position="center">
-                    <DarkButton>Get started</DarkButton>
+                    <DarkButton size="sm">Get started</DarkButton>
                   </ButtonWrapper>
                 </BoxWrapper>
               ))}
