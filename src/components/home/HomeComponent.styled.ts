@@ -152,8 +152,9 @@ const Button = styled.button<BtnProps>`
   cursor: pointer;
 
   @media (width <= 768px) {
-    width: 10.5rem;
-    font-size: 1.4rem;
+    height: 3rem;
+    width: clamp(8.438rem, 30%, 10.5rem);
+    font-size: clamp(1rem, -0.5rem + 2.8vw, 1.3rem);
   }
 
   &:hover {

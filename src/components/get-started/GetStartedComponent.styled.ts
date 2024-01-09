@@ -8,6 +8,10 @@ const MainWrapper = styled.div`
   align-items: stretch;
   width: 100%;
   height: 100%;
+
+  @media (width <= 768px) {
+    background-color: #21295c;
+  }
 `;
 
 const UpPolygonWrapper = styled.div`
@@ -76,6 +80,7 @@ const MiddleSectionTitle = styled.div`
   @media (width <= 768px) {
     font-size: 8vw;
     font-weight: 600;
+    color: #fff;
   }
 `;
 
@@ -91,6 +96,7 @@ const MiddleSectionDescription = styled.div`
   @media (width <= 768px) {
     font-size: 5.2vw;
     font-weight: 500;
+    color: #fff;
   }
 `;
 
@@ -136,14 +142,22 @@ const Button = styled.button<BtnProps>`
   border: 0.15em solid #065a82;
   cursor: pointer;
 
-  @media (width <= 768px) {
-    width: 10.5rem;
-    font-size: 1.4rem;
-  }
-
   &:hover {
     color: rgb(0 0 0 / 90%);
     background-color: ${(props) => props.onHoverBackgroundColor};
+  }
+
+  @media (width <= 768px) {
+    color: rgb(0 0 0 / 90%);
+    background-color: #fff;
+    height: 3rem;
+    width: clamp(8.438rem, 30%, 10.5rem);
+    font-size: clamp(1rem, -0.5rem + 2.8vw, 1.3rem);
+
+    &:hover {
+      color: #fff;
+      background-color: #065a82;
+    }
   }
 `;
 //#endregion Styled Components

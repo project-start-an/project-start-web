@@ -10,14 +10,14 @@ import {
   BoxContentWrapper,
   BoxHeaderVisAsset,
   BoxHeaderVisAssetWrapper,
-  BoxInfoBtn,
-  BoxInfoBtnWrapper,
   BoxTitle,
   BoxWrapper,
   ContentWrapper,
   InnerWrapper,
   MainWrapper,
   Title,
+  ButtonWrapper,
+  Button,
 } from "./Services.styled";
 
 function ServicesComponent() {
@@ -51,11 +51,9 @@ function ServicesComponent() {
                   );
                 })}
               </BoxContentWrapper>
-              <BoxInfoBtnWrapper>
-                <BoxInfoBtn onHoverBackgroundColor={"#D7E6F0"}>
-                  More info
-                </BoxInfoBtn>
-              </BoxInfoBtnWrapper>
+              <ButtonWrapper>
+                <Button onHoverBackgroundColor={"#fff"}>Get started</Button>
+              </ButtonWrapper>
             </BoxWrapper>
           ))}
         </ContentWrapper>
@@ -89,11 +87,9 @@ function ServicesComponent() {
                       );
                     })}
                   </BoxContentWrapper>
-                  <BoxInfoBtnWrapper>
-                    <BoxInfoBtn onHoverBackgroundColor={"#D7E6F0"}>
-                      More info
-                    </BoxInfoBtn>
-                  </BoxInfoBtnWrapper>
+                  <ButtonWrapper>
+                    <Button onHoverBackgroundColor={"#fff"}>Get started</Button>
+                  </ButtonWrapper>
                 </BoxWrapper>
               ))}
             </Carousel>

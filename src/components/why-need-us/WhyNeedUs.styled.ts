@@ -16,6 +16,11 @@ const MainWrapper = styled.div<MainWrapperInputProps>`
   flex-direction: column;
   height: 100%;
   width: 100%;
+
+  @media (width <= 768px) {
+    background-image: unset;
+    background-color: #fff;
+  }
 `;
 
 const InnerWrapper = styled.div`
