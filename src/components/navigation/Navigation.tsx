@@ -58,7 +58,10 @@ export default function Navigation() {
     const targetElement = document.querySelector(link.href);
     console.log(link.href);
     if (targetElement) {
-      const offset = targetElement.getBoundingClientRect().top + window.scrollY;
+      let offset = targetElement.getBoundingClientRect().top + window.scrollY;
+      console.log("href: ", link.href);
+      // Navbar height = 75.828px, margin-bottom of navbar = 5.6px (needed for nav shadow)
+      if (link.href === "#home") offset = offset - (75.828 + 5.6);
       window.scrollTo({ top: offset, behavior: "smooth" });
     }
   };

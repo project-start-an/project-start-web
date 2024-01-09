@@ -1,4 +1,3 @@
-import UpPolygon from "../../assets/up-polygon.svg";
 import LeftPolygon from "../../assets/left-polygon.svg";
 import RighPolygon from "../../assets/right-polygon.svg";
 import BottomPolygon from "../../assets/bottom-polygon.svg";
@@ -16,8 +15,6 @@ import {
   SidePolygonWrapper,
   TitleBlueText,
   TitleText,
-  UpPolygonStyle,
-  UpPolygonWrapper,
   rightAssetStyle,
   HomePageTitlesWrapperStyled,
 } from "./HomeComponent.styled";
@@ -34,9 +31,6 @@ const handleNavLinkClick = () => {
 function HomeComponent() {
   return (
     <MainWrapper>
-      <UpPolygonWrapper>
-        <img src={UpPolygon} style={UpPolygonStyle} />
-      </UpPolygonWrapper>
       <HorizontalWrapper>
         <SidePolygonWrapper>
           <img src={LeftPolygon} style={SidePolygonStyle} />

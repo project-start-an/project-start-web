@@ -11,19 +11,6 @@ const MainWrapper = styled.div`
   height: 100%;
 `;
 
-const UpPolygonWrapper = styled.div`
-  align-self: center;
-  height: 15%;
-
-  @media (width <= 768px) {
-    display: none;
-  }
-`;
-
-const UpPolygonStyle = {
-  height: "100%",
-};
-
 const HorizontalWrapper = styled.div`
   display: flex;
   justify-content: space-between;
@@ -178,8 +165,6 @@ const Button = styled.button<BtnProps>`
 
 export {
   MainWrapper,
-  UpPolygonWrapper,
-  UpPolygonStyle,
   HorizontalWrapper,
   SidePolygonWrapper,
   SidePolygonStyle,

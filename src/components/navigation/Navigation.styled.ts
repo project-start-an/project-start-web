@@ -3,6 +3,8 @@ import styled from "styled-components";
 //#region Styled Components
 const NavWrapper = styled.div`
   display: flex;
+  width: 100%;
+  margin-bottom: 0.35rem;
   justify-content: center;
   align-items: center;
   border-radius: 0 0 0.5rem 0.5rem;
@@ -12,6 +14,7 @@ const NavWrapper = styled.div`
 
   @media (width <= 768px) {
     box-shadow: none;
+    margin-bottom: unset;
   }
 `;
 
