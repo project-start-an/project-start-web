@@ -16,7 +16,7 @@ const MainWrapper = styled.div<MainWrapperInputProps>`
   height: 100%;
   width: 100%;
 
-  @media (width <= 768px) {
+  @media (width <= 900px) {
     background-image: unset;
     background-color: #21295c;
   }
@@ -29,6 +29,18 @@ const InnerWrapper = styled.div`
   align-items: center;
   height: 100%;
   width: 80%;
+
+  @media (width <= 900px) {
+    width: 50%;
+  }
+
+  @media (width <= 768px) {
+    width: 60%;
+  }
+
+  @media (width <= 500px) {
+    width: 70%;
+  }
 `;
 
 const Title = styled.h2`
@@ -79,7 +91,7 @@ const BoxWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media (width <= 768px) {
+  @media (width <= 900px) {
     height: 94%;
     box-shadow: none;
     width: 100%;
@@ -142,11 +154,9 @@ const BoxTitle = styled.div`
   justify-content: center;
 
   @media (width <= 900px) {
-    margin-top: 5rem;
-  }
-
-  @media (width <= 768px) {
-    font-size: 5.6vw;
+    margin-top: 4rem;
+    font-size: clamp(0.7rem, 5vw, 1.4rem);
+    text-align: center;
   }
 `;
 
@@ -162,8 +172,9 @@ const BoxContentWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  @media (width <= 768px) {
-    /* Mobile styles go here */
+  @media (width <= 900px) {
+    gap: 0.5rem;
+    margin-left: 5%;
   }
 `;
 

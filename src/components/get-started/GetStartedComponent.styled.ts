@@ -9,7 +9,7 @@ const MainWrapper = styled.div`
   width: 100%;
   height: 100%;
 
-  @media (width <= 768px) {
+  @media (width <= 900px) {
     background-color: #21295c;
   }
 `;
@@ -51,7 +51,7 @@ const MiddleSectionWrapper = styled.div`
   align-items: center;
   gap: 5rem;
 
-  @media (width <= 768px) {
+  @media (width <= 900px) {
     width: 78%;
   }
 `;
@@ -77,7 +77,7 @@ const MiddleSectionTitle = styled.div`
   line-height: 84px;
   margin-bottom: 1rem;
 
-  @media (width <= 768px) {
+  @media (width <= 900px) {
     font-size: 8vw;
     font-weight: 600;
     color: #fff;
@@ -93,7 +93,7 @@ const MiddleSectionDescription = styled.div`
   font-weight: 400;
   line-height: normal;
 
-  @media (width <= 768px) {
+  @media (width <= 900px) {
     font-size: 5.2vw;
     font-weight: 500;
     color: #fff;
@@ -105,7 +105,7 @@ const BottomPolygonWrapper = styled.div`
   height: 10%;
   margin-left: 30%;
 
-  @media (width <= 768px) {
+  @media (width <= 900px) {
     display: none;
   }
 `;

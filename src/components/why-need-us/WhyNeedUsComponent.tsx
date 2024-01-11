@@ -34,28 +34,7 @@ function WhyNeedUsComponent() {
                       fontWeight: "600",
                     }}
                   >
-                    Eye-catching&nbsp;
-                  </span>
-                  designs
-                </FieldWrapper>
-                <FieldWrapper>
-                  <IconWrapper>
-                    <img src={Checkmark} alt="checkmark" />
-                  </IconWrapper>
-                  <span
-                    style={{
-                      fontWeight: "600",
-                    }}
-                  >
-                    Custom
-                  </span>
-                  -made solutions just for{" "}
-                  <span
-                    style={{
-                      fontWeight: "600",
-                    }}
-                  >
-                    &nbsp;you
+                    Eye-catching designs
                   </span>
                 </FieldWrapper>
                 <FieldWrapper>
@@ -67,28 +46,7 @@ function WhyNeedUsComponent() {
                       fontWeight: "600",
                     }}
                   >
-                    No&nbsp;
-                  </span>{" "}
-                  more manual{" "}
-                  <span
-                    style={{
-                      fontWeight: "600",
-                    }}
-                  >
-                    &nbsp;tasks
-                  </span>
-                </FieldWrapper>
-                <FieldWrapper>
-                  <IconWrapper>
-                    <img src={Checkmark} alt="checkmark" />
-                  </IconWrapper>
-                  Being more{" "}
-                  <span
-                    style={{
-                      fontWeight: "600",
-                    }}
-                  >
-                    &nbsp;recognizable
+                    Custom-made solutions just for you
                   </span>
                 </FieldWrapper>
                 <FieldWrapper>
@@ -100,29 +58,43 @@ function WhyNeedUsComponent() {
                       fontWeight: "600",
                     }}
                   >
-                    Reliable&nbsp;
-                  </span>{" "}
-                  maintainance and support
+                    No more manual tasks
+                  </span>
                 </FieldWrapper>
                 <FieldWrapper>
                   <IconWrapper>
                     <img src={Checkmark} alt="checkmark" />
                   </IconWrapper>
-                  Using{" "}
                   <span
                     style={{
                       fontWeight: "600",
                     }}
                   >
-                    &nbsp;latest&nbsp;
-                  </span>{" "}
-                  technology and{" "}
+                    Being more recognisable
+                  </span>
+                </FieldWrapper>
+                <FieldWrapper>
+                  <IconWrapper>
+                    <img src={Checkmark} alt="checkmark" />
+                  </IconWrapper>
                   <span
                     style={{
                       fontWeight: "600",
                     }}
                   >
-                    &nbsp;trends
+                    Reliable maintainance and support
+                  </span>
+                </FieldWrapper>
+                <FieldWrapper>
+                  <IconWrapper>
+                    <img src={Checkmark} alt="checkmark" />
+                  </IconWrapper>
+                  <span
+                    style={{
+                      fontWeight: "600",
+                    }}
+                  >
+                    Using latest technology and trends
                   </span>
                 </FieldWrapper>
               </LeftSectionInnerWrapper>

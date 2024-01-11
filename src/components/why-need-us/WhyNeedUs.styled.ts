@@ -17,7 +17,7 @@ const MainWrapper = styled.div<MainWrapperInputProps>`
   height: 100%;
   width: 100%;
 
-  @media (width <= 768px) {
+  @media (width <= 900px) {
     background-image: unset;
     background-color: #fff;
   }
@@ -68,6 +68,10 @@ const BoxWrapper = styled.div`
   border-radius: 0.4em;
   background-color: #d7e6f0;
   align-items: center;
+
+  @media (width <= 900px) {
+    width: 100%;
+  }
 
   @media (width <= 768px) {
     width: 100%;
@@ -127,11 +131,7 @@ const FieldWrapper = styled.div`
   font-family: Ubuntu, sans-serif;
   font-weight: 600;
   cursor: pointer;
-  font-size: 0.95vw;
-
-  @media (width <= 768px) {
-    font-size: 3.7vw;
-  }
+  font-size: clamp(0.5rem, 3vw, 0.8rem);
 
   &:hover {
     opacity: 0.9;
@@ -140,14 +140,10 @@ const FieldWrapper = styled.div`
 
 const IconWrapper = styled.div`
   height: 100%;
-  width: 12%;
+  width: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  @media (width <= 768px) {
-    width: 17%;
-  }
 
   & img {
     width: 42%;

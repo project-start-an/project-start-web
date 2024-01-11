@@ -26,7 +26,7 @@ import {
 } from "../styled-components/Button.styled";
 
 function GetStartedComponent() {
-  const isMobile = useMediaQuery("(max-width: 768px)");
+  const isMobile = useMediaQuery("(max-width: 900px)");
   const navigate = useNavigate();
 
   return (
