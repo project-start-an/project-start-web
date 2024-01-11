@@ -9,6 +9,11 @@ const MainWrapper = styled.div`
   align-items: stretch;
   width: 100%;
   height: 100%;
+
+  @media (width <= 768px) {
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const HorizontalWrapper = styled.div`
@@ -20,6 +25,11 @@ const HorizontalWrapper = styled.div`
   overflow: hidden;
 
   @media (width <= 768px) {
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex: unset;
+    overflow: unset;
     flex-direction: column-reverse;
   }
 `;
@@ -50,10 +60,10 @@ const LeftSection = styled.div`
 
   @media (width <= 768px) {
     flex-direction: column-reverse;
-    justify-content: flex-end;
-    width: 80%;
-    margin-top: 0%;
-    margin-left: 0%;
+    margin-top: unset;
+    margin-left: unset;
+    width: 100%;
+    height: 30%;
   }
 `;
 
@@ -61,6 +71,7 @@ const HomePageTitlesWrapperStyled = styled.div`
   @media (width <= 768px) {
     margin-top: 10%;
     text-align: center;
+    width: 80%;
   }
 `;
 
@@ -72,7 +83,7 @@ const TitleText = styled.span`
   font-weight: 400;
 
   @media (width <= 768px) {
-    font-size: 6vw;
+    font-size: clamp(1.5rem, -0.5rem + 5.5vw, 4rem);
     font-weight: 600;
   }
 `;
@@ -83,7 +94,7 @@ const TitleBlueText = styled(TitleText)`
   font-weight: 500;
 
   @media (width <= 768px) {
-    font-size: 8vw;
+    font-size: clamp(2rem, -0.5rem + 6.5vw, 5rem);
     font-weight: 600;
   }
 `;
@@ -104,8 +115,9 @@ const RightSection = styled.div`
   margin-right: 5%;
 
   @media (width <= 768px) {
-    width: 82%;
-    margin-right: 0%;
+    width: 100%;
+    height: 50%;
+    margin-right: unset;
   }
 `;
 
