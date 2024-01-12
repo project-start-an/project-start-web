@@ -2,16 +2,13 @@ import ServicesBanner from "../../assets/ServicesCompAssets/service-banner.png";
 import ServicesData from "../../data/ServicesData/ServicesData";
 import Checkmark from "../../assets/checkmark.svg";
 import { FieldWrapper, IconWrapper } from "../why-need-us/WhyNeedUs.styled";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import useTheme from "@mui/material/styles/useTheme";
 import Carousel from "react-material-ui-carousel";
+import { useMediaQuery } from "usehooks-ts";
 
 import {
   BoxContentWrapper,
   BoxHeaderVisAsset,
   BoxHeaderVisAssetWrapper,
-  BoxInfoBtn,
-  BoxInfoBtnWrapper,
   BoxTitle,
   BoxWrapper,
   ContentWrapper,
@@ -19,12 +16,11 @@ import {
   MainWrapper,
   Title,
 } from "./Services.styled";
+import { ButtonWrapper, DarkButton } from "../styled-components/Button.styled";
 
 function ServicesComponent() {
-  const theme = useTheme();
-
   // Change to be tablet/mobile
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const isMobile = useMediaQuery("(max-width: 900px)");
 
   return (
     <MainWrapper bannerImg={ServicesBanner}>
@@ -51,11 +47,9 @@ function ServicesComponent() {
                   );
                 })}
               </BoxContentWrapper>
-              <BoxInfoBtnWrapper>
-                <BoxInfoBtn onHoverBackgroundColor={"#D7E6F0"}>
-                  More info
-                </BoxInfoBtn>
-              </BoxInfoBtnWrapper>
+              <ButtonWrapper position="center">
+                <DarkButton size="sm">Get started</DarkButton>
+              </ButtonWrapper>
             </BoxWrapper>
           ))}
         </ContentWrapper>
@@ -89,11 +83,9 @@ function ServicesComponent() {
                       );
                     })}
                   </BoxContentWrapper>
-                  <BoxInfoBtnWrapper>
-                    <BoxInfoBtn onHoverBackgroundColor={"#D7E6F0"}>
-                      More info
-                    </BoxInfoBtn>
-                  </BoxInfoBtnWrapper>
+                  <ButtonWrapper position="center">
+                    <DarkButton size="sm">Get started</DarkButton>
+                  </ButtonWrapper>
                 </BoxWrapper>
               ))}
             </Carousel>

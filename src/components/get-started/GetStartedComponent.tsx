@@ -3,6 +3,7 @@ import LeftPolygon from "../../assets/left-polygon.svg";
 import RighPolygon from "../../assets/right-polygon.svg";
 import BottomPolygon from "../../assets/bottom-polygon.svg";
 import { useNavigate } from "react-router-dom";
+import { useMediaQuery } from "usehooks-ts";
 
 import {
   BottomPolygonStyle,
@@ -14,14 +15,18 @@ import {
   UpPolygonStyle,
   UpPolygonWrapper,
   MiddleSectionWrapper,
-  ButtonWrapper,
-  Button,
   MiddleSectionTitle,
   MiddleSectionDescription,
   MiddleSectionInnerWrapper,
-} from "./GetStarted.styled";
+} from "./GetStartedComponent.styled";
+import {
+  ButtonWrapper,
+  DarkButton,
+  LightButton,
+} from "../styled-components/Button.styled";
 
 function GetStartedComponent() {
+  const isMobile = useMediaQuery("(max-width: 900px)");
   const navigate = useNavigate();
 
   return (
@@ -42,13 +47,16 @@ function GetStartedComponent() {
                 Let's start working together, shall we?
               </MiddleSectionDescription>
             </div>
-            <ButtonWrapper>
-              <Button
-                onHoverBackgroundColor={"white"}
-                onClick={() => navigate("/ContactUs")}
-              >
-                Get started
-              </Button>
+            <ButtonWrapper position="center">
+              {!isMobile ? (
+                <DarkButton onClick={() => navigate("/ContactUs")}>
+                  Get started
+                </DarkButton>
+              ) : (
+                <LightButton onClick={() => navigate("/ContactUs")}>
+                  Get started
+                </LightButton>
+              )}
             </ButtonWrapper>
           </MiddleSectionInnerWrapper>
         </MiddleSectionWrapper>

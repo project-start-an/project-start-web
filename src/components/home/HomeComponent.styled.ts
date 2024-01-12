@@ -1,104 +1,103 @@
-import { styled } from "@mui/material";
+import React from "react";
+import styled from "styled-components";
 
-const MainWrapper = styled("div")({
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "space-between",
-  alignItems: "stretch",
+//#region Styled Components
+const MainWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  height: 100%;
+
+  @media (width <= 768px) {
+    justify-content: center;
+    align-items: center;
+  }
+`;
+
+const HorizontalWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  height: 40%;
+  overflow: hidden;
+
+  @media (width <= 768px) {
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex: unset;
+    overflow: unset;
+    flex-direction: column-reverse;
+  }
+`;
+
+const SidePolygonWrapper = styled.div`
+  height: 100%;
+  width: 5%;
+
+  @media (width <= 768px) {
+    display: none;
+  }
+`;
+
+const SidePolygonStyle = {
+  height: "100%",
   width: "100%",
-  height: "100%",
-});
-
-const UpPolygonWrapper = styled("div")({
-  alignSelf: "center",
-  height: "15%",
-  "@media (max-width: 768px)": {
-    display: "none",
-  },
-});
-
-const UpPolygonStyle: React.CSSProperties = {
-  height: "100%",
 };
 
-const HorizontalWrapper = styled("div")({
-  display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center",
-  flex: 1,
-  height: "40%",
-  overflow: "hidden",
+const LeftSection = styled.div`
+  height: 100%;
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 5%;
+  margin-left: 5%;
 
-  "@media (max-width: 768px)": {
-    flexDirection: "column-reverse",
-  },
-});
+  @media (width <= 768px) {
+    flex-direction: column-reverse;
+    margin-top: unset;
+    margin-left: unset;
+    width: 100%;
+    height: 30%;
+  }
+`;
 
-const SidePolygonWrapper = styled("div")({
-  height: "100%",
-  width: "5%",
+const HomePageTitlesWrapperStyled = styled.div`
+  @media (width <= 768px) {
+    margin-top: 10%;
+    text-align: center;
+    width: 80%;
+  }
+`;
 
-  "@media (max-width: 768px)": {
-    display: "none",
-  },
-});
+const TitleText = styled.span`
+  color: #000;
+  font-family: Ubuntu, sans-serif;
+  font-size: min(4vw, 3rem);
+  font-style: normal;
+  font-weight: 400;
 
-const SidePolygonStyle: React.CSSProperties = {
-  height: "100%",
-  width: "100%",
-};
+  @media (width <= 768px) {
+    font-size: clamp(1.5rem, -0.5rem + 5.5vw, 4rem);
+    font-weight: 600;
+  }
+`;
 
-const LeftSection = styled("div")({
-  height: "100%",
-  width: "35%",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  flexDirection: "column",
-  marginTop: "5%",
-  marginLeft: "5%",
+const TitleBlueText = styled(TitleText)`
+  color: #516a91;
+  font-size: min(5.9vw, 4rem);
+  font-weight: 500;
 
-  "@media (max-width: 768px)": {
-    flexDirection: "column-reverse",
-    justifyContent: "flex-end",
-    width: "80%",
-    marginTop: "0%",
-    marginLeft: "0%",
-  },
-});
-
-const HomePageTitlesWrapperStyled = styled("div")({
-  "@media (max-width: 768px)": {
-    marginTop: "10%",
-    textAlign: "center",
-  },
-});
-
-const TitleText = styled("span")({
-  color: "#000",
-  fontFamily: "Ubuntu",
-  fontSize: "min(4vw, 3rem)",
-  fontStyle: "normal",
-  fontWeight: "400",
-
-  "@media (max-width: 768px)": {
-    fontSize: "6vw",
-    fontWeight: "600",
-  },
-});
-
-const TitleBlueText = styled(TitleText)({
-  color: "#516A91",
-  fontFamily: "Ubuntu",
-  fontSize: "min(5.9vw, 4rem)",
-  fontStyle: "normal",
-  fontWeight: "500",
-
-  "@media (max-width: 768px)": {
-    fontSize: "8vw",
-    fontWeight: "600",
-  },
-});
+  @media (width <= 768px) {
+    font-size: clamp(2rem, -0.5rem + 6.5vw, 5rem);
+    font-weight: 600;
+  }
+`;
 
 const rightAssetStyle: React.CSSProperties = {
   height: "100%",
@@ -106,84 +105,39 @@ const rightAssetStyle: React.CSSProperties = {
   objectFit: "contain",
 };
 
-const RightSection = styled("div")({
-  height: "100%",
-  width: "35%",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  flexDirection: "column",
-  marginRight: "5%",
+const RightSection = styled.div`
+  height: 100%;
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 5%;
 
-  "@media (max-width: 768px)": {
-    width: "82%",
-    marginRight: "0%",
-  },
-});
+  @media (width <= 768px) {
+    width: 100%;
+    height: 50%;
+    margin-right: unset;
+  }
+`;
 
-const BottomPolygonWrapper = styled("div")({
-  alignSelf: "center",
-  height: "10%",
-  "@media (max-width: 768px)": {
-    display: "none",
-  },
-});
+const BottomPolygonWrapper = styled.div`
+  align-self: center;
+  height: 10%;
 
-const ButtonWrapper = styled("div")({
-  height: "20%",
-  width: "100%",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "flex-start",
-
-  "@media (max-width: 768px)": {
-    height: "20%",
-    justifyContent: "center",
-  },
-});
-
-type BtnProps = {
-  onHoverBackgroundColor: string;
-};
-
-const Button = styled("button")<BtnProps>(({ onHoverBackgroundColor }) => ({
-  width: "12.5rem",
-  padding: "1rem",
-  height: "3.5rem",
-  fontWeight: "600",
-  borderRadius: "1rem",
-  display: "flex",
-  color: "#FFFFFF",
-  fontFamily: "Ubuntu",
-  // fontSize: normalViewFontSize + "vw",
-  fontSize: "1.5rem",
-  alignItems: "center",
-  justifyContent: "center",
-  backgroundColor: "#065A82",
-  border: "0.15em solid #065A82",
-  cursor: "pointer",
-  "@media (max-width: 768px)": {
-    // fontSize: mobileViewFontSize + "vw",
-    width: "10.5rem",
-    fontSize: "1.4rem",
-  },
-  "&:hover": {
-    color: "rgb(0 0 0 / 90%)",
-    backgroundColor: onHoverBackgroundColor, // backgroundColor: "#D7E6F0",
-  },
-}));
+  @media (width <= 768px) {
+    display: none;
+  }
+`;
+//#endregion Styled Components
 
 export {
   MainWrapper,
-  UpPolygonWrapper,
-  UpPolygonStyle,
   HorizontalWrapper,
   SidePolygonWrapper,
   SidePolygonStyle,
   LeftSection,
   RightSection,
-  ButtonWrapper,
-  Button,
   rightAssetStyle,
   BottomPolygonWrapper,
   TitleText,

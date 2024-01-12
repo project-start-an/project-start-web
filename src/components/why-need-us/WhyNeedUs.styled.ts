@@ -1,112 +1,120 @@
-import { styled } from "@mui/material/styles";
+import styled from "styled-components";
 
+//#region Styled Components
 type MainWrapperInputProps = {
   bannerImg: string;
 };
 
-const MainWrapper = styled("div")<MainWrapperInputProps>(({ bannerImg }) => ({
-  backgroundImage: `url(${bannerImg})`,
-  backgroundSize: "contain",
-  backgroundRepeat: "no-repeat",
-  backgroundPosition: "center bottom",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  flexDirection: "column",
-  height: "100%",
-  width: "100%",
-}));
+const MainWrapper = styled.div<MainWrapperInputProps>`
+  background-image: url(${(props) => props.bannerImg});
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
 
-const InnerWrapper = styled("div")({
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "flex-end",
-  alignItems: "center",
-  height: "100%",
-  width: "80%",
-});
+  @media (width <= 900px) {
+    background-image: unset;
+    background-color: #fff;
+  }
+`;
+
+const InnerWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  width: 80%;
+`;
 
 type TitleInputProps = {
   color: string;
 };
 
-const Title = styled("h2")<TitleInputProps>(({ color }) => ({
-  color: `${color}`,
-  fontFamily: "Ubuntu",
-  fontWeight: "500",
-  fontSize: "4dvh",
-  alignSelf: "flex-start",
+const Title = styled.h2<TitleInputProps>`
+  color: ${(props) => props.color};
+  font-family: Ubuntu, sans-serif;
+  font-weight: 500;
+  font-size: 4vh;
+  align-self: flex-start;
 
-  "@media (max-width: 768px)": {
-    alignSelf: "center",
-  },
-}));
+  @media (width <= 768px) {
+    align-self: center;
+  }
+`;
 
-const ContentWrapper = styled("div")({
-  height: "80%",
-  width: "100%",
-  display: "flex",
-  justifyContent: "space-evenly",
-  alignItems: "center",
+const ContentWrapper = styled.div`
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 
-  "@media (max-width: 768px)": {
-    alignItems: "center",
-    flexDirection: "column",
-  },
-});
+  @media (width <= 768px) {
+    align-items: center;
+    flex-direction: column;
+  }
+`;
 
-const BoxWrapper = styled("div")({
-  height: "78%",
-  width: "84%",
-  display: "flex",
-  borderRadius: "0.4em",
-  backgroundColor: "#D7E6F0",
-  alignItems: "center",
-  // boxShadow: "rgba(0, 0, 0, 0.25) 0.8px 2px 6px 2px",
-  "@media (max-width: 768px)": {
-    width: "100%",
-    height: "78%",
-  },
-});
+const BoxWrapper = styled.div`
+  height: 78%;
+  width: 84%;
+  display: flex;
+  border-radius: 0.4em;
+  background-color: #d7e6f0;
+  align-items: center;
 
-const LeftSectionWrapper = styled("div")({
-  height: "100%",
-  width: "55%",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
+  @media (width <= 900px) {
+    width: 100%;
+  }
 
-  "@media (max-width: 768px)": {
-    width: "100%",
-  },
-});
+  @media (width <= 768px) {
+    width: 100%;
+    height: 78%;
+  }
+`;
 
-const LeftSectionInnerWrapper = styled("div")({
-  // Add your default styles here
-  height: "70%",
-  width: "80%",
-  display: "flex",
-  // backgroundColor: "grey",
-  alignItems: "center",
-  justifyContent: "center",
-  flexDirection: "column",
-  "@media (max-width: 768px)": {
-    width: "96%",
-    // backgroundColor: "grey",
-  },
-});
+const LeftSectionWrapper = styled.div`
+  height: 100%;
+  width: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-const RightSectionWrapper = styled("div")({
-  // Add your default styles here
-  height: "100%",
-  width: "50%",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  "@media (max-width: 768px)": {
-    display: "none",
-  },
-});
+  @media (width <= 768px) {
+    width: 100%;
+  }
+`;
+
+const LeftSectionInnerWrapper = styled.div`
+  height: 70%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @media (width <= 768px) {
+    width: 96%;
+  }
+`;
+
+const RightSectionWrapper = styled.div`
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (width <= 768px) {
+    display: none;
+  }
+`;
 
 const ImageStyle: React.CSSProperties = {
   height: "85%",
@@ -114,39 +122,35 @@ const ImageStyle: React.CSSProperties = {
   objectFit: "contain",
 };
 
-const FieldWrapper = styled("div")({
-  height: "16%",
-  width: "100%",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "flex-start",
-  fontFamily: "Ubuntu",
-  fontWeight: "600",
-  cursor: "pointer",
-  fontSize: "0.95dvw",
-  "@media (max-width: 768px)": {
-    fontSize: "3.7dvw",
-  },
+const FieldWrapper = styled.div`
+  height: 16%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: Ubuntu, sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: clamp(0.5rem, 3vw, 0.8rem);
 
-  "&:hover": {
-    opacity: 0.9,
-  },
-});
+  &:hover {
+    opacity: 0.9;
+  }
+`;
 
-const IconWrapper = styled("div")({
-  height: "100%",
-  width: "12%",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  "@media (max-width: 768px)": {
-    width: "17%",
-  },
-  "& img": {
-    width: "42%",
-    height: "100%",
-  },
-});
+const IconWrapper = styled.div`
+  height: 100%;
+  width: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & img {
+    width: 42%;
+    height: 100%;
+  }
+`;
+//#endregion Styled Components
 
 export {
   MainWrapper,
