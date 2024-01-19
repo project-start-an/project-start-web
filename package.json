@@ -51,6 +51,6 @@
     "stylelint": "^16.1.0",
     "stylelint-config-standard": "^36.0.0",
     "typescript": "^5.3.2",
-    "vite": "^5.0.5"
+    "vite": "^5.0.12"
   }
 }
