@@ -39,7 +39,7 @@ const InnerWrapper = styled.div`
   }
 
   @media (width <= 500px) {
-    width: 70%;
+    width: 85%;
   }
 `;
 
@@ -95,6 +95,11 @@ const BoxWrapper = styled.div`
     height: 94%;
     box-shadow: none;
     width: 100%;
+  }
+
+  @media (width <= 768px) {
+    justify-content: center;
+    align-items: center;
   }
 `;
 
@@ -158,6 +163,10 @@ const BoxTitle = styled.div`
     font-size: clamp(0.7rem, 5vw, 1.4rem);
     text-align: center;
   }
+
+  @media (width <= 768px) {
+    margin-top: 1rem;
+  }
 `;
 
 const BoxContentWrapper = styled.div`
@@ -175,6 +184,7 @@ const BoxContentWrapper = styled.div`
   @media (width <= 900px) {
     gap: 0.5rem;
     margin-left: 5%;
+    width: 95%;
   }
 `;
 

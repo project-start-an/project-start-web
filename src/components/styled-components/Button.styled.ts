@@ -46,9 +46,12 @@ const DarkButton = styled(Button)`
   color: #fff;
   border: 0.15em solid #065a82;
 
-  &:hover {
-    color: rgb(0 0 0 / 90%);
-    background-color: #fff;
+  /* media query is needed here to make touch devices not have sticky hover effect */
+  @media (hover: hover) {
+    &:hover {
+      color: rgb(0 0 0 / 90%);
+      background-color: #fff;
+    }
   }
 `;
 
@@ -56,9 +59,12 @@ const LightButton = styled(Button)`
   color: rgb(0 0 0 / 90%);
   background-color: #fff;
 
-  &:hover {
-    color: #fff;
-    background-color: #065a82;
+  /* media query is needed here to make touch devices not have sticky hover effect */
+  @media (hover: hover) {
+    &:hover {
+      color: #fff;
+      background-color: #065a82;
+    }
   }
 `;
 

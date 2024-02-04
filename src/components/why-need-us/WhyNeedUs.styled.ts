@@ -129,12 +129,16 @@ const FieldWrapper = styled.div`
   align-items: center;
   justify-content: flex-start;
   font-family: Ubuntu, sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
   font-size: clamp(0.5rem, 3vw, 0.8rem);
 
   &:hover {
     opacity: 0.9;
+  }
+
+  @media (width <= 768px) {
+    font-size: 0.9rem;
   }
 `;
 
