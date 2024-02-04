@@ -1,7 +1,7 @@
 import ServicesBanner from "../../assets/ServicesCompAssets/service-banner.png";
 import ServicesData from "../../data/ServicesData/ServicesData";
 import Checkmark from "../../assets/checkmark.svg";
-import { FieldWrapper, IconWrapper } from "../styled-components/Box.styled";
+import { FieldWrapper, IconWrapper } from "../why-need-us/WhyNeedUs.styled";
 import Carousel from "react-material-ui-carousel";
 import { useMediaQuery } from "usehooks-ts";
 
@@ -42,7 +42,7 @@ function ServicesComponent() {
                       <IconWrapper>
                         <img src={Checkmark} alt="checkmark" />
                       </IconWrapper>
-                      <div>{item1}</div>
+                      {item1}
                     </FieldWrapper>
                   );
                 })}

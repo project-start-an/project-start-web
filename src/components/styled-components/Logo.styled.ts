@@ -9,12 +9,15 @@ const Logo = styled.h2`
 `;
 
 const NavLogo = styled(Logo)`
+  text-align: left;
+  margin-left: 3rem;
   transition:
     transform 0.3s ease,
     color 0.3s ease;
 
   @media (width <= 768px) {
     text-align: end;
+    margin-left: unset;
   }
 
   &:hover {

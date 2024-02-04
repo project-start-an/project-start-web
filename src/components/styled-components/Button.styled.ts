@@ -22,14 +22,14 @@ type BtnProps = {
 };
 
 const Button = styled.button<BtnProps>`
-  width: ${(props) => (props.size === "sm" ? "8.5rem" : "12.5rem")};
+  width: ${(props) => (props.size === "sm" ? "9.5rem" : "12.5rem")};
   padding: 1rem;
-  height: ${(props) => (props.size === "sm" ? "2.5rem" : "3.5rem")};
+  height: ${(props) => (props.size === "sm" ? "3rem" : "3.5rem")};
   font-weight: 600;
   border-radius: 1rem;
   display: flex;
   font-family: Ubuntu, sans-serif;
-  font-size: ${(props) => (props.size === "sm" ? "1rem" : "1.5rem")};
+  font-size: ${(props) => (props.size === "sm" ? "1.1rem" : "1.5rem")};
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -46,9 +46,12 @@ const DarkButton = styled(Button)`
   color: #fff;
   border: 0.15em solid #065a82;
 
-  &:hover {
-    color: rgb(0 0 0 / 90%);
-    background-color: #fff;
+  /* media query is needed here to make touch devices not have sticky hover effect */
+  @media (hover: hover) {
+    &:hover {
+      color: rgb(0 0 0 / 90%);
+      background-color: #fff;
+    }
   }
 `;
 
@@ -56,9 +59,12 @@ const LightButton = styled(Button)`
   color: rgb(0 0 0 / 90%);
   background-color: #fff;
 
-  &:hover {
-    color: #fff;
-    background-color: #065a82;
+  /* media query is needed here to make touch devices not have sticky hover effect */
+  @media (hover: hover) {
+    &:hover {
+      color: #fff;
+      background-color: #065a82;
+    }
   }
 `;
 

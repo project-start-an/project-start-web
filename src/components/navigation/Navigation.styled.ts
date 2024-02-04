@@ -20,7 +20,6 @@ const NavWrapper = styled.div`
 
 const MenuIconWrapper = styled.div`
   display: none;
-  cursor: pointer;
   width: 60%;
   justify-content: flex-end;
 
@@ -32,7 +31,7 @@ const MenuIconWrapper = styled.div`
 const NavLinksWrapper = styled.nav<{ $showMenu?: boolean }>`
   width: 60%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 
   @media (width <= 768px) {
@@ -43,6 +42,7 @@ const NavLinksWrapper = styled.nav<{ $showMenu?: boolean }>`
 const NavLinksMobileWrapper = styled(NavLinksWrapper)<{ $showMenu?: boolean }>`
   display: none;
   position: absolute;
+  gap: 3rem;
   top: calc(75.828px + 10px); /* Position below the menu icon */
   left: 0;
   width: 100%;

@@ -10,6 +10,7 @@ import {
 } from "./Navigation.styled";
 import { changeHandlerState } from "../contact-form/ContactForm.signals";
 import MobileNav from "../../assets/NavAssets/mobile-nav.svg";
+import MobileNavClose from "../../assets/NavAssets/mobile-nav-close.svg";
 import { NavLogo } from "../styled-components/Logo.styled";
 
 const projectName = "WedecodeIT";
@@ -98,7 +99,11 @@ function Navigation() {
         ))}
       </NavLinksMobileWrapper>
       <MenuIconWrapper className="mobile" onClick={() => toggleMenu()}>
-        <img src={MobileNav} alt="mobile-nav" />
+        {!showMobileMenu ? (
+          <img src={MobileNav} alt="mobile-nav" />
+        ) : (
+          <img src={MobileNavClose} alt="mobile-nav-close" />
+        )}
       </MenuIconWrapper>
     </NavWrapper>
   );
