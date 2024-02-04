@@ -28,11 +28,7 @@ const InnerWrapper = styled.div`
   justify-content: flex-start;
   align-items: center;
   height: 100%;
-  width: 90%;
-
-  @media (width <= 1400px) {
-    width: 95%;
-  }
+  width: 80%;
 
   @media (width <= 900px) {
     width: 50%;
@@ -69,8 +65,7 @@ const ContentWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  align-items: flex-start;
-  margin-top: 5%;
+  align-items: center;
 
   @media (width <= 900px) {
     align-items: center;
@@ -88,19 +83,13 @@ const ContentWrapper = styled.div`
 `;
 
 const BoxWrapper = styled.div`
-  height: 100%;
-  max-height: 40rem;
-  width: 30%;
-  max-width: 30rem;
+  height: 80%;
+  width: 25%;
   border-radius: 0.5em;
   background-color: #d7e6f0;
   box-shadow: 0 -4px 3px rgb(50 50 50 / 75%);
   display: flex;
   flex-direction: column;
-
-  @media (width <= 1100px) {
-    max-height: 35rem;
-  }
 
   @media (width <= 900px) {
     height: 94%;
@@ -138,11 +127,9 @@ const BoxHeaderVisAsset = styled.div`
   top: -60%;
   left: 50%;
   transform: translateX(-50%);
-
-  /* width: 35%; */
-  padding: 0.2rem;
+  width: 34%;
   display: flex;
-  height: 140%;
+  height: 160%;
   font-family: Ubuntu, sans-serif;
   font-weight: 600;
   font-size: 1.3vw;
@@ -164,11 +151,12 @@ const BoxHeaderVisAsset = styled.div`
 const BoxTitle = styled.div`
   height: 10%;
   width: 100%;
+  display: flex;
   font-family: Ubuntu, sans-serif;
   font-weight: 600;
-  font-size: clamp(0.7rem, 1.9vw, 1.4rem);
-  padding-inline: 1rem;
-  text-align: center;
+  font-size: 1.3vw;
+  align-items: flex-end;
+  justify-content: center;
 
   @media (width <= 900px) {
     margin-top: 4rem;
@@ -183,16 +171,15 @@ const BoxTitle = styled.div`
 
 const BoxContentWrapper = styled.div`
   height: 55%;
-  width: 100%;
-
-  /* margin-left: 10%; */
+  width: 80%;
+  margin-left: 10%;
   display: flex;
   font-family: Ubuntu, sans-serif;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.1vw;
   align-items: center;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
 
   @media (width <= 900px) {
     gap: 0.5rem;

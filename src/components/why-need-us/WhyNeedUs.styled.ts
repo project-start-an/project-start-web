@@ -131,7 +131,7 @@ const FieldWrapper = styled.div`
   font-family: Ubuntu, sans-serif;
   font-weight: 500;
   cursor: pointer;
-  font-size: clamp(0.5rem, 3vw, 0.8rem);
+  font-size: clamp(0.8rem, 1.4vw, 1.2rem);
 
   &:hover {
     opacity: 0.9;
